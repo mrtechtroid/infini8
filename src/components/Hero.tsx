@@ -14,73 +14,123 @@ export default function Hero() {
   const sunRef = useRef<HTMLDivElement>(null)
   const birdRef = useRef<HTMLImageElement>(null)
   const pseudoMountainRef = useRef<HTMLDivElement>(null)
+
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.to(buildingRef.current, {
-        x: -150,
-        ease: "none",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top",
-          end: "bottom center",
-          scrub: 1
-        }
+      // Initial load animations
+      gsap.from(buildingRef.current, {
+        x: 200,
+        opacity: 0,
+        duration: 1,
+        ease: 'power1.out'
       })
-      gsap.to(birdRef.current, {
-        x: -150,
-        ease: "none",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top",
-          end: "bottom center",
-          scrub: 1
-        }
+      gsap.from(birdRef.current, {
+        x: -200,
+        opacity: 0,
+        duration: 1,
+        delay: 0.2,
+        ease: 'power1.out'
       })
-
-      gsap.to(blossomRef.current, {
-        x: 150,
-        ease: "none",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top",
-          end: "bottom center",
-          scrub: 1
-        }
+      gsap.from(blossomRef.current, {
+        x: 200,
+        opacity: 0,
+        duration: 1,
+        delay: 0.4,
+        ease: 'power1.out'
       })
 
-      gsap.to(mountainRef.current, {
-        y: -250,
-        scale: 1.3,
-        ease: "power1.inOut",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top",
-          end: "bottom center",
-          scrub: 1
+      // Modified scroll animations with more gradual movement
+      gsap.fromTo(buildingRef.current, 
+        { x: 0 }, // Starting position (where it ended after load animation)
+        {
+          x: -150,
+          ease: "power1.inOut", // Changed from "none" to "power1.inOut" for smoother movement
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            end: "+=500", // Extended scroll distance for more gradual movement
+            scrub: 0.5, // Increased from 1 to 2 for smoother movement
+            toggleActions: "play reverse play reverse" // Ensures animation reverses on scroll up
+          }
         }
-      })
-      gsap.to(pseudoMountainRef.current, {
-        // opacity: 1,
-        // backgroundColor: "rgba(255, 255, 255, 0.5)",
-        height:250,
-        ease: "power1.inOut",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top",
-          end: "bottom center",
-          scrub: 1
-        }
-      })
+      )
 
-      gsap.to(sunRef.current, {
-        opacity: 0.5,
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top",
-          end: "bottom center",
-          scrub: 1
+      gsap.fromTo(blossomRef.current,
+        { x: 0 }, // Starting position
+        {
+          x: 200,
+          ease: "power1.inOut",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            end: "+=500",
+            scrub: 0.5,
+            toggleActions: "play reverse play reverse"
+          }
         }
-      })
+      )
+
+      gsap.fromTo(mountainRef.current,
+        { y: 0, scale: 1 },
+        {
+          y: -100,
+          scale: 1.2,
+          ease: "power1.inOut",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            end: "+=500",
+            scrub: 0.5,
+            toggleActions: "play reverse play reverse"
+          }
+        }
+      )
+
+      gsap.fromTo(sunRef.current,
+        { y: 0, opacity: 1 },
+        {
+          y: 200,
+          opacity: 0.5,
+          ease: "power1.inOut",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            end: "+=500",
+            scrub: 0.5,
+            toggleActions: "play reverse play reverse"
+          }
+        }
+      )
+
+      gsap.fromTo(pseudoMountainRef.current,
+        { height: 30 },
+        {
+          height: 250,
+          ease: "power1.inOut",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            end: "+=1000",
+            scrub: 0.5,
+            toggleActions: "play reverse play reverse"
+          }
+        }
+      )
+
+      gsap.fromTo(birdRef.current,
+        { x: 0 },
+        {
+          x: -150,
+          ease: "power1.inOut",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            end: "+=500",
+            scrub: 0.5,
+            toggleActions: "play reverse play reverse"
+          }
+        }
+      )
     })
 
     return () => ctx.revert()
@@ -107,12 +157,11 @@ export default function Hero() {
           <div className="absolute inset-0 bg-[#FF4533] rounded-full" />
         </div>
 
-
         <img
           ref={buildingRef}
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/building-QfSshdJncVB1b9cfYiOkkz3izBLM9L.svg"
           alt="Japanese pagoda"
-          className="absolute bottom-[0%] w-[180px] md:w-[250px] lg:w-[320px] z-30 transform-gpu"
+          className="absolute bottom-[0%] w-[150px] md:w-[220px] lg:w-[320px] z-30 transform-gpu"
         />
 
         <img
@@ -129,13 +178,11 @@ export default function Hero() {
           className="absolute top-[0%] right-[0%] w-[180px] md:w-[250px] lg:w-[320px] z-30 transform-gpu"
         />
         <div
-        ref={pseudoMountainRef}
-        className='absolute bottom-0 left-0 w-full h-[30px] bg-black'
+          ref={pseudoMountainRef}
+          className='absolute bottom-0 left-0 w-full h-[30px] bg-black'
         >
         </div>
-        
       </div>
     </section>
   )
 }
-

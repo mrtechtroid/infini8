@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Hero from '@/components/Hero'
+import Navbar from "@/components/Navbar"
 import About from '@/components/About'
 import Events from '@/components/Events'
 import Footer from '@/components/Footer'
@@ -40,6 +41,7 @@ export default function Home() {
 
   return (
     <main ref={containerRef} className="relative overflow-hidden">
+      <Navbar/>
       <Hero />
       <CherryBlossoms />
       <About />
