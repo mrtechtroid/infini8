@@ -160,9 +160,11 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative h-screen w-full overflow-hidden"
-      style={{ backgroundImage: "url('/WaterColourBG - 1.png')" }}
+      className="relative h-screen w-full overflow-hidden watercolor-bg" //put this for css background
+      // className="relative h-screen w-full overflow-hidden" uncoment for image background
+      // style={{ backgroundImage: "url('/bg-upscale.png')" }} uncomment for image background
     >
+        <div className="sakura-overlay" /> {/*put for css background*/}
       <div className="relative h-full w-full max-w-[1920px] mx-auto">
         <img
           ref={birdRef}

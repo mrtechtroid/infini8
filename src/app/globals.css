@@ -13,9 +13,84 @@
     --foreground: #ededed;
   }
 }
+@font-face {
+  font-family: 'Osake';
+  src: url('/Osake.otf') format('opentype');
+}
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+/* this is for scrollbar */
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff758c, #ff7eb3);
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff8a9e, #ff8fc1);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ff758c rgba(0, 0, 0, 0.2);
+}
+
+
+/* this part is for background */
+.watercolor-bg {
+  background: linear-gradient(
+    120deg,
+    #ffd1dc 0%,
+    #ffe8e8 25%,
+    #fff0f5 50%,
+    #ffe1e8 75%,
+    #ffd1dc 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.watercolor-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, #ffb7c5 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, #ffccd5 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, #ffe8e8 0%, transparent 60%);
+  filter: blur(30px);
+  opacity: 0.7;
+}
+
+.sakura-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(#ff758c 1px, transparent 1px),
+    radial-gradient(#ffb7c5 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+  opacity: 0.1;
 }
