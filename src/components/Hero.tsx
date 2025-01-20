@@ -14,6 +14,7 @@ export default function Hero() {
   const sunRef = useRef<HTMLDivElement>(null)
   const birdRef = useRef<HTMLImageElement>(null)
   const pseudoMountainRef = useRef<HTMLDivElement>(null)
+  const logoRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -38,9 +39,14 @@ export default function Hero() {
         delay: 0.4,
         ease: 'power1.out'
       })
+      gsap.to(logoRef.current, {
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power2.out'
+      });
 
       // Modified scroll animations with more gradual movement
-      gsap.fromTo(buildingRef.current, 
+      gsap.fromTo(buildingRef.current,
         { x: 0 }, // Starting position (where it ended after load animation)
         {
           x: -150,
@@ -73,8 +79,24 @@ export default function Hero() {
       gsap.fromTo(mountainRef.current,
         { y: 0, scale: 1 },
         {
-          y: -100,
-          scale: 1.2,
+          y: -50, // Reduced movement for smoother transition
+          scale: 1.1, // Slightly reduced scale
+          ease: "none", // Linear movement for consistency
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            end: "+=400", // Adjusted scroll distance
+            scrub: 1, // Increased smoothness
+            toggleActions: "play none none reverse"
+          }
+        }
+      )
+
+      gsap.fromTo(sunRef.current,
+        { y: 0, opacity: 1 },
+        {
+          y: 200,
+          opacity: 0.5,
           ease: "power1.inOut",
           scrollTrigger: {
             trigger: containerRef.current,
@@ -85,9 +107,8 @@ export default function Hero() {
           }
         }
       )
-
-      gsap.fromTo(sunRef.current,
-        { y: 0, opacity: 1 },
+      gsap.fromTo(logoRef.current,
+        { y: 0 },
         {
           y: 200,
           opacity: 0.5,
@@ -137,10 +158,10 @@ export default function Hero() {
   }, [])
 
   return (
-    <section 
+    <section
       ref={containerRef}
       className="relative h-screen w-full overflow-hidden"
-      style={{backgroundImage:"url('/WaterColourBG - 1.png')", background: "rgba(255, 255, 255, 1)"}}
+      style={{ backgroundImage: "url('/WaterColourBG - 1.png')" }}
     >
       <div className="relative h-full w-full max-w-[1920px] mx-auto">
         <img
@@ -149,12 +170,42 @@ export default function Hero() {
           alt="Flying birds"
           className="absolute top-[15%] left-[15%] w-[120px] md:w-[180px] lg:w-[220px] z-20"
         />
-        
-        <div 
+
+        {/* Sun with reduced opacity */}
+        {/* <div
           ref={sunRef}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] z-10"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] z-[5] opacity-100"
         >
-          <div className="absolute inset-0 bg-[#FF4533] rounded-full" />
+          <div className="absolute inset-0 bg-[#FF4533] rounded-full mix-blend-screen" />
+        </div>
+
+        <div
+          ref={logoRef}
+          className="absolute top-[25%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-[15] transform-gpu opacity-0"  // Added opacity-0
+        >
+          <img
+            src="/infin8_logo.png"
+            alt="Infin8 logo"
+            className="w-[300px] md:w-[360px] lg:w-[440px]"
+          />
+        </div> */}
+        <div
+          ref={sunRef}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] z-[5] opacity-80"
+        >
+          <div className="absolute inset-0 bg-[#FF4533] rounded-full mix-blend-screen" />
+
+          {/* Logo now nested inside sun div */}
+          <div
+            ref={logoRef}
+            className="absolute inset-0 flex items-center justify-center z-[15]"
+          >
+            <img
+              src="/infin8_logo.png"
+              alt="Infin8 logo"
+              className="w-[300px] md:w-[360px] lg:w-[440px]"
+            />
+          </div>
         </div>
 
         <img
@@ -164,12 +215,14 @@ export default function Hero() {
           className="absolute bottom-[0%] w-[150px] md:w-[220px] lg:w-[320px] z-30 transform-gpu"
         />
 
-        <img
-          ref={mountainRef}
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mountain-LnAQuV6tIuBDPnQfkWj5osBZQT4eOD.svg"
-          alt="Mount Fuji"
-          className="absolute bottom-[0%] left-1/2 -translate-x-1/2 w-[500px] md:w-[600px] lg:w-[1000px] z-20 transform-gpu"
-        />
+        <div className="absolute bottom-0 left-0 w-full flex justify-center items-end z-20">
+          <img
+            ref={mountainRef}
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mountain-LnAQuV6tIuBDPnQfkWj5osBZQT4eOD.svg"
+            alt="Mount Fuji"
+            className="w-[500px] md:w-[600px] lg:w-[1000px] transform-gpu"
+          />
+        </div>
 
         <img
           ref={blossomRef}
@@ -177,12 +230,18 @@ export default function Hero() {
           alt="Cherry blossoms"
           className="absolute top-[0%] right-[0%] w-[180px] md:w-[250px] lg:w-[320px] z-30 transform-gpu"
         />
-        <div
+        {/* <div
           ref={pseudoMountainRef}
           className='absolute bottom-0 left-0 w-full h-[30px] bg-black'
+        > */}
+        <div
+          ref={pseudoMountainRef}
+          className='absolute bottom-0 left-0 w-full h-[30px] bg-black transform-gpu'
+          style={{ marginBottom: '-1px' }} // This eliminates any potential gap
         >
         </div>
       </div>
-    </section>
+    </section >
+
   )
 }
