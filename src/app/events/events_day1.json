@@ -1,0 +1,57 @@
+[
+    {
+      "id":11,
+      "name": "Nukkad Natak",
+      "prizePool": 20000,
+      "image": "/posters/Nukkad Natak.jpg"
+    },
+    {
+      "id":12,
+      "name": "Clash Royale",
+      "prizePool": 20000,
+      "image": "/posters/Clash Royale.jpg"
+    },
+    {
+      "id":13,
+      "name": "Jijnasa",
+      "prizePool": 15000,
+      "image": "/posters/Jijnasa.jpg"
+    },
+    {
+      "id":14,
+      "name": "Lost in Action",
+      "prizePool": 20000,
+      "image": "/posters/Lost in Action.jpg"
+    },
+    {
+      "id":15,
+      "name": "Nritta",
+      "prizePool": 20000,
+      "image": "/posters/Nritta.jpg"
+    },
+    {
+      "id":16,
+      "name": "Infinitude",
+      "prizePool": 25000,
+      "image": "/posters/Infinitude.jpg"
+    },
+    {
+      "id":17,
+      "name": "Game Design",
+      "prizePool": 15000,
+      "image": "/posters/Game Design.jpg"
+    },
+    {
+      "id":18,
+      "name": "Call of Duty Mobile",
+      "prizePool": 20000,
+      "image": "/posters/Call of Duty Mobile.jpg"
+    },
+    {
+      "id":19,
+      "name": "Clash Royale",
+      "prizePool": 20000,
+      "image": "/posters/Clash Royale.jpg"
+    }
+  ]
+  

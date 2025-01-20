@@ -20,7 +20,7 @@ const Navbar = () => {
               {['Home', 'Events', 'Team', 'About', 'Sponsors'].map((item) => (
                 <a
                   key={item}
-                  href={`#${item.toLowerCase()}`}
+                  href={`/${item.toLowerCase()}`}
                   className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-300 hover:bg-white/10 rounded-md"
                 >
                   {item}
@@ -68,7 +68,7 @@ const Navbar = () => {
           {['Home', 'Events', 'Team', 'About', 'Sponsors'].map((item) => (
             <a
               key={item}
-              href={`#${item.toLowerCase()}`}
+              href={`/${item.toLowerCase()}`}
               className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium hover:bg-white/10 rounded-md"
               onClick={() => setIsOpen(false)}
             >

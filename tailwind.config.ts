@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        'last-shuriken': ['url("/public/the-last-shuriken.otf")'], 
+      },
     },
   },
   plugins: [],

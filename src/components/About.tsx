@@ -118,6 +118,7 @@ export default function About() {
             ref={textRef}
             className="w-full lg:w-1/2 text-white space-y-6" style={{fontFamily: 'Tektur, sans-serif'}}
           >
+            <img src="/shooting_star.png"/>
             <h3 className="text-3xl md:text-4xl font-bold mb-6" >
               The Cultural Extravaganza
             </h3>
