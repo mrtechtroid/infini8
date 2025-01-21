@@ -1,0 +1,95 @@
+{
+    "events": {
+      "day1": [
+        {
+          "id": 1,
+          "name": "Nukkad Natak",
+          "prizePool": 20000,
+          "rules": ["Maximum 10 participants per team", "Time limit: 20 minutes", "No use of microphones or props"],
+          "about": "A street play event highlighting social issues.",
+          "image": "/posters/Nukkad Natak.jpg",
+          "spocs": [
+            { "name": "Rajesh Kumar", "phone": "9876543210" },
+            { "name": "Priya Sharma", "phone": "8765432109" }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Infinitude",
+          "prizePool": 25000,
+          "rules": ["Individual participation", "Time limit: 15 minutes", "Creative presentations are encouraged"],
+          "about": "A limitless competition showcasing your unique talents.",
+          "image": "/posters/Infinitude.jpg",
+          "spocs": [
+            { "name": "Ankita Singh", "phone": "9123456780" },
+            { "name": "Ravi Verma", "phone": "8123456790" }
+          ]
+        }
+      ],
+      "day2": [
+        {
+          "id": 3,
+          "name": "Stage Play",
+          "prizePool": 20000,
+          "rules": ["Team size: 5-15 participants", "Time limit: 30 minutes", "Original scripts are encouraged"],
+          "about": "A dramatic competition to showcase your acting skills.",
+          "image": "/posters/Stage Play.jpg",
+          "spocs": [
+            { "name": "Meera Kapoor", "phone": "7012345678" },
+            { "name": "Sahil Yadav", "phone": "6012345678" }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Poetry",
+          "prizePool": 15000,
+          "rules": ["Individual participation", "Time limit: 5 minutes", "Original content only"],
+          "about": "An event for poetry enthusiasts to share their creativity.",
+          "image": "/posters/Poetry.jpg",
+          "spocs": [
+            { "name": "Aditi Rao", "phone": "9876543120" },
+            { "name": "Rohan Nair", "phone": "8765432190" }
+          ]
+        }
+      ],
+      "day3": [
+        {
+          "id": 5,
+          "name": "Brush Up",
+          "prizePool": 10000,
+          "rules": ["Individual participation", "Time limit: 2 hours", "Use only provided materials"],
+          "about": "An art competition to showcase your painting skills.",
+          "image": "/posters/Brush Up.jpg",
+          "spocs": [
+            { "name": "Neha Sharma", "phone": "7890123456" },
+            { "name": "Akhil Mehta", "phone": "6890123456" }
+          ]
+        },
+        {
+          "id": 6,
+          "name": "Short Film Competition",
+          "prizePool": 25000,
+          "rules": ["Team size: Up to 5 members", "Duration: 5-10 minutes", "Original content only"],
+          "about": "A competition for budding filmmakers to showcase their talent.",
+          "image": "/posters/Short Film Competition.jpg",
+          "spocs": [
+            { "name": "Karan Patel", "phone": "9123456789" },
+            { "name": "Sneha Roy", "phone": "8123456789" }
+          ]
+        },
+        {
+          "id": 7,
+          "name": "Fashion",
+          "prizePool": 20000,
+          "rules": ["Team size: 3-10 members", "Time limit: 15 minutes", "Theme-based presentations are encouraged"],
+          "about": "A glamorous fashion show competition.",
+          "image": "/posters/Fashion.jpg",
+          "spocs": [
+            { "name": "Simran Kaur", "phone": "7123456789" },
+            { "name": "Rahul Desai", "phone": "6123456789" }
+          ]
+        }
+      ]
+    }
+  }
+  
