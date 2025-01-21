@@ -10,26 +10,28 @@ export default function CustomScrollbar() {
   useEffect(() => {
     // Register the ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
-
+  
     // Create an Intersection Observer to track which section is in view
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            // Update the active section state when a section is in view
             setActiveSection(entry.target.id);
           }
         });
       },
       {
-        threshold: 0.5, // Trigger when section is 50% visible
+        threshold: 0.3, // Trigger when section is 50% visible
       }
     );
-
-    // Observe all sections
-    document.querySelectorAll("section").forEach((section) => {
+  
+    // Observe all sections with a "section" tag
+    const sections = document.querySelectorAll("section");
+    sections.forEach((section) => {
       observer.observe(section);
     });
-
+  
     // GSAP ScrollTrigger for scroll indicator
     gsap.to(".scroll-indicator", {
       height: "100%", // Animate the height of the indicator
@@ -40,9 +42,14 @@ export default function CustomScrollbar() {
         scrub: true, // Smooth syncing with scroll
       },
     });
-
-    return () => observer.disconnect();
+  
+    // Cleanup
+    return () => {
+      sections.forEach((section) => observer.unobserve(section)); // Unobserve sections
+      observer.disconnect(); // Disconnect observer
+    };
   }, []);
+  
 
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
