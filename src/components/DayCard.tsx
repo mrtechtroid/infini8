@@ -48,7 +48,7 @@ const DayCard: React.FC<DayCardProps> = ({ dayNumber }) => {
       <div style={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
         <div style={{ fontSize: '48px', marginBottom: '10px' }}>初</div>
         <div style={{ fontSize: '48px', marginBottom: '10px' }}>日</div>
-        <div className="font-['The Last Shuriken']" style={{ fontSize: '48px', textTransform: 'uppercase' }}>{`Day ${dayNumber}`}</div>
+        <div className="font-['Osake']" style={{ fontSize: '48px', textTransform: 'uppercase' }}>{`Day ${dayNumber}`}</div>
       </div>
 
       {/* Bottom divider to match EventCard */}

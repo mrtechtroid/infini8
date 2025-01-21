@@ -39,7 +39,7 @@ export default function EventsPage() {
       <div className="container mx-auto px-6 py-12">
         <div className="text-center mb-12">
           <div className="inline-block bg-[url('/events_bg.png')] bg-contain bg-no-repeat bg-center py-4 px-12">
-            <h1 className="text-3xl md:text-5xl font-['The Last Shuriken'] font-bold text-black">EVENTS</h1>
+            <h1 className="text-3xl md:text-5xl font-['Osake'] font-bold text-black">EVENTS</h1>
           </div>
         </div>
 
