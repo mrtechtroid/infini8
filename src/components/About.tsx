@@ -83,7 +83,7 @@ export default function About() {
               ref={buildingRef}
               src="/about_building.svg"
               alt="Building with neon sign"
-              className="h-full transform-gpu neon-flicker"
+              className="h-full transform-gpu"
             />
           </div>
           
@@ -94,7 +94,7 @@ export default function About() {
             <h3 
               className="text-4xl md:text-5xl mb-8 text-[#FF4533]"
               // deciding style={{ fontFamily: 'Tektur, sans-serif' }}
-              style={{fontFamily: 'Osake, sans-serif'}}
+              style={{fontFamily: 'The Last Shuriken, sans-serif'}}
             >
               The Cultural Extravaganza
             </h3>
