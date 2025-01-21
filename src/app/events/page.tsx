@@ -2,9 +2,7 @@
 
 import DayCard from "@/components/DayCard";
 import CustomScrollbar from "@/components/Scrollbar";
-import events1 from "./events_day1.json";
-import events2 from "./events_day2.json";
-import events3 from "./events_day3.json";
+import Events from "./events.json";
 import "../globals.css";
 
 interface EventCardProps {
@@ -52,7 +50,7 @@ export default function EventsPage() {
           <div className="mb-24">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               <DayCard dayNumber="1" />
-              {events1.map((event) => (
+              {Events.events.day1.map((event) => (
                 <EventCard event_id={event.id} key={event.id} name={event.name} prizePool={event.prizePool} image={event.image} />
               ))}
             </div>
@@ -74,7 +72,7 @@ export default function EventsPage() {
           <div className="mb-24">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               <DayCard dayNumber="2" />
-              {events2.map((event) => (
+              {Events.events.day2.map((event) => (
                 <EventCard event_id={event.id} key={event.id} name={event.name} prizePool={event.prizePool} image={event.image} />
               ))}
             </div>
@@ -94,7 +92,7 @@ export default function EventsPage() {
           <div className="mb-24">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               <DayCard dayNumber="3" />
-              {events3.map((event) => (
+              {Events.events.day3.map((event) => (
                 <EventCard event_id={event.id} key={event.id} name={event.name} prizePool={event.prizePool} image={event.image} />
               ))}
             </div>

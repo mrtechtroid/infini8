@@ -12,7 +12,8 @@
             { "name": "Arjun Subhedar", "phone": "7028770201" },
             { "name": "Chandrima Nandi", "phone": "9028872476" }
           ],
-          "fee":150
+          "fee":150,
+          "registration_form":"https://forms.gle/q9R4e1TcHewW3CR99"
         },
         {
           "id": 2,
@@ -26,7 +27,8 @@
             { "name": "Nathan Mathew Verghese", "phone": "8848839946" }
           ],
           "fee":0,
-          "pending":"fee,about,rules"
+          "registration_form":"https://forms.gle/q9R4e1TcHewW3CR99",
+          "pending":"fee,about,rules,form"
         },
         {
           "id": 3,
@@ -39,7 +41,8 @@
             { "name": "Nikunj Mahajan", "phone": "9797959937" },
             { "name": "Kunal Mittal", "phone": "6283322581" }
           ],
-          "fee":0
+          "fee":0,
+          "registration_form":"https://forms.gle/u2hUiVnfkZFbgM2y7"
         },
         {
           "id": 4,
@@ -53,6 +56,7 @@
             { "name": "Vishruth Vijay", "phone": "9449960095" }
           ],
           "fee":0,
+          "registration_form":"https://forms.gle/nbdT6d1Z5rwfdQuq9",
           "pending":"rules"
         },
         {
@@ -67,6 +71,7 @@
             { "name": "Amruth", "phone": "8106453075" }
           ],
           "fee":0,
+          "registration_form":"https://forms.gle/W4potxKV1zwgG3Xk8",
           "pending":"rules"
         },
         {
@@ -81,12 +86,12 @@
             { "name": "Ishaan Sodhi", "phone": "7009755769" }
           ],
           "fee":0,
-          "pending":"rules"
+          "registration_form":"https://forms.gle/726onnadPQFyzVB48"
         }
       ],
       "day2": [
         {
-          "id": 6,
+          "id": 7,
           "name": "Ancient Echoes",
           "prizePool": 8000,
           "rules": ["Format: Single-Elimination Bracket", "Teams: 15-20 registered teams", "Objective: Compete to emerge as the ultimate champion through skill, strategy, and teamwork.","2.Tournament Structure","Initial Rounds: If more than 16 teams register, an initial qualifying round will be conducted to reduce the number of teams to 16.","Round 1 (16 teams): BO1 (Best of 1)","Quarterfinals (8 teams): BO1","Semifinals (4 teams): BO3 (Best of 3)","Finals (2 teams): BO3 (Best of 3)","3. Game Modes","Round 1 & Quarterfinals: Game modes will be randomly selected from the following: Frontline,Team Deathmatch (TDM),Domination,Hardpoint,Control","Semifinals: Game modes will be randomly selected from the following:,Hardcore Team Deathmatch (Hardcore TDM),Hardcore Domination,Hardcore Hardpoint,Search & Destroy (S&D)","Finals: Same as Semifinals: Random selection between Hardcore TDM, Hardcore Domination, Hardcore Hardpoint, and Search & Destroy (S&D).","4. Match Rules","1.Match Settings: Standard tournament rules for each game mode. Time limits, score limits, and other settings will adhere to competitive CODM standards.","2. Victory Conditions: BO1: The team that wins the single match advances. BO3: The team that wins 2 out of 3 matches advances.","3.Tiebreakers: In case of a tie (e.g., equal scores in Control or Domination), total kills across the match will decide the winner.","5. Code of Conduct","Fair Play: Cheating, hacking, or use of any third-party tools is strictly prohibited.","2. Sportsmanship: Players must respect opponents, teammates, and officials.", "3. Penalties: Violations of rules may result in match forfeiture, disqualification, or bans.","6. Additional Details","1. Team Requirements: Each team must consist of exactly 5 players. Substitutes are not allowed.","2. Communication: All teams must join the designated WhatsApp group for match updates and coordination.","3. Equipment: Players are responsible for ensuring their devices and internet connections are stable."],
@@ -96,57 +101,226 @@
             { "name": "Amar Pratap Singh", "phone": "8197367978" },
             { "name": "Sriram Srikanth", "phone": "6362792963" }
           ],
+          "fee":0,
+          "registration_form":"https://forms.gle/zgUc9DN2JZqoqvQ89",
           "pending":"rules"
         },
         {
-          "id": 6,
-          "name": "JAM",
-          "prizePool": 10000,
-          "rules": ["Individual participation", "Time limit: 5 minutes", "Original content only"],
-          "about": "An event for poetry enthusiasts to share their creativity.",
-          "image": "/posters/JAM.jpg",
+          "id": 8,
+          "name": "RangManch",
+          "prizePool": 30000,
+          "rules": ["Time limit - The play duration should be around a minimum of 20 minutes and around a maximum of 45 minutes from ‘stage entry’ to ‘stage exit’.", "There can be maximum of 15 members on a team. Out of these, maximum 2 people can be present on the light and sound console.", "We can provide basic props if informed in advance such as tables or chairs.","Script submissions are due by 1st Feb 2024, along with a 10-minute recording of the play for the screening round. Please mail them to parvaaz@iiitb.ac.in. Also,specify the total duration of the play.","The organizers have the power to disqualify any team based on any grounds they seem fit.","If your play contains instruments to be connected to speaks, it should be well specified in the mail containing the script and recording."],
+          "about": "Unleash your unique talents on the theatrical battlefield. Join the Rang Manch and let the curtains rise on your unique talents as you vie for the spotlight in this thrilling showcase of theatrical brilliance!",
+          "image": "/posters/Rangmanch.jpg",
           "spocs": [
-            { "name": "Harsh Modani", "phone": "9380126399" },
-            { "name": "Vishruth Vijay", "phone": "9449960095" }
-          ]
+            { "name": "Harsh Gupta", "phone": "7425876315" },
+            { "name": "Harsh Modi", "phone": "9660831133" }
+          ],
+          "fee":500,
+          "registration_form":"https://forms.gle/HYAsMYP9uFjntdZ29"
+        },
+        {
+          "id": 9,
+          "name": "BGMI",
+          "prizePool": 5000,
+          "rules": ["Requirements:","1. Participants are required to bring their own gaming devices and headsets.","2. All participants must adhere to the tournament schedule and arrive on time for check-in.","3. Players must ensure their gaming equipment is fully charged and properly working.","4. Participants must agree to abide by the tournament rules and regulations, including fair play and sportsmanship guidelines.","Rules and Guidelines General Guidelines:","1. By participating, participants agree to abide by the rules.","2. Event details are subject to change without prior notice.","3. Organizers have the final authority on all matters, including the discretion to disqualify any participant or team without justification.","Specific Rules:","1. Cheating, hacking, or use of exploits will not be tolerated.","2. Respectful behaviour towards other players and organizers is mandatory.","3. Any disputes will be resolved by the event head, whose decisions are final."],
+          "about": "Embark on a thrilling adventure with IIITBs BGMI Showdown, a battleground where teams collide in intense battles. Demonstrate your gaming prowess, securing kills for bonuses as you strive for triumph in this gripping showdown. Brace yourself for an adrenaline-fueled experience of strategic combat and seamless teamwork, as every move counts in this electrifying gaming spectacle!",
+          "image": "/posters/BGMI.jpg",
+          "spocs": [
+            { "name": "Arshbir Singh Dang", "phone": "9871423108" },
+            { "name": "Harjot Singh", "phone": "98851366538" }
+          ],
+          "fee":0,
+          "registration_form":"https://forms.gle/pzRxRRnUHH72QVxJ8"
+        },
+        {
+          "id": 10,
+          "name": "Ramp It Up",
+          "prizePool": 12000,
+          "rules": ["Requirements:","1. Participants are required to bring their own gaming devices and headsets.","2. All participants must adhere to the tournament schedule and arrive on time for check-in.","3. Players must ensure their gaming equipment is fully charged and properly working.","4. Participants must agree to abide by the tournament rules and regulations, including fair play and sportsmanship guidelines.","Rules and Guidelines General Guidelines:","1. By participating, participants agree to abide by the rules.","2. Event details are subject to change without prior notice.","3. Organizers have the final authority on all matters, including the discretion to disqualify any participant or team without justification.","Specific Rules:","1. Cheating, hacking, or use of exploits will not be tolerated.","2. Respectful behaviour towards other players and organizers is mandatory.","3. Any disputes will be resolved by the event head, whose decisions are final."],
+          "about": "Get ready to own the spotlight at our college's fashion show in the Infin8! 'Ramp It Up ' is your chance to showcase your unique style and make a statement on the runway. Whether you're a trendsetter or just love fashion, this is your moment to shine. Join us for an evening of glamour, creativity, and runway magic – where style meets the spotlight!",
+          "image": "/posters/Ramp It Up.jpg",
+          "spocs": [
+            { "name": "Varsha Yamasani", "phone": "8639604273" },
+            { "name": "Monish", "phone": "9154158805" }
+          ],
+          "fee":150,
+          "registration_form":"https://forms.gle/JoCt2aMubhvX19aZ7",
+          "pending":"rules"
+        },
+        {
+          "id": 11,
+          "name": "Mono Acting",
+          "prizePool": 5000,
+          "rules": ["1. Solo Act: Each participant must perform a solo act, which can either be a monologue or a solo scene adapted from a script. No group performances are allowed.","2. Time Limit: Each performance must be completed within a strict time limit of 5 minutes. Participants exceeding the time limit may face penalties or disqualification.","3. Language: Performances can be delivered in Hindi, English, or a combination of both languages (bilingual acts).","4. Script Selection: Participants have the liberty to choose their own scripts.However, if the script is adapted from an existing work, appropriate credit must be given to the original author or source.","5. Props: Basic props such as a table or a chair can be provided by the organizers. These requirements must be communicated to the organizingteam well in advance.","6. Disqualification Clause: The organizing committee reserves the right to disqualify any participant on grounds they deem appropriate. Participants are expected to adhere to the guidelines and maintain decorum.","7. Technical Requirements: If the act involves the use of instruments that need to be connected to speakers or other technical equipment, participants must inform the organizers beforehand.","All your requirements should be emailed to parvaaz@iiitb.ac.in"],
+          "about": "Step into the spotlight and show the world what you're capable of! Monoacting is all about bringing stories to life through your voice, body, and imagination. Whether you're a seasoned performer or a budding actor, this is your chance to shine solo and captivate the audience with your talent. Register now and become the star of your own story!",
+          "image": "/posters/Mono Acting.jpg",
+          "spocs": [
+            { "name": "Ivan Bhargava", "phone": "9324407526" },
+            { "name": "Aishwarya Sharma", "phone": "9425280241" }
+          ],
+          "fee":0,
+          "registration_form":"https://forms.gle/3u6g3yTDdNzHpxNz8"
+        },
+        {
+          "id": 12,
+          "name": "Saaz, Sur and Taal",
+          "prizePool": 10000,
+          "rules": ["Time Limit:","Solo instrumentalists are allotted a maximum of 4 minutes for their entire stage performance.","Musical Diversity:","Participants are required to showcase their versatility by playing at least one percussion or non-percussive instrument. Separate prizes will be awarded for each category.","Backing Track or Accompanist Options:","Participants may choose to use a pre-submitted backing track or have one accompanist.However, it is emphasized that the judging will solely be based on the instrumentalist's performance, not the backing track.","Basic Effects Allowance:","Instrumentalists are permitted to request basic effects such as compression, reverb, etc., to enhance their performance. Note that looping is allowed, but will not affect the judgement.","Judging Criteria:","Performances will be evaluated based on several factors, including pitch accuracy, rhythm,musicality, skill level, stage presence, and other relevant aspects. The judging panel will consider these elements to determine the overall quality of the solo singing performance."],
+          "about": "Showcase your mastery and passion for music at Infin8 ’25’s Solo Instrumental Competition! Whether you play strings, keys, or anything in between, this is your moment to shine. Complete the form below to register and claim your spot in this incredible musical journey. Let your instrument tell your story!",
+          "image": "/posters/Saaz, Sur and Taal.jpg",
+          "spocs": [
+            { "name": "Vinay Ramesh", "phone": "6369602159" },
+            { "name": "Trupti Khodwe", "phone": "9422810823" }
+          ],
+          "fee":250,
+          "registration_form":"https://docs.google.com/forms/d/e/1FAIpQLScBUJtd_RS-euYi3ZwkREAVdqk5_DKMI8Gt-vv62YcUMIEM2g/viewform?usp=sharing"
+        },
+        {
+          "id": 13,
+          "name": "Geoguessr",
+          "prizePool": 10000,
+          "rules": ["The game mode is Duels","Players must bring their own laptops","0.5x multiplier from round 5 onwards.","Maps are random and will be ADW or ACW","All players should be present in the room and can’t play remotely","SPOCs withhold the right to disqualify any participant at their discretion","Geogusser rules apply (no googling)","For 2v2 the teammates can talk to each other","Spectating friends cannot help","No outside help allowed"],
+          "about": "Join us for an exciting GeoGuessr event where participants will be dropped into random locations around the world and challenged to guess their surroundings! Test your geography skills, explore new places, and compete with others in a fun and engaging way. Whether you're a seasoned explorer or a casual player, this event is sure to be an adventure!  ",
+          "image": "/posters/Geoguessr.jpg",
+          "spocs": [
+            { "name": "Aaditya Gole", "phone": "7972513736" },
+            { "name": "Ayush Gupta", "phone": "8884803648" }
+          ],
+          "fee":0,
+          "registration_form":"https://forms.gle/q9R4e1TcHewW3CR99",
+          "pending":"link"
+        },
+        {
+          "id": 14,
+          "name": "Slam Poetry",
+          "prizePool": 4000,
+          "rules": ["The game mode is Duels","Players must bring their own laptops","0.5x multiplier from round 5 onwards.","Maps are random and will be ADW or ACW","All players should be present in the room and can’t play remotely","SPOCs withhold the right to disqualify any participant at their discretion","Geogusser rules apply (no googling)","For 2v2 the teammates can talk to each other","Spectating friends cannot help","No outside help allowed"],
+          "about": "Amidst the chaos of life, immerse yourself in the cathartic world of Slam Poetry. This competition beckons individuals to take a breather, step onto the stage, and unleash the power of spoken word to express their innermost thoughts, emotions, and reflections.",
+          "image": "/posters/Slam Poetry.jpg",
+          "spocs": [
+            { "name": "Subikshaa", "phone": "73825 06480" }
+          ],
+          "fee":0,
+          "registration_form":"https://docs.google.com/forms/d/e/1FAIpQLSfwfqE6-wtLx3gVia-D16rlEnrDmL539RymlMrc7vbvenKVbA/viewform?usp=sf_link",
+          "pending":"rules"
+        },
+        {
+          "id": 15,
+          "name": "Battle of Bands",
+          "prizePool": 30000,
+          "rules": ["Time Limit:","Bands are allocated a maximum of 20 minutes for their performance, inclusive of stage setup.","Member Limit:","Each participating band can consist of up to 8 members.","Instrumentalists Requirement:","Bands must include a minimum of 2 instrumentalists among their members.","On-Stage Presence:","At any given moment during the performance, there should be a minimum of 3 band members actively performing on stage.","Genre Freedom:","There are no restrictions on the genre of the musical performance; bands are free to explore and showcase their preferred style.","Pre-recorded Backing Tracks:","The use of pre-recorded backing tracks during the performance is strictly prohibited.","Original Composition Bonus:","Extra points will be awarded to bands that present an impressive original composition during their performance.","Judging Criteria:","Bands will be evaluated based on various criteria, including but not limited to – the tightness of their performance, individual skills of each member, musicality, and overall stage presence.Judges will consider these elements to determine the winners of the competition, and their decision will be final."],
+          "about": "Welcome to the Battle of the Bands registration for Infin8 ’25! This is your chance to showcase your musical talent, compete with the best, and captivate the crowd. Complete the form below to secure your spot in this electrifying competition. Get ready to rock the stage and make history!",
+          "image": "/posters/Battle of Bands.jpg",
+          "spocs": [
+            { "name": "Aditya Rao", "phone": "7349709494" },
+            { "name": "Priyanshu Tiwari", "phone": "6353877175" }
+          ],
+          "fee":1000,
+          "registration_form":"https://docs.google.com/forms/d/e/1FAIpQLSdrHaHs666bFtWPDcZtoPPjREWW-r-kb-m362jME9wo8ShH8A/viewform?usp=sharing"
+        },
+        {
+          "id": 16,
+          "name": "Sargam",
+          "prizePool": 10000,
+          "rules": ["Time Limit:Solo singers are allotted a maximum of 4 minutes for their entire stage performance.","Musical Diversity:Participants are required to showcase their versatility by presenting at least one of Indian classical/semi-classical and non-classical genre. Separate prizes will be awarded for each category.","Restrictions on Beatboxing and Rapping:Beatboxing and rapping are not allowed as part of the solo singing performance.","Backing Track or Accompanist Options: Participants may choose to use a pre-submitted backing track, have one accompanist, or play a musical instrument themselves. However, it is emphasized that the judging will solely be based on the singer's vocals, not the backing track.","Basic Effects Allowance: Singers are permitted to request basic effects such as compression, reverb, etc., to enhance their performance.","Judging Criteria: Performances will be evaluated based on several factors, including pitch accuracy, rhythm,musicality, skill level, stage presence, and other relevant aspects. The judging panel will consider these elements to determine the overall quality of the solo singing performance."],
+          "about": "Step into the spotlight at Infin8 ’25’s Solo Singing Competition! This is your chance to mesmerize the audience with your voice and compete for glory. Fill out the registration form below to secure your place in this thrilling vocal showcase. Let your voice soar and steal the show!",
+          "image": "/posters/Sargam.jpg",
+          "spocs": [
+            { "name": "Hemanth Mada", "phone": "8501024315" }
+          ],
+          "fee":250,
+          "registration_form":"https://docs.google.com/forms/d/e/1FAIpQLScYBNHdB3Kqi09tLEeAIVVNrkqmD_0sNW9CjqyBJFioj_NmSw/viewform?usp=sharing"
+        },
+        {
+          "id": 17,
+          "name": "Smash Carts",
+          "prizePool": 4000,
+          "rules": ["Team Format:"," Gather your crew of 3 players per team and gear up to compete against the best. Teamwork, strategy, and quick reflexes are the keys to victory!","If time permits , it will be a round robin format , else it will be a knockout format","Reward:","1st Prize ₹2500","2nd Prize ₹1500"],
+          "about": "Smashkarts – The Ultimate Gaming Showdown! Get ready for an action-packed gaming experience like never before! 🚀 Thrilling gameplay, intense battles, and an electrifying atmosphere. Smash your way to the top and prove your dominance! It’s not just about the prizes—it’s about the glory, the bragging rights, and the ultimate test of your skills.Don’t miss your chance to be a part of this epic gaming competition. Rally your squad, bring your A-game, and let the smashing begin! 🏆",
+          "image": "/posters/Smash Carts.jpg",
+          "spocs": [
+            { "name": "Aditya Reddy", "phone": "9392417242" },
+            {"name:":"Akul Anhith","phone":""}
+          ],
+          "fee":250,
+          "registration_form":"https://forms.gle/qAxbSJWkvwDT8ghr6",
+          "pending":"number"
         }
       ],
       "day3": [
         {
-          "id": 5,
+          "id": 18,
+          "name": "Valorant",
+          "prizePool": 6000,
+          "rules": ["Each team must consist of 5 players and can optionally have 1 substitute.", "All team leaders must join the designated WhatsApp group before the matches.All official announcements, schedules, and updates will be communicated through WhatsApp.", "Ensure you have the latest version of the game installed before the match day.No delays will be entertained on the match day due to version issues.","All matches, except for Finals and Semi-Finals (depending on the total number of teams), willfollow a knockout format.","Preliminary Rounds, Quarterfinals, and Semifinals: Best-of-3.","Finals: Best-of-5.","Matches will feature a map veto system.Teams will alternate in banning and picking maps as per the standard map veto procedure.","All weapons, agents, and abilities are allowed unless currently disabled in Ranked Mode.","Any form of cheating, abuse, or exploitation of bugs/glitches will result in immediatedisqualification of the team.Referees or tournament administrators will monitor the matches for compliance.","Teams are expected to join the match lobby at least 15 minutes prior to the scheduled start time.A maximum grace period of 5 minutes will be allowed for a late team; failure to join within thistime will result in a forfeit.","Finals will be conducted offline at the IIITB campus. If there is a special case, please contact theorganizers.","Substitutes can only be used before the match begins.Mid-match substitutions are not allowed.","Any disputes or issues during the tournament must be reported to the organizers immediately.The decision of the organizers will be final and binding.","Players are expected to maintain a professional and respectful demeanor towards opponents,teammates, and organizers.Toxic behavior, harassment, or offensive language will lead to penalties or disqualification.","Matches may be streamed or spectated by authorized personnel.Players are not allowed to stream their matches without prior approval from the organizers.","In case of severe technical issues (e.g., server crash), the match may be paused or restarted atthe organizers' discretion.Players are responsible for ensuring their own hardware and network readiness.","Depending on the average rank of the team, you may get a bye in the first round."],
+          "about": "Embark on a thrilling adventure with IIITBs Valorant Showdown, a battleground where teams collide in intense battles. Demonstrate your gaming prowess, securing kills for bonuses as you strive for triumph in this gripping showdown. Brace yourself for an adrenaline-fueled experience of strategic combat and seamless teamwork, as every move counts in this electrifying gaming spectacle!",
+          "image": "/posters/Valorant.jpg",
+          "spocs": [
+            { "name": "Aarpeet Chandrasekhar", "phone": "9834544139" },
+            { "name": "Bhavya Jain", "phone": "8104040619" }
+          ],
+          "fee":0,
+          "registration_form":"https://forms.gle/ZmzRa8HADVPHVmoa6"
+        },
+        {
+          "id": 19,
           "name": "Brush Up",
-          "prizePool": 10000,
-          "rules": ["Individual participation", "Time limit: 2 hours", "Use only provided materials"],
-          "about": "An art competition to showcase your painting skills.",
+          "prizePool": 8000,
+          "rules": ["Each team must consist of 5 players and can optionally have 1 substitute.", "All team leaders must join the designated WhatsApp group before the matches.All official announcements, schedules, and updates will be communicated through WhatsApp.", "Ensure you have the latest version of the game installed before the match day.No delays will be entertained on the match day due to version issues.","All matches, except for Finals and Semi-Finals (depending on the total number of teams), willfollow a knockout format.","Preliminary Rounds, Quarterfinals, and Semifinals: Best-of-3.","Finals: Best-of-5.","Matches will feature a map veto system.Teams will alternate in banning and picking maps as per the standard map veto procedure.","All weapons, agents, and abilities are allowed unless currently disabled in Ranked Mode.","Any form of cheating, abuse, or exploitation of bugs/glitches will result in immediatedisqualification of the team.Referees or tournament administrators will monitor the matches for compliance.","Teams are expected to join the match lobby at least 15 minutes prior to the scheduled start time.A maximum grace period of 5 minutes will be allowed for a late team; failure to join within thistime will result in a forfeit.","Finals will be conducted offline at the IIITB campus. If there is a special case, please contact theorganizers.","Substitutes can only be used before the match begins.Mid-match substitutions are not allowed.","Any disputes or issues during the tournament must be reported to the organizers immediately.The decision of the organizers will be final and binding.","Players are expected to maintain a professional and respectful demeanor towards opponents,teammates, and organizers.Toxic behavior, harassment, or offensive language will lead to penalties or disqualification.","Matches may be streamed or spectated by authorized personnel.Players are not allowed to stream their matches without prior approval from the organizers.","In case of severe technical issues (e.g., server crash), the match may be paused or restarted atthe organizers' discretion.Players are responsible for ensuring their own hardware and network readiness.","Depending on the average rank of the team, you may get a bye in the first round."],
+          "about": "Embark on a thrilling adventure with IIITBs Valorant Showdown, a battleground where teams collide in intense battles. Demonstrate your gaming prowess, securing kills for bonuses as you strive for triumph in this gripping showdown. Brace yourself for an adrenaline-fueled experience of strategic combat and seamless teamwork, as every move counts in this electrifying gaming spectacle!",
           "image": "/posters/Brush Up.jpg",
           "spocs": [
-            { "name": "Neha Sharma", "phone": "7890123456" },
-            { "name": "Akhil Mehta", "phone": "6890123456" }
-          ]
+            { "name": "Metlapalli Ragini", "phone": "8341774899" },
+            { "name": "Saniya Ismail", "phone": "8976224962" }
+          ],
+          "fee":0,
+          "registration_form":"https://forms.gle/q9R4e1TcHewW3CR99",
+          "pending":"about,rules,link"
         },
         {
-          "id": 6,
-          "name": "Short Film Competition",
-          "prizePool": 25000,
-          "rules": ["Team size: Up to 5 members", "Duration: 5-10 minutes", "Original content only"],
-          "about": "A competition for budding filmmakers to showcase their talent.",
-          "image": "/posters/Short Film Competition.jpg",
+          "id": 20,
+          "name": "Nritta",
+          "prizePool": 8000,
+          "rules": ["Performance Duration: Each performance should last between 3 to 5 minutes.","Participants: Only college students are allowed to participate.","Dance Styles: All dance styles, including fusion, are welcome.","Props Usage: Props that litter the stage, such as colors or confetti are strictly prohibited. If you plan to use props, prior approval is required.","Soundtrack Submission: Participants must have their tracks (in mp3 format) ready by 5th February 2025. Mode of submission will be informed at that time.","Conduct: Performances must maintain decorum, with no vulgarity allowed."],
+          "about": "Anticipate an electrifying spectacle of dance at the grand event, 'Nritta.'' Elevate your performance as a solo artist or collaborate in a duo, and let the stage be your canvas for up to 5 minutes of captivating expression.  Make every moment count and immerse yourself in the rhythmic world of 'Nritta.' The spotlight awaits, so get ready to leave an indelible mark on the stage with your dance prowess.",
+          "image": "/posters/Nritta.jpg",
           "spocs": [
-            { "name": "Karan Patel", "phone": "9123456789" },
-            { "name": "Sneha Roy", "phone": "8123456789" }
-          ]
+            { "name": "Ayush Tiwari", "phone": "6377809792" },
+            { "name": "Arismita Mukherjee", "phone": "7019648656" }
+          ],
+          "fee":150,
+          "registration_form":"https://forms.gle/CQn3aYZCX8uwz6Ug6"
         },
         {
-          "id": 7,
-          "name": "Fashion",
-          "prizePool": 20000,
-          "rules": ["Team size: 3-10 members", "Time limit: 15 minutes", "Theme-based presentations are encouraged"],
-          "about": "A glamorous fashion show competition.",
-          "image": "/posters/Fashion.jpg",
+          "id": 21,
+          "name": "Infinitude",
+          "prizePool": 30000,
+          "rules": ["Team Size : 5 to 20 members"],
+          "about": "Step into the cultural tapestry of Infinitude, a group dance competition that adds a dynamic flair to our festivities! Embrace the opportunity with a nominal registration fee and the allure of enticing prizes for the top performers. Let the rhythm of your collective expression become a highlight of our cultural celebration!",
+          "image": "/posters/Infinitude.jpg",
           "spocs": [
-            { "name": "Simran Kaur", "phone": "7123456789" },
-            { "name": "Rahul Desai", "phone": "6123456789" }
-          ]
+            { "name": "Akshat Batra", "phone": "9133568951" },
+            { "name": "Matthew Joseph", "phone": "8451910312" }
+          ],
+          "fee":800,
+          "registration_form":"https://forms.gle/B2TnQQ1ewGapSJGn7",
+          "pending":"rules"
+        },
+        {
+          "id": 22,
+          "name": "League of Fanatics",
+          "prizePool": 12000,
+          "rules": ["Round 1: Choose Your Track","1.Anime & Sports (Who believe Naruto run is peak athletic form)","2.Movies & Games (who've finished more fictional storylines than conversations)","3.Music & Books (who sing theme songs in the shower)","Top 4 teams from each category advance! Your parents still won't be impressed, but we will be.","Round 2: The Mashup","12 teams split into 2 groups. Time to prove you didn't waste all those hours watching 'just one more episode.' Top 3 from each group advances.","Final Round: The Ultimate Showdown 6 teams battle it out to determine who has the most useless knowledge.","Reward:","1st Prize ₹5000","2nd Prize ₹4000","3rd Prize ₹3000"],
+          "about": "For everyone whose brain is stuffed with facts that will never help them file taxes (but might win them this competition).",
+          "image": "/posters/League of Fanatics.jpg",
+          "spocs": [
+            { "name": "Kanav Bhardwaj", "phone": "8837751558" },
+            { "name": "Harsh Modi", "phone": "9660831133" }
+          ],
+          "fee":800,
+          "registration_form":"https://forms.gle/oeJU4dYXo6is9zNN8",
+          "pending":"rules"
         }
       ]
     }
