@@ -24,8 +24,8 @@ function EventCard({ name, prizePool, image,event_id }: EventCardProps) {
         <div className="bg-red-600 h-2" />
         <div className="bg-white rounded-lg mx-2 mb-2 mt-1">
           <div className="px-4 py-3 text-center">
-            <h3 className="text-base font-medium font-['The Last Shuriken'] text-gray-900 truncate ">{name}</h3>
-            <p className="text-sm text-gray-600 mt-1">Prize Pool: {prizePool}</p>
+            <h3 className="text-base font-medium text-gray-900 truncate " style={{fontFamily:"The Last Shuriken"}}>{name}</h3>
+            <p className="text-sm text-gray-600 mt-1" style={{fontFamily:""}}>Prize Pool: {prizePool}</p>
           </div>
         </div>
       </div>

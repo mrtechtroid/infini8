@@ -3,7 +3,10 @@
       "id":11,
       "name": "Nukkad Natak",
       "prizePool": 20000,
-      "image": "/posters/Nukkad Natak.jpg"
+      "image": "/posters/Nukkad Natak.jpg",
+      "about":"",
+      "rules":[""],
+      "contact":[{"name":"","phone":""}]
     },
     {
       "id":12,

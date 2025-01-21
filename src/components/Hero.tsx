@@ -238,7 +238,7 @@ export default function Hero() {
         > */}
         <div
           ref={pseudoMountainRef}
-          className='absolute bottom-0 left-0 w-full h-[30px] bg-black transform-gpu'
+          className='absolute bottom-0 left-0 w-full h-[30px] bg-black transform-gpu z-10'
           style={{ marginBottom: '-1px' }} // This eliminates any potential gap
         >
         </div>

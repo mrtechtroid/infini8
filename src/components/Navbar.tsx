@@ -1,12 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
-
   return (
-    <nav className="fixed w-full top-0 z-50 bg-black/30 backdrop-blur-sm border-b border-white/10">
+    <nav className={"fixed w-full top-0 z-50 bg-black/30 backdrop-blur-sm border-b border-white/10 ease-in-out" }>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Brand */}
