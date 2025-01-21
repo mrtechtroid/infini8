@@ -36,15 +36,15 @@ function EventCard({ name, prizePool, image,event_id }: EventCardProps) {
 
 export default function EventsPage() {
   return (
-    <div className="min-h-screen bg-red-600 relative">
+    <div className="min-h-screen bg-red-600 relative" style={{ backgroundImage: "url('/eventsbg.jpg')" }}>
       <CustomScrollbar/>
       <div className="container mx-auto px-6 py-12">
 
 
-        <section id="day1">
+        <section id="day1" style={{zIndex:-1}}>
           <div className="text-center mb-12">
             <div className="inline-block bg-[url('/events_bg.png')] bg-contain bg-no-repeat bg-center py-4 px-12">
-              <h1 className="text-3xl md:text-5xl font-['The Last Shuriken'] font-bold text-black">EVENTS</h1>
+              <h1 className="text-3xl md:text-5xl font-['The Last Shuriken'] font-bold text-black" style={{fontFamily:"The Last Shuriken"}}>EVENTS</h1>
             </div>
           </div>
 
@@ -60,7 +60,7 @@ export default function EventsPage() {
         </section>
 
 
-        <section id ="day2">
+        <section id ="day2" style={{zIndex:-1}}>
           <div className="w-full mb-12 flex justify-center">
               <img
                   src="/day2_event_divider.png"
@@ -82,7 +82,7 @@ export default function EventsPage() {
         </section>
 
 
-        <section id = "day3">
+        <section id = "day3" style={{zIndex:-1}}>
           <div className="w-full mb-12 flex justify-center">
               <img
                   src="/day3_event_divider.png"

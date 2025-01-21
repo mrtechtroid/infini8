@@ -4,51 +4,110 @@
         {
           "id": 1,
           "name": "Nukkad Natak",
-          "prizePool": 20000,
-          "rules": ["Maximum 10 participants per team", "Time limit: 20 minutes", "No use of microphones or props"],
-          "about": "A street play event highlighting social issues.",
+          "prizePool": 15000,
+          "rules": ["Time limit - Maximum 15 minutes from entry to exit.", "We can provide basic props if informed in advance.", "Instruments are allowed.","There’s no upper bound on team sizes.","Script submissions due by 1st Feb 2025. Please mail them to parvaaz@iiitb.ac.in.","The play should preferably be in Hindi or English.","The organizers have the power to disqualify any team based on any grounds they seem fit."],
+          "about": "Explore the vibrant world of street theater with 'NUKKAD NAATAK' This event invites you to harness the power of compelling performances to raise your voice and drive societal change.",
           "image": "/posters/Nukkad Natak.jpg",
           "spocs": [
-            { "name": "Rajesh Kumar", "phone": "9876543210" },
-            { "name": "Priya Sharma", "phone": "8765432109" }
-          ]
+            { "name": "Arjun Subhedar", "phone": "7028770201" },
+            { "name": "Chandrima Nandi", "phone": "9028872476" }
+          ],
+          "fee":150
         },
         {
           "id": 2,
-          "name": "Infinitude",
-          "prizePool": 25000,
+          "name": "Short Film Competition",
+          "prizePool": 13000,
           "rules": ["Individual participation", "Time limit: 15 minutes", "Creative presentations are encouraged"],
           "about": "A limitless competition showcasing your unique talents.",
-          "image": "/posters/Infinitude.jpg",
+          "image": "/posters/Short Film Competition.jpg",
           "spocs": [
-            { "name": "Ankita Singh", "phone": "9123456780" },
-            { "name": "Ravi Verma", "phone": "8123456790" }
-          ]
+            { "name": "Varshith Vattikuti", "phone": "9886987649" },
+            { "name": "Nathan Mathew Verghese", "phone": "8848839946" }
+          ],
+          "fee":0,
+          "pending":"fee,about,rules"
+        },
+        {
+          "id": 3,
+          "name": "CODM",
+          "prizePool": 4000,
+          "rules": ["Format: Single-Elimination Bracket", "Teams: 15-20 registered teams", "Objective: Compete to emerge as the ultimate champion through skill, strategy, and teamwork.","2.Tournament Structure","Initial Rounds: If more than 16 teams register, an initial qualifying round will be conducted to reduce the number of teams to 16.","Round 1 (16 teams): BO1 (Best of 1)","Quarterfinals (8 teams): BO1","Semifinals (4 teams): BO3 (Best of 3)","Finals (2 teams): BO3 (Best of 3)","3. Game Modes","Round 1 & Quarterfinals: Game modes will be randomly selected from the following: Frontline,Team Deathmatch (TDM),Domination,Hardpoint,Control","Semifinals: Game modes will be randomly selected from the following:,Hardcore Team Deathmatch (Hardcore TDM),Hardcore Domination,Hardcore Hardpoint,Search & Destroy (S&D)","Finals: Same as Semifinals: Random selection between Hardcore TDM, Hardcore Domination, Hardcore Hardpoint, and Search & Destroy (S&D).","4. Match Rules","1.Match Settings: Standard tournament rules for each game mode. Time limits, score limits, and other settings will adhere to competitive CODM standards.","2. Victory Conditions: BO1: The team that wins the single match advances. BO3: The team that wins 2 out of 3 matches advances.","3.Tiebreakers: In case of a tie (e.g., equal scores in Control or Domination), total kills across the match will decide the winner.","5. Code of Conduct","Fair Play: Cheating, hacking, or use of any third-party tools is strictly prohibited.","2. Sportsmanship: Players must respect opponents, teammates, and officials.", "3. Penalties: Violations of rules may result in match forfeiture, disqualification, or bans.","6. Additional Details","1. Team Requirements: Each team must consist of exactly 5 players. Substitutes are not allowed.","2. Communication: All teams must join the designated WhatsApp group for match updates and coordination.","3. Equipment: Players are responsible for ensuring their devices and internet connections are stable."],
+          "about": "Immerse yourself in the exhilarating IIITBs CODM World Championship, where teams engage in intense team deathmatches. Showcase your gaming prowess, secure kills for bonuses, and strive for victory in this thrilling championship. Get ready for the adrenaline-fueled action of strategic combat and teamwork!",
+          "image": "/posters/CODM.jpg",
+          "spocs": [
+            { "name": "Nikunj Mahajan", "phone": "9797959937" },
+            { "name": "Kunal Mittal", "phone": "6283322581" }
+          ],
+          "fee":0
+        },
+        {
+          "id": 4,
+          "name": "JAM",
+          "prizePool": 10000,
+          "rules": ["Individual participation", "Time limit: 5 minutes", "Original content only"],
+          "about": "JAM, originating from the renowned BBC radio show, is a captivating verbal challenge game where participants strive to speak for exactly one minute on a given topic without breaking three fundamental rules. The game has evolved into a delightful and light-hearted event, emphasizing wit, spontaneity, and linguistic agility. Reference -Please watch the first few rounds in the video below for reference. It’s a very fun and light-hearted event so we might have bonus points for entertaining speeches and challenges ;) https://www.youtube.com/watch?v=2Zu-2eNYmMM",
+          "image": "/posters/JAM.jpg",
+          "spocs": [
+            { "name": "Harsh Modani", "phone": "9380126399" },
+            { "name": "Vishruth Vijay", "phone": "9449960095" }
+          ],
+          "fee":0,
+          "pending":"rules"
+        },
+        {
+          "id": 5,
+          "name": "Clash Royale",
+          "prizePool": 4000,
+          "rules": ["Individual participation", "Time limit: 5 minutes", "Original content only"],
+          "about": "Dive into the thrilling world of Clash Royale in our E-Sports event! Experience the strategic rush of this vintage Supercell classic tower rush and strategy game. Showcase your gaming prowess, join the online competition, and compete for the top spot. It's your chance to enjoy the excitement of Clash Royale, prove your skills, and have a blast in this action-packed gaming showdown!",
+          "image": "/posters/Clash Royale.jpg",
+          "spocs": [
+            { "name": "Trivedh", "phone": "7207602910" },
+            { "name": "Amruth", "phone": "8106453075" }
+          ],
+          "fee":0,
+          "pending":"rules"
+        },
+        {
+          "id": 6,
+          "name": "FIFA",
+          "prizePool": 6000,
+          "rules": ["1. General Rules","Teams Selection:","No fictional or All-Star teams are allowed.","Players may select any regular-season teams included in the original game.","Both players can select the same team (e.g., Barcelona). In such cases:","The 'away' player must pick the Away Jersey for that team.","'Away' players are responsible for ensuring their jersey does not resemble the home team's jersey.","Any disputes regarding jersey selection will be resolved by a coin toss.","Match Type: Classic Kick-Off","FIFA Trainer: Off","Difficulty Level: Legendary","Game Speed: Normal","Half Length:4 minutes (Until Quarter-Finals) 6 minutes (Semi-Finals and Finals)","Semi-Finals will be played over two legs with away goals rule applied.","Finals and Third-Place matches will be single-leg matches.","Match Outcomes: In case of a tie, the match will proceed to Extra Time (Classic) and then Penalties if required.","2. Gameplay Rules","Controller Policy: Players may bring their own controllers. If a controller is defective, the player can pause the game with the opponent’s approval and notify the referee.","Pausing: Players must request their opponent's permission before pausing the game.Pausing is only allowed with the opponent's approval.","Formations and Tactics: All formations and tactics must be decided before the start of the match.Players will be given 2 minutes to finalize their setup.","3. Tournament Format","Knock-Out Rounds: Each round will be a single-elimination round.","Third-Place Match: A one-leg match will determine the third-place winner.","Disqualification: Players who fail to show up at their allotted time without justification will be disqualified.","4. Disputes and Referee Decisions: Any disputes during the game will be resolved by the referee.The referee’s decision is final.","5. Miscellaneous Rules: Rule Changes: The rules are subject to change at the discretion of the organizers."],
+          "about": "Welcome to FIFA – a thrilling 11v11 football spectacle where the beauty of the game meets strategic brilliance! In this premier football simulation, it's not just about goals; it's about crafting a winning strategy with your unique squad. Choose players with specialized skills, coordinate plays, and outsmart your opponents. In FIFA, tactics take center stage, elevating your gameplay beyond simple ball control. Experience the essence of football where every move counts, and victory belongs to the tactically astute!",
+          "image": "/posters/FIFA.jpg",
+          "spocs": [
+            { "name": "Pratham Shetty", "phone": "8310804600" },
+            { "name": "Ishaan Sodhi", "phone": "70097 55769" }
+          ],
+          "fee":0,
+          "pending":"rules"
         }
       ],
       "day2": [
         {
-          "id": 3,
-          "name": "Stage Play",
-          "prizePool": 20000,
-          "rules": ["Team size: 5-15 participants", "Time limit: 30 minutes", "Original scripts are encouraged"],
-          "about": "A dramatic competition to showcase your acting skills.",
-          "image": "/posters/Stage Play.jpg",
+          "id": 6,
+          "name": "Ancient Echoes",
+          "prizePool": 8000,
+          "rules": ["Format: Single-Elimination Bracket", "Teams: 15-20 registered teams", "Objective: Compete to emerge as the ultimate champion through skill, strategy, and teamwork.","2.Tournament Structure","Initial Rounds: If more than 16 teams register, an initial qualifying round will be conducted to reduce the number of teams to 16.","Round 1 (16 teams): BO1 (Best of 1)","Quarterfinals (8 teams): BO1","Semifinals (4 teams): BO3 (Best of 3)","Finals (2 teams): BO3 (Best of 3)","3. Game Modes","Round 1 & Quarterfinals: Game modes will be randomly selected from the following: Frontline,Team Deathmatch (TDM),Domination,Hardpoint,Control","Semifinals: Game modes will be randomly selected from the following:,Hardcore Team Deathmatch (Hardcore TDM),Hardcore Domination,Hardcore Hardpoint,Search & Destroy (S&D)","Finals: Same as Semifinals: Random selection between Hardcore TDM, Hardcore Domination, Hardcore Hardpoint, and Search & Destroy (S&D).","4. Match Rules","1.Match Settings: Standard tournament rules for each game mode. Time limits, score limits, and other settings will adhere to competitive CODM standards.","2. Victory Conditions: BO1: The team that wins the single match advances. BO3: The team that wins 2 out of 3 matches advances.","3.Tiebreakers: In case of a tie (e.g., equal scores in Control or Domination), total kills across the match will decide the winner.","5. Code of Conduct","Fair Play: Cheating, hacking, or use of any third-party tools is strictly prohibited.","2. Sportsmanship: Players must respect opponents, teammates, and officials.", "3. Penalties: Violations of rules may result in match forfeiture, disqualification, or bans.","6. Additional Details","1. Team Requirements: Each team must consist of exactly 5 players. Substitutes are not allowed.","2. Communication: All teams must join the designated WhatsApp group for match updates and coordination.","3. Equipment: Players are responsible for ensuring their devices and internet connections are stable."],
+          "about": "Get ready to channel your inner cultural wizard! 'Ancient Echos' is a fun and challenging quiz that tests your knowledge of Indian culture, yoga, and spirituality. Compete with friends and see how well you know our ancient Indian culture.",
+          "image": "/posters/Ancient Echoes.jpg",
           "spocs": [
-            { "name": "Meera Kapoor", "phone": "7012345678" },
-            { "name": "Sahil Yadav", "phone": "6012345678" }
-          ]
+            { "name": "Amar Pratap Singh", "phone": "8197367978" },
+            { "name": "Sriram Srikanth", "phone": "6362792963" }
+          ],
+          "pending":"rules"
         },
         {
-          "id": 4,
-          "name": "Poetry",
-          "prizePool": 15000,
+          "id": 6,
+          "name": "JAM",
+          "prizePool": 10000,
           "rules": ["Individual participation", "Time limit: 5 minutes", "Original content only"],
           "about": "An event for poetry enthusiasts to share their creativity.",
-          "image": "/posters/Poetry.jpg",
+          "image": "/posters/JAM.jpg",
           "spocs": [
-            { "name": "Aditi Rao", "phone": "9876543120" },
-            { "name": "Rohan Nair", "phone": "8765432190" }
+            { "name": "Harsh Modani", "phone": "9380126399" },
+            { "name": "Vishruth Vijay", "phone": "9449960095" }
           ]
         }
       ],
