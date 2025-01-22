@@ -6,8 +6,20 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function CustomScrollbar() {
   const [activeSection, setActiveSection] = useState("day1");
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Handle responsive layout
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Check initial screen size
+    checkMobile();
+
+    // Add resize listener
+    window.addEventListener('resize', checkMobile);
+
     // Register the ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
   
@@ -16,17 +28,16 @@ export default function CustomScrollbar() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // Update the active section state when a section is in view
             setActiveSection(entry.target.id);
           }
         });
       },
       {
-        threshold: 0.3, // Trigger when section is 50% visible
+        threshold: 0.3,
       }
     );
   
-    // Observe all sections with a "section" tag
+    // Observe all sections
     const sections = document.querySelectorAll("section");
     sections.forEach((section) => {
       observer.observe(section);
@@ -34,22 +45,22 @@ export default function CustomScrollbar() {
   
     // GSAP ScrollTrigger for scroll indicator
     gsap.to(".scroll-indicator", {
-      height: "100%", // Animate the height of the indicator
+      height: "100%",
       scrollTrigger: {
         trigger: "body",
         start: "top top",
         end: "bottom bottom",
-        scrub: true, // Smooth syncing with scroll
+        scrub: true,
       },
     });
   
     // Cleanup
     return () => {
-      sections.forEach((section) => observer.unobserve(section)); // Unobserve sections
-      observer.disconnect(); // Disconnect observer
+      window.removeEventListener('resize', checkMobile);
+      sections.forEach((section) => observer.unobserve(section));
+      observer.disconnect();
     };
   }, []);
-  
 
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
@@ -63,10 +74,11 @@ export default function CustomScrollbar() {
 
   return (
     <div
-      className="fixed left-0 top-0 h-full bg-red-600 w-16 bg-background border-r flex flex-col items-center justify-center gap-8"
+      className={`fixed left-0 top-0 h-full bg-red-600 border-r flex flex-col items-center justify-center gap-4 md:gap-8 transition-all duration-300
+        ${isMobile ? 'w-12 md:w-16' : 'w-16'}`}
       style={{
         backgroundImage: "url('/eventsbg.jpg')",
-        zIndex: 10, // Ensure the container is above other elements
+        zIndex: 10,
       }}
     >
       {/* Scroll Indicator */}
@@ -81,8 +93,8 @@ export default function CustomScrollbar() {
           key={day}
           onClick={() => scrollToSection(day)}
           style={{
-            width: "280px",
-            height: "80px",
+            width: isMobile ? "200px" : "280px",
+            height: isMobile ? "60px" : "80px",
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
@@ -92,10 +104,11 @@ export default function CustomScrollbar() {
             position: "relative",
             overflow: "hidden",
             borderRadius: "8px",
-            zIndex: 4, // Ensure buttons are above the scrollbar indicator
+            zIndex: 4,
           }}
-          className={`relative z-10 w-24 h-10 rounded-md flex items-center justify-start pl-4
+          className={`relative z-10 rounded-md flex items-center justify-start pl-2 md:pl-4
            transition-all duration-200 group overflow-hidden
+           ${isMobile ? 'w-20 h-8 md:w-24 md:h-10' : 'w-24 h-10'}
            ${
              activeSection === day
                ? "bg-yellow-600 text-white"
@@ -105,7 +118,7 @@ export default function CustomScrollbar() {
           {/* Left black stripes */}
           <div
             style={{
-              width: "20px",
+              width: isMobile ? "15px" : "20px",
               height: "100%",
               backgroundColor: "#080033",
               display: "flex",
@@ -132,36 +145,40 @@ export default function CustomScrollbar() {
               flexDirection: "row",
               justifyContent: "center",
               alignItems: "center",
-              gap: "12px",
-              padding: "0 15px",
+              gap: isMobile ? "8px" : "12px",
+              padding: isMobile ? "0 10px" : "0 15px",
             }}
           >
             <div
               className="font-['The Last Shuriken']"
               style={{
-                fontSize: "24px",
+                fontSize: isMobile ? "18px" : "24px",
                 textTransform: "uppercase",
                 fontFamily: "The Last Shuriken",
-                color:"black"
+                color: "black"
               }}
             >
-              {`${day}`}
+              {day}
             </div>
           </div>
 
           {/* Right red divider */}
           <div
             style={{
-              width: "4px",
+              width: isMobile ? "3px" : "4px",
               height: "100%",
               backgroundColor: "#DC2626",
             }}
           ></div>
-          <div className="absolute left-[120%] top-1/2 -translate-y-1/2 px-2 py-1 rounded bg-popover text-popover-foreground opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 whitespace-nowrap">
+          
+          {/* Tooltip */}
+          <div className={`absolute top-1/2 -translate-y-1/2 px-2 py-1 rounded bg-popover text-popover-foreground 
+            opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 whitespace-nowrap
+            ${isMobile ? 'left-[100%] ml-2' : 'left-[120%]'}`}>
             Go to Day {day.replace("day", "")}
           </div>
         </button>
       ))}
     </div>
   );
-}
+};
