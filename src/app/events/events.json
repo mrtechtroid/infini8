@@ -17,18 +17,18 @@
         },
         {
           "id": 2,
-          "name": "Short Film Competition",
+          "name": "Cut to the Chase",
           "prizePool": 13000,
           "rules": ["Individual participation", "Time limit: 15 minutes", "Creative presentations are encouraged"],
-          "about": "A limitless competition showcasing your unique talents.",
-          "image": "/posters/Short Film Competition.jpg",
+          "about": "A picture speaks a thousand words, a film is a million pictures… do the math! Show off your writing, acting and editing prowess to influence the masses with your short yet impactful film.",
+          "image": "/posters/Cut to the Chase.jpg",
           "spocs": [
             { "name": "Varshith Vattikuti", "phone": "9886987649" },
             { "name": "Nathan Mathew Verghese", "phone": "8848839946" }
           ],
           "fee":0,
-          "registration_form":"https://forms.gle/q9R4e1TcHewW3CR99",
-          "pending":"fee,about,rules,form"
+          "registration_form":"https://docs.google.com/forms/d/e/1FAIpQLSdU8y0o_62fZ_RpcL50Ht-7Ho6RtuYXHCxYpkzPc7O3xL4nbw/viewform?usp=sf_link",
+          "pending":"rules"
         },
         {
           "id": 3,
@@ -63,7 +63,7 @@
           "id": 5,
           "name": "Clash Royale",
           "prizePool": 4000,
-          "rules": ["Individual participation", "Time limit: 5 minutes", "Original content only"],
+          "rules": ["All participants must be present at the venue at the specified time.Failure to attend without prior notice will result in disqualification.", "The first round will follow a tournament-style format. Subsequent rounds will transition to knockouts, depending on the number of participants.", "All matches will be conducted in a standard 1v1 format. Different game modes will be used, which will be announced on the day of the tournament.","To ensure fair play all the cards which are above level 11 are capped to level 11 (Tournament Standard)","No cheating, account sharing, or use of any unauthorized third-party software. Players caught violating fair play rules will be immediately disqualified.","Players are responsible for ensuring a stable internet connection. If a player disconnects during a match, the game will continue, and the result will stand.","Players are responsible for the maintenance of their devices. If a device fails during a match, it will not be restarted.","In the event of a tie, the following criteria will determine the rankings (in order of priority):","1. Number of wins","2. Number of crowns earned","3. Least Number of loses","For any issues, participants should contact the designated Single Point of Contact (SPOC). The SPOC’s decision will be final and binding."],
           "about": "Dive into the thrilling world of Clash Royale in our E-Sports event! Experience the strategic rush of this vintage Supercell classic tower rush and strategy game. Showcase your gaming prowess, join the online competition, and compete for the top spot. It's your chance to enjoy the excitement of Clash Royale, prove your skills, and have a blast in this action-packed gaming showdown!",
           "image": "/posters/Clash Royale.jpg",
           "spocs": [
@@ -71,8 +71,7 @@
             { "name": "Amruth", "phone": "8106453075" }
           ],
           "fee":0,
-          "registration_form":"https://forms.gle/W4potxKV1zwgG3Xk8",
-          "pending":"rules"
+          "registration_form":"https://forms.gle/W4potxKV1zwgG3Xk8"
         },
         {
           "id": 6,
@@ -94,7 +93,7 @@
           "id": 7,
           "name": "Ancient Echoes",
           "prizePool": 8000,
-          "rules": ["Format: Single-Elimination Bracket", "Teams: 15-20 registered teams", "Objective: Compete to emerge as the ultimate champion through skill, strategy, and teamwork.","2.Tournament Structure","Initial Rounds: If more than 16 teams register, an initial qualifying round will be conducted to reduce the number of teams to 16.","Round 1 (16 teams): BO1 (Best of 1)","Quarterfinals (8 teams): BO1","Semifinals (4 teams): BO3 (Best of 3)","Finals (2 teams): BO3 (Best of 3)","3. Game Modes","Round 1 & Quarterfinals: Game modes will be randomly selected from the following: Frontline,Team Deathmatch (TDM),Domination,Hardpoint,Control","Semifinals: Game modes will be randomly selected from the following:,Hardcore Team Deathmatch (Hardcore TDM),Hardcore Domination,Hardcore Hardpoint,Search & Destroy (S&D)","Finals: Same as Semifinals: Random selection between Hardcore TDM, Hardcore Domination, Hardcore Hardpoint, and Search & Destroy (S&D).","4. Match Rules","1.Match Settings: Standard tournament rules for each game mode. Time limits, score limits, and other settings will adhere to competitive CODM standards.","2. Victory Conditions: BO1: The team that wins the single match advances. BO3: The team that wins 2 out of 3 matches advances.","3.Tiebreakers: In case of a tie (e.g., equal scores in Control or Domination), total kills across the match will decide the winner.","5. Code of Conduct","Fair Play: Cheating, hacking, or use of any third-party tools is strictly prohibited.","2. Sportsmanship: Players must respect opponents, teammates, and officials.", "3. Penalties: Violations of rules may result in match forfeiture, disqualification, or bans.","6. Additional Details","1. Team Requirements: Each team must consist of exactly 5 players. Substitutes are not allowed.","2. Communication: All teams must join the designated WhatsApp group for match updates and coordination.","3. Equipment: Players are responsible for ensuring their devices and internet connections are stable."],
+          "rules": ["This is a solo quiz which consists of questions from Yoga and Indian culture.","Participants must join the WhatsApp group to be eligible to participate and stay updated on the details of the event.","To ensure a smooth start, participants must arrive at the venue 10 minutes ahead of the scheduled time.","Round 1: MCQ Quiz on online platform","Several MCQ questions will be displayed and the score depends on both speed and accuracy.","Top 30 participants will advance to round 2","Round 2: Pen-Paper questionnaire","The second round involves solving a pen-paper questionnaire that may include crosswords, fill in the blanks, passage comprehension, and word searches.","Scoring criteria remains the same as round 1.","Top 3 performers will win the event.","Rewards:","1st place - ₹3500","2nd place - ₹2500","3rd place - ₹1000","Usage of any electronic gadgets for seeking answers or asking for external help will lead to direct disqualification.","The decision of SPOC is final in case of any disputes.","The rules are subject to change at the discretion of the organizers."],
           "about": "Get ready to channel your inner cultural wizard! 'Ancient Echos' is a fun and challenging quiz that tests your knowledge of Indian culture, yoga, and spirituality. Compete with friends and see how well you know our ancient Indian culture.",
           "image": "/posters/Ancient Echoes.jpg",
           "spocs": [
@@ -102,8 +101,7 @@
             { "name": "Sriram Srikanth", "phone": "6362792963" }
           ],
           "fee":0,
-          "registration_form":"https://forms.gle/zgUc9DN2JZqoqvQ89",
-          "pending":"rules"
+          "registration_form":"https://forms.gle/zgUc9DN2JZqoqvQ89"
         },
         {
           "id": 8,
@@ -137,7 +135,7 @@
           "id": 10,
           "name": "Ramp It Up",
           "prizePool": 12000,
-          "rules": ["Requirements:","1. Participants are required to bring their own gaming devices and headsets.","2. All participants must adhere to the tournament schedule and arrive on time for check-in.","3. Players must ensure their gaming equipment is fully charged and properly working.","4. Participants must agree to abide by the tournament rules and regulations, including fair play and sportsmanship guidelines.","Rules and Guidelines General Guidelines:","1. By participating, participants agree to abide by the rules.","2. Event details are subject to change without prior notice.","3. Organizers have the final authority on all matters, including the discretion to disqualify any participant or team without justification.","Specific Rules:","1. Cheating, hacking, or use of exploits will not be tolerated.","2. Respectful behaviour towards other players and organizers is mandatory.","3. Any disputes will be resolved by the event head, whose decisions are final."],
+          "rules": ["You can form a team of 2 or take part individually.","The time limit for every team/individual would be 1 minute (including setup and performance both).","Negative marking if participants exceed the time limit.","Vulgarity is strongly prohibited. Any form of obscenity will lead to debarring the team/individual from the contest.","Teams/individuals will be judged on costumes, walking stance, attitude, hairstyle, and overall presentation.","The decision of the judges will be final and binding.","All costumes are permitted, which maintain decency, including original costumes and fashion designs.","Purchased, professionally made, or rented costumes are permitted.","Results Announcement: On our Instagram handle https://www.instagram.com/infin8_iiitb/"],
           "about": "Get ready to own the spotlight at our college's fashion show in the Infin8! 'Ramp It Up ' is your chance to showcase your unique style and make a statement on the runway. Whether you're a trendsetter or just love fashion, this is your moment to shine. Join us for an evening of glamour, creativity, and runway magic – where style meets the spotlight!",
           "image": "/posters/Ramp It Up.jpg",
           "spocs": [
@@ -146,7 +144,7 @@
           ],
           "fee":150,
           "registration_form":"https://forms.gle/JoCt2aMubhvX19aZ7",
-          "pending":"rules"
+          "pending":"fee 150 or 200"
         },
         {
           "id": 11,
@@ -188,8 +186,7 @@
             { "name": "Ayush Gupta", "phone": "8884803648" }
           ],
           "fee":0,
-          "registration_form":"https://forms.gle/q9R4e1TcHewW3CR99",
-          "pending":"link"
+          "registration_form":["https://forms.gle/E7yCZeejPYKScwW16","https://forms.gle/9zU6MT7DhU7hwNh87"]
         },
         {
           "id": 14,
@@ -241,16 +238,30 @@
           "image": "/posters/Smash Carts.jpg",
           "spocs": [
             { "name": "Aditya Reddy", "phone": "9392417242" },
-            {"name:":"Akul Anhith","phone":""}
+            {"name:":"Akul Anhith","phone":"9491259683"}
           ],
-          "fee":250,
-          "registration_form":"https://forms.gle/qAxbSJWkvwDT8ghr6",
-          "pending":"number"
+          "fee":0,
+          "registration_form":"https://forms.gle/qAxbSJWkvwDT8ghr6"
+        },
+        {
+          "id": 18,
+          "name": "Trapped in Tangents",
+          "prizePool": 5000,
+          "rules": ["Team Format:"," Gather your crew of 3 players per team and gear up to compete against the best. Teamwork, strategy, and quick reflexes are the keys to victory!","If time permits , it will be a round robin format , else it will be a knockout format","Reward:","1st Prize ₹2500","2nd Prize ₹1500"],
+          "about": "Prepare for a rollercoaster of mathematical excitement with Trapped in Tangents! This is not your average quiz; it's a high-energy, fun-filled competition designed to engage participants in multiple thrilling rounds of math trivia. Whether you're a seasoned math whiz or just enjoy the thrill of numbers, this contest promises a riveting experience for all.",
+          "image": "/posters/Trapped in Tangents.jpg",
+          "spocs": [
+            { "name": "Kaustubh Manda", "phone": "8142890001" },
+            {"name:":"Arnav Orungaty","phone":"9049005484"}
+          ],
+          "fee":0,
+          "registration_form":"https://docs.google.com/forms/d/e/1FAIpQLSe00GrDsJNnKxSh-l8sPpM95mOZdyxRIPcF-HbhCrJhlbtHdw/viewform?usp=sf_link",
+          "pending":"rules"
         }
       ],
       "day3": [
         {
-          "id": 18,
+          "id": 19,
           "name": "Valorant",
           "prizePool": 6000,
           "rules": ["Each team must consist of 5 players and can optionally have 1 substitute.", "All team leaders must join the designated WhatsApp group before the matches.All official announcements, schedules, and updates will be communicated through WhatsApp.", "Ensure you have the latest version of the game installed before the match day.No delays will be entertained on the match day due to version issues.","All matches, except for Finals and Semi-Finals (depending on the total number of teams), willfollow a knockout format.","Preliminary Rounds, Quarterfinals, and Semifinals: Best-of-3.","Finals: Best-of-5.","Matches will feature a map veto system.Teams will alternate in banning and picking maps as per the standard map veto procedure.","All weapons, agents, and abilities are allowed unless currently disabled in Ranked Mode.","Any form of cheating, abuse, or exploitation of bugs/glitches will result in immediatedisqualification of the team.Referees or tournament administrators will monitor the matches for compliance.","Teams are expected to join the match lobby at least 15 minutes prior to the scheduled start time.A maximum grace period of 5 minutes will be allowed for a late team; failure to join within thistime will result in a forfeit.","Finals will be conducted offline at the IIITB campus. If there is a special case, please contact theorganizers.","Substitutes can only be used before the match begins.Mid-match substitutions are not allowed.","Any disputes or issues during the tournament must be reported to the organizers immediately.The decision of the organizers will be final and binding.","Players are expected to maintain a professional and respectful demeanor towards opponents,teammates, and organizers.Toxic behavior, harassment, or offensive language will lead to penalties or disqualification.","Matches may be streamed or spectated by authorized personnel.Players are not allowed to stream their matches without prior approval from the organizers.","In case of severe technical issues (e.g., server crash), the match may be paused or restarted atthe organizers' discretion.Players are responsible for ensuring their own hardware and network readiness.","Depending on the average rank of the team, you may get a bye in the first round."],
@@ -264,22 +275,21 @@
           "registration_form":"https://forms.gle/ZmzRa8HADVPHVmoa6"
         },
         {
-          "id": 19,
+          "id": 20,
           "name": "Brush Up",
           "prizePool": 8000,
-          "rules": ["Each team must consist of 5 players and can optionally have 1 substitute.", "All team leaders must join the designated WhatsApp group before the matches.All official announcements, schedules, and updates will be communicated through WhatsApp.", "Ensure you have the latest version of the game installed before the match day.No delays will be entertained on the match day due to version issues.","All matches, except for Finals and Semi-Finals (depending on the total number of teams), willfollow a knockout format.","Preliminary Rounds, Quarterfinals, and Semifinals: Best-of-3.","Finals: Best-of-5.","Matches will feature a map veto system.Teams will alternate in banning and picking maps as per the standard map veto procedure.","All weapons, agents, and abilities are allowed unless currently disabled in Ranked Mode.","Any form of cheating, abuse, or exploitation of bugs/glitches will result in immediatedisqualification of the team.Referees or tournament administrators will monitor the matches for compliance.","Teams are expected to join the match lobby at least 15 minutes prior to the scheduled start time.A maximum grace period of 5 minutes will be allowed for a late team; failure to join within thistime will result in a forfeit.","Finals will be conducted offline at the IIITB campus. If there is a special case, please contact theorganizers.","Substitutes can only be used before the match begins.Mid-match substitutions are not allowed.","Any disputes or issues during the tournament must be reported to the organizers immediately.The decision of the organizers will be final and binding.","Players are expected to maintain a professional and respectful demeanor towards opponents,teammates, and organizers.Toxic behavior, harassment, or offensive language will lead to penalties or disqualification.","Matches may be streamed or spectated by authorized personnel.Players are not allowed to stream their matches without prior approval from the organizers.","In case of severe technical issues (e.g., server crash), the match may be paused or restarted atthe organizers' discretion.Players are responsible for ensuring their own hardware and network readiness.","Depending on the average rank of the team, you may get a bye in the first round."],
-          "about": "Embark on a thrilling adventure with IIITBs Valorant Showdown, a battleground where teams collide in intense battles. Demonstrate your gaming prowess, securing kills for bonuses as you strive for triumph in this gripping showdown. Brace yourself for an adrenaline-fueled experience of strategic combat and seamless teamwork, as every move counts in this electrifying gaming spectacle!",
+          "rules": ["Basic materials like a drawing sheet, brushes, pencils,eraser, paint palette, etc will be provided.But it is recommended that students bring their own medium for painting as only limited number of acrylic/poster paints and brushes will be provided.","Participants may choose either painting, sketching, or both, based on their interest and expertise.","The same amount of time will be allocated to all, even if both categories are chosen for participation.","The artwork must be created at the venue and not beforehand.","Few on-spot registrations are available for IIITB students.","Non-students must register beforehand to ensure participation."],
+          "about": "This is the painting and sketching competition. Inviting artists of all ages and skill levels to showcase their talent and express their imagination. Any style of art is welcomed, we just want you all to have fun! ",
           "image": "/posters/Brush Up.jpg",
           "spocs": [
             { "name": "Metlapalli Ragini", "phone": "8341774899" },
             { "name": "Saniya Ismail", "phone": "8976224962" }
           ],
           "fee":0,
-          "registration_form":"https://forms.gle/q9R4e1TcHewW3CR99",
-          "pending":"about,rules,link"
+          "registration_form":"https://docs.google.com/forms/d/e/1FAIpQLSf8g5JuEyL-54ekRHIIC82QkM3lWDq3UAu1ZFql_q1-T_7d5Q/viewform?usp=sf_link"
         },
         {
-          "id": 20,
+          "id": 21,
           "name": "Nritta",
           "prizePool": 8000,
           "rules": ["Performance Duration: Each performance should last between 3 to 5 minutes.","Participants: Only college students are allowed to participate.","Dance Styles: All dance styles, including fusion, are welcome.","Props Usage: Props that litter the stage, such as colors or confetti are strictly prohibited. If you plan to use props, prior approval is required.","Soundtrack Submission: Participants must have their tracks (in mp3 format) ready by 5th February 2025. Mode of submission will be informed at that time.","Conduct: Performances must maintain decorum, with no vulgarity allowed."],
@@ -293,10 +303,10 @@
           "registration_form":"https://forms.gle/CQn3aYZCX8uwz6Ug6"
         },
         {
-          "id": 21,
+          "id": 22,
           "name": "Infinitude",
           "prizePool": 30000,
-          "rules": ["Team Size : 5 to 20 members"],
+          "rules": ["Team Size: A team should comprise of at least 5 members and at most 20 members.","Performance: Each team will be given 7 minutes as performance time and 2 minutes of setup time. Vulgarity is not allowed within performances.","Participants: All performers must be college students and proof in the form of an official college ID card must be with each participant.","Style: All dance styles, including any kind of fusion, is permitted.","Props: If a team employs any kind of props, prior approval would be required. Props that may potentially litter the stage, such as colors, flowers etc, are strictly prohibited. In case of requirements such as digital backdrop, any specific lighting setup, they need to be provided beforehand.","Music: Soundtrack to be provided in .mp3 format, latest by 5th February, through the prescribed mode of submission, that will be intimated later."],
           "about": "Step into the cultural tapestry of Infinitude, a group dance competition that adds a dynamic flair to our festivities! Embrace the opportunity with a nominal registration fee and the allure of enticing prizes for the top performers. Let the rhythm of your collective expression become a highlight of our cultural celebration!",
           "image": "/posters/Infinitude.jpg",
           "spocs": [
@@ -304,11 +314,10 @@
             { "name": "Matthew Joseph", "phone": "8451910312" }
           ],
           "fee":800,
-          "registration_form":"https://forms.gle/B2TnQQ1ewGapSJGn7",
-          "pending":"rules"
+          "registration_form":"https://forms.gle/B2TnQQ1ewGapSJGn7"
         },
         {
-          "id": 22,
+          "id": 23,
           "name": "League of Fanatics",
           "prizePool": 12000,
           "rules": ["Round 1: Choose Your Track","1.Anime & Sports (Who believe Naruto run is peak athletic form)","2.Movies & Games (who've finished more fictional storylines than conversations)","3.Music & Books (who sing theme songs in the shower)","Top 4 teams from each category advance! Your parents still won't be impressed, but we will be.","Round 2: The Mashup","12 teams split into 2 groups. Time to prove you didn't waste all those hours watching 'just one more episode.' Top 3 from each group advances.","Final Round: The Ultimate Showdown 6 teams battle it out to determine who has the most useless knowledge.","Reward:","1st Prize ₹5000","2nd Prize ₹4000","3rd Prize ₹3000"],
@@ -319,8 +328,7 @@
             { "name": "Harsh Modi", "phone": "9660831133" }
           ],
           "fee":800,
-          "registration_form":"https://forms.gle/oeJU4dYXo6is9zNN8",
-          "pending":"rules"
+          "registration_form":"https://forms.gle/oeJU4dYXo6is9zNN8"
         }
       ]
     }
