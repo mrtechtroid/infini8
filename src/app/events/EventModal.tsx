@@ -57,10 +57,6 @@ export default function EventModal({ isOpen, onClose, event }: EventModalProps) 
                   className="object-cover w-full h-full"
                 />
                 {/* Corner decorations */}
-                <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-red-600" />
-                <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-red-600" />
-                <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-red-600" />
-                <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-red-600" />
               </div>
             </div>
 
@@ -75,11 +71,11 @@ export default function EventModal({ isOpen, onClose, event }: EventModalProps) 
                     Prize Pool: ₹{event.prizePool.toLocaleString()}
                   </p>
                 </div>
-                <div className="p-4 bg-gray-800 rounded-lg border border-red-800">
+                {event.fee!=0?<div className="p-4 bg-gray-800 rounded-lg border border-red-800">
                   <p className="text-lg font-semibold text-red-500">
                     Registration Fee: ₹{event.fee.toLocaleString()}
                   </p>
-                </div>
+                </div>:null}
               </div>
 
               {/* Action Buttons */}
@@ -99,8 +95,8 @@ export default function EventModal({ isOpen, onClose, event }: EventModalProps) 
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 px-6 py-3 bg-gray-800 text-gray-100 rounded-lg hover:bg-gray-700 transition-colors font-semibold border border-red-800"
                 >
-                  <Download className="w-5 h-5" />
-                  Download Rules PDF
+                  <ExternalLink className="w-5 h-5" />
+                  View Event Rules
                 </a>
               </div>
 
