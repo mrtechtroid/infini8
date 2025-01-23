@@ -6,11 +6,6 @@
   --background: #ffffff;
   --foreground: #171717;
 }
-/* Add smooth scrolling to the html element */
-html {
-  scroll-behavior: smooth;
-}
-
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -113,12 +108,12 @@ body {
 /* this is for the neon about building flicker */
 .neon-flicker {
   animation: neonFlicker 1.5s infinite alternate-reverse;
-  filter: drop-shadow(0 0 5px #4ae5ac) drop-shadow(0 0 50px #4ae5ac);
+  filter: drop-shadow(0 0 5px #ff4933) drop-shadow(0 0 10px #ff4933);
 }
 
 @keyframes neonFlicker {
   0%, 18%, 22%, 25%, 53%, 57%, 100% {
-    filter: drop-shadow(0 0 5px #4ae5ac) drop-shadow(0 0 50px #4ae5ac);
+    filter: drop-shadow(0 0 5px #ff4933) drop-shadow(0 0 10px #ff4933);
   }
   20%, 24%, 55% {
     filter: none;
