@@ -1,6 +1,5 @@
 "use client"
-
-import { useState, useEffect } from 'react';
+import { useState,useEffect } from "react";
 import DayCard from "@/components/DayCard";
 import events from "./events.json";
 import "../globals.css";
@@ -162,12 +161,15 @@ export default function EventsPage() {
 
         <section id="day2">
           <div className="w-full mb-12 flex justify-center">
-            <img
-              src="/day2_event_divider.png"
-              alt="Day 2 divider"
-              className="transform hover:scale-105 transition-transform duration-300"
-            />
+              <img
+                  src="/day2_event_divider.png"
+                  alt="Day 2 divider"
+              />
           </div>
+
+
+          
+          {/* Day 2 Divider and Section */}
           <div className="mb-24">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               <DayCard dayNumber="2" />
@@ -191,12 +193,13 @@ export default function EventsPage() {
 
         <section id="day3">
           <div className="w-full mb-12 flex justify-center">
-            <img
-              src="/day3_event_divider.png"
-              alt="Day 3 divider"
-              className="transform hover:scale-105 transition-transform duration-300"
-            />
+              <img
+                  src="/day3_event_divider.png"
+                  alt="Day 3 divider"
+              />
           </div>
+
+          {/* Day 3 Divider and Section */}
           <div className="mb-24">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               <DayCard dayNumber="3" />
@@ -216,7 +219,9 @@ export default function EventsPage() {
               ))}
             </div>
           </div>
-        </section>
+        </section> 
+
+
       </div>
     </div>
   );

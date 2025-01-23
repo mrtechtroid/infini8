@@ -51,14 +51,10 @@ export default function AboutKoi() {
   }, [])
 
   return (
-    <section 
+    <section
       ref={sectionRef}
-      className="relative min-h-screen w-full bg-[#0a0a15] overflow-hidden py-20"
+      className="relative min-h-screen w-full bg-[#1E1F44] overflow-hidden py-20"
     >
-      {/* Stars Background */}
-      <div id="stars"></div>
-      <div id="stars2"></div>
-      <div id="stars3"></div>
       <div className="container relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="relative w-full lg:w-1/2">
