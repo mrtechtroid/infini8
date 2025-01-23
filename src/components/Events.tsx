@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
+import Image from 'next/image'
 gsap.registerPlugin(ScrollTrigger)
 
 const events = [
@@ -46,18 +46,15 @@ export default function Events() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gray-900 text-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-12 text-center">Festival Events</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {events.map((event, index) => (
-            <div key={index} className="billboard bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-              <h3 className="text-2xl font-semibold mb-2">{event.title}</h3>
-              <p className="text-gray-400 mb-2">{event.time}</p>
-              <p className="text-gray-400">{event.location}</p>
-            </div>
-          ))}
-        </div>
+    <section ref={sectionRef} className="py-20 bg-gray-900 text-white w-full h-full bg-red-900 bg-[url('/eventsbg.jpg')] relative">
+      <Image src="/sushi.svg" alt="Background pattern" width={1000} height={1000} className="absolute right-[0%] bottom-[0%] w-[90%] h-[90%]" />
+      <div className="container mx-auto px-4 absolute left-[4%] top-[10%] w-[50%] h-[90%]">
+        <h2 className="text-4xl font-bold mb-12" style={{fontFamily:"The Last Shuriken"}}>Events</h2>
+        <span>
+          <p className="text-xl text-gray-300 leading-relaxed">
+            Infin8 is a three-day extravaganza filled with vibrant shows, performances, competitions, games, and stalls.
+          </p>
+        </span>
       </div>
     </section>
   )

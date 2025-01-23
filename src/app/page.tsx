@@ -3,22 +3,23 @@
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import Hero from "../components/Hero"
 import About from "../components/About"
 import Events from "../components/Events"
 import Footer from "../components/Footer"
 import CherryBlossoms from "../components/CherryBlossoms"
 import Navbar from "@/components/Navbar"
-// import GalleryScene from "@/components/GalleryScene"
+import GalleryScene from "@/components/GalleryScene"
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const sections = gsap.utils.toArray<HTMLElement>("section")
-
+    const sections = gsap.utils.toArray<HTMLElement>("section");
+  
     const ctx = gsap.context(() => {
       sections.forEach((section, i) => {
         ScrollTrigger.create({
@@ -26,9 +27,13 @@ export default function Home() {
           start: "top top",
           pin: true,
           pinSpacing: false,
-          snap: 1,
-        })
-
+          snap: {
+            snapTo: 1, // snapping to the closest section
+            duration: 0.5, // snapping duration (faster snap)
+            ease: "power1.out", // smooth easing for snap
+          },
+        });
+  
         if (i > 0) {
           gsap.fromTo(
             section,
@@ -44,14 +49,15 @@ export default function Home() {
                 end: "center center",
                 toggleActions: "play none none reverse",
               },
-            },
-          )
+            }
+          );
         }
-      })
-    }, containerRef)
-
-    return () => ctx.revert()
-  }, [])
+      });
+    }, containerRef);
+  
+    return () => ctx.revert();
+  }, []);
+  
 
   return (
     <main ref={containerRef} className="relative">
@@ -67,7 +73,7 @@ export default function Home() {
         <Events />
       </section>
       <section className="h-screen">
-        {/* <GalleryScene /> */}
+        <GalleryScene />
       </section>
       <section className="h-screen">
         <Footer />
