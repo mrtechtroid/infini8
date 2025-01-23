@@ -18,7 +18,7 @@ interface EventModalProps {
     fee: number;
     image: string;
     time: string;
-    venue: string;
+    venue:string,
     registration_form: string;
   };
 }
@@ -77,7 +77,7 @@ export default function EventModal({ isOpen, onClose, event }: EventModalProps) 
                     </div>
                   </div>
                 )}
-                {event.venue && (
+                {/*event.venue && (
                   <div className="p-4 bg-gray-800 rounded-lg border border-red-800 flex items-center gap-3">
                     <MapPin className="w-6 h-6 text-red-500" />
                     <div>
@@ -85,7 +85,7 @@ export default function EventModal({ isOpen, onClose, event }: EventModalProps) 
                       <p className="text-gray-300">{event.venue}</p>
                     </div>
                   </div>
-                )}
+                )*/}
               </div>
 
               {/* Prize Pool & Fee */}

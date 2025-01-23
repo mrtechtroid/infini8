@@ -10,7 +10,9 @@ import Events from "../components/Events"
 import Footer from "../components/Footer"
 import CherryBlossoms from "../components/CherryBlossoms"
 import Navbar from "@/components/Navbar"
-import GalleryScene from "@/components/GalleryScene"
+import AboutKoi from "@/components/AboutKoi"
+import FAQs from "@/components/faqs"
+//import GalleryScene from "@/components/GalleryScene";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -67,13 +69,13 @@ export default function Home() {
         <Hero />
       </section>
       <section className="h-screen">
-        <About />
+        <AboutKoi />
       </section>
       <section className="h-screen">
         <Events />
       </section>
       <section className="h-screen">
-        <GalleryScene />
+        <FAQs/>
       </section>
       <section className="h-screen">
         <Footer />

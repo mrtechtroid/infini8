@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -60,10 +58,11 @@ export default function AboutKoi() {
         backgroundImage: "url('/koibg.png')",
       }}
     >
-      <div className="container relative z-10">
+      <div className="container relative">
         <div className="flex flex-col lg:flex-row items-center gap-12">
-          <div className="relative w-full lg:w-1/2">
-            <svg ref={koiRef} viewBox="0 0 540 540" className="w-full">
+          {/* Absolute positioned SVG container that covers the entire section */}
+          <div className="absolute inset-0 w-full h-full pointer-events-none">
+            <svg ref={koiRef} viewBox="0 0 540 540" className="w-full h-full">
               <defs>
                 <linearGradient
                   x1="100%"
@@ -81,7 +80,7 @@ export default function AboutKoi() {
                   <stop offset="100%" stopColor="#1E1F4455" />
                 </radialGradient>
 
-                <circle id="pond-boundary" cx="270" cy="200" r="1000"></circle>
+                <circle id="pond-boundary" cx="270" cy="270" r="1000"></circle>
 
                 <path
                   id="koi-body-path"
@@ -270,30 +269,6 @@ export default function AboutKoi() {
                         id="swim"
                         d="M132.072164,421.924184 C209.85391,344.142439 264.104973,376.992683 341.886719,299.210938 C419.668465,221.429192 388.37841,125.15284 466.160156,47.3710938 C543.941902,-30.4106522 570.271044,9.80192058 600.902344,21.3476563 C631.533643,32.8933919 663.77784,86.8393478 585.996094,164.621094 C508.214348,242.40284 365.417402,188.578947 287.635656,266.360693 C209.85391,344.142439 295.108744,485.397273 217.326998,563.179018 C139.545252,640.960764 68.8334105,621.24292 48.3710938,587.339844 C27.908777,553.436767 54.2904182,499.70593 132.072164,421.924184 Z"
                       ></path>
-
-                      <g
-                        id="lilies-bottom"
-                        fillRule="evenodd"
-                        transform="translate(408, 402)"
-                      >
-                        <g transform="translate(0.000000, 55.000000)">
-                          <g id="flower"></g>
-                        </g>
-                      </g>
-                      <g
-                        id="lilies-top"
-                        fillRule="evenodd"
-                        transform="translate(0, 8)"
-                      >
-                        <use
-                          href="#flower"
-                          transform="translate(233.000000, 15.000000)"
-                        ></use>
-                        <use
-                          href="#flower"
-                          transform="translate(58.000000, 285.000000)"
-                        ></use>
-                      </g>
                     </g>
                   </g>
                 </g>
@@ -307,9 +282,12 @@ export default function AboutKoi() {
             </svg>
           </div>
 
+          {/* Content container with relative positioning */}
+          <div className="relative w-full lg:w-1/2 min-h-[400px]"></div>
+
           <div
             ref={textRef}
-            className="w-full lg:w-1/2 text-white space-y-8 px-6 lg:px-0"
+            className="relative w-full lg:w-1/2 text-white space-y-8 px-6 lg:px-0"
           >
             <h3
               className="text-4xl md:text-5xl mb-8 text-[#4AE5AC]"
