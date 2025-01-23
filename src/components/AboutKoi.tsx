@@ -52,14 +52,14 @@ export default function AboutKoi() {
 
   return (
     <section
-      ref={sectionRef}
-      className="relative min-h-screen w-full bg-cover bg-center overflow-hidden py-20"
-      style={{
-        backgroundImage: "url('/koibg.png')",
-      }}
+    ref={sectionRef}
+    className="relative min-h-screen w-full bg-cover bg-center overflow-hidden py-20"
+    style={{
+      backgroundImage: "url('/koibg.png')",
+    }}
     >
-      <div className="container relative">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+    <div className="container relative h-full">
+      <div className="flex flex-col lg:flex-row items-center justify-center h-full min-h-screen">
           {/* Absolute positioned SVG container that covers the entire section */}
           <div className="absolute inset-0 w-full h-full pointer-events-none">
             <svg ref={koiRef} viewBox="0 0 540 540" className="w-full h-full">
@@ -287,7 +287,7 @@ export default function AboutKoi() {
 
           <div
             ref={textRef}
-            className="relative w-full lg:w-1/2 text-white space-y-8 px-6 lg:px-0"
+            className="relative w-full lg:w-1/2 text-white space-y-8 px-6 lg:px-0 z-10"
           >
             <h3
               className="text-4xl md:text-5xl mb-8 text-[#4AE5AC]"
