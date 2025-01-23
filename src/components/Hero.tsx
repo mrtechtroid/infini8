@@ -1,10 +1,13 @@
 'use client'
 
+
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+
 gsap.registerPlugin(ScrollTrigger)
+
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -15,6 +18,7 @@ export default function Hero() {
   const birdRef = useRef<HTMLImageElement>(null)
   const pseudoMountainRef = useRef<HTMLDivElement>(null)
   const logoRef = useRef<HTMLDivElement>(null)
+
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -45,6 +49,7 @@ export default function Hero() {
         ease: 'power2.out'
       });
 
+
       // Modified scroll animations with more gradual movement
       gsap.fromTo(buildingRef.current,
         { x: 0 }, // Starting position (where it ended after load animation)
@@ -61,6 +66,7 @@ export default function Hero() {
         }
       )
 
+
       gsap.fromTo(blossomRef.current,
         { x: 0 }, // Starting position
         {
@@ -75,6 +81,7 @@ export default function Hero() {
           }
         }
       )
+
 
       gsap.fromTo(mountainRef.current,
         { y: 0, scale: 1 },
@@ -91,6 +98,7 @@ export default function Hero() {
           }
         }
       )
+
 
       gsap.fromTo(sunRef.current,
         { y: 0, opacity: 1 },
@@ -123,6 +131,7 @@ export default function Hero() {
         }
       )
 
+
       gsap.fromTo(pseudoMountainRef.current,
         { height: 30 },
         {
@@ -137,6 +146,7 @@ export default function Hero() {
           }
         }
       )
+
 
       gsap.fromTo(birdRef.current,
         { x: 0 },
@@ -154,17 +164,19 @@ export default function Hero() {
       )
     })
 
+
     return () => ctx.revert()
   }, [])
+
 
   return (
     <section
       ref={containerRef}
       className="relative h-screen w-full overflow-hidden watercolor-bg" //put this for css background
-      // className="relative h-screen w-full overflow-hidden" uncoment for image background
-      // style={{ backgroundImage: "url('/bg-upscale.png')" }} uncomment for image background
+    // className="relative h-screen w-full overflow-hidden" uncoment for image background
+    // style={{ backgroundImage: "url('/bg-upscale.png')" }} uncomment for image background
     >
-        <div className="sakura-overlay" /> {/*put for css background*/}
+      <div className="sakura-overlay" /> {/*put for css background*/}
       <div className="relative h-full w-full max-w-[1920px] mx-auto">
         <img
           ref={birdRef}
@@ -173,29 +185,32 @@ export default function Hero() {
           className="absolute top-[15%] left-[15%] w-[120px] md:w-[180px] lg:w-[220px] z-20"
         />
 
+
         {/* Sun with reduced opacity */}
         {/* <div
-          ref={sunRef}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] z-[5] opacity-100"
-        >
-          <div className="absolute inset-0 bg-[#FF4533] rounded-full mix-blend-screen" />
-        </div>
+          ref={sunRef}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] z-[5] opacity-100"
+        >
+          <div className="absolute inset-0 bg-[#FF4533] rounded-full mix-blend-screen" />
+        </div>
 
-        <div
-          ref={logoRef}
-          className="absolute top-[25%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-[15] transform-gpu opacity-0"  // Added opacity-0
-        >
-          <img
-            src="/infin8_logo.png"
-            alt="Infin8 logo"
-            className="w-[300px] md:w-[360px] lg:w-[440px]"
-          />
-        </div> */}
+
+        <div
+          ref={logoRef}
+          className="absolute top-[25%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-[15] transform-gpu opacity-0"  // Added opacity-0
+        >
+          <img
+            src="/infin8_logo.png"
+            alt="Infin8 logo"
+            className="w-[300px] md:w-[360px] lg:w-[440px]"
+          />
+        </div> */}
         <div
           ref={sunRef}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] z-[5] opacity-80"
         >
           <div className="absolute inset-0 bg-[#FF4533] rounded-full mix-blend-screen" />
+
 
           {/* Logo now nested inside sun div */}
           <div
@@ -210,12 +225,14 @@ export default function Hero() {
           </div>
         </div>
 
+
         <img
           ref={buildingRef}
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/building-QfSshdJncVB1b9cfYiOkkz3izBLM9L.svg"
           alt="Japanese pagoda"
           className="absolute bottom-[0%] w-[150px] md:w-[220px] lg:w-[320px] z-30 transform-gpu"
         />
+
 
         <div className="absolute bottom-0 left-0 w-full flex justify-center items-end z-20">
           <img
@@ -226,6 +243,7 @@ export default function Hero() {
           />
         </div>
 
+
         <img
           ref={blossomRef}
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cherry_blossom-9tlvCGBNKYu5I1mHJw2PwMfu9kkOpS.svg"
@@ -233,9 +251,9 @@ export default function Hero() {
           className="absolute top-[0%] right-[0%] w-[180px] md:w-[250px] lg:w-[320px] z-30 transform-gpu"
         />
         {/* <div
-          ref={pseudoMountainRef}
-          className='absolute bottom-0 left-0 w-full h-[30px] bg-black'
-        > */}
+          ref={pseudoMountainRef}
+          className='absolute bottom-0 left-0 w-full h-[30px] bg-black'
+        > */}
         <div
           ref={pseudoMountainRef}
           className='absolute bottom-0 left-0 w-full h-[30px] bg-black transform-gpu z-10'
@@ -244,6 +262,7 @@ export default function Hero() {
         </div>
       </div>
     </section >
+
 
   )
 }

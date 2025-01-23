@@ -16,7 +16,7 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
-              {['Home', 'Events', 'Team', 'About', 'Sponsors'].map((item) => (
+              {['Events', 'Team', 'About', 'Sponsors'].map((item) => (
                 <a
                   key={item}
                   href={`/${item.toLowerCase()}`}
@@ -64,7 +64,7 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       <div className={`${isOpen ? 'block' : 'hidden'} md:hidden bg-black/50 backdrop-blur-sm`}>
         <div className="px-2 pt-2 pb-3 space-y-1">
-          {['Home', 'Events', 'Team', 'About', 'Sponsors'].map((item) => (
+          {['Events', 'Team', 'About', 'Sponsors'].map((item) => (
             <a
               key={item}
               href={`/${item.toLowerCase()}`}

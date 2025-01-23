@@ -1,4 +1,4 @@
-import { X, Download, ExternalLink } from 'lucide-react';
+import { X, Download, ExternalLink, Calendar, MapPin } from 'lucide-react';
 
 interface Spoc {
   name: string;
@@ -17,6 +17,8 @@ interface EventModalProps {
     prizePool: number;
     fee: number;
     image: string;
+    time: string;
+    venue: string;
     registration_form: string;
   };
 }
@@ -57,10 +59,6 @@ export default function EventModal({ isOpen, onClose, event }: EventModalProps) 
                   className="object-cover w-full h-full"
                 />
                 {/* Corner decorations */}
-                <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-red-600" />
-                <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-red-600" />
-                <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-red-600" />
-                <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-red-600" />
               </div>
             </div>
 
@@ -68,6 +66,28 @@ export default function EventModal({ isOpen, onClose, event }: EventModalProps) 
             <div className="w-full md:w-3/5">
               <h2 className="text-3xl font-['The Last Shuriken'] text-gray-100 mb-6">{event.name}</h2>
               
+              {/* Date & Venue Section */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                {event.time && (
+                  <div className="p-4 bg-gray-800 rounded-lg border border-red-800 flex items-center gap-3">
+                    <Calendar className="w-6 h-6 text-red-500" />
+                    <div>
+                      <p className="text-lg font-semibold text-red-500">Date</p>
+                      <p className="text-gray-300">{event.time}</p>
+                    </div>
+                  </div>
+                )}
+                {event.venue && (
+                  <div className="p-4 bg-gray-800 rounded-lg border border-red-800 flex items-center gap-3">
+                    <MapPin className="w-6 h-6 text-red-500" />
+                    <div>
+                      <p className="text-lg font-semibold text-red-500">Venue</p>
+                      <p className="text-gray-300">{event.venue}</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+
               {/* Prize Pool & Fee */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                 <div className="p-4 bg-gray-800 rounded-lg border border-red-800">
@@ -75,11 +95,13 @@ export default function EventModal({ isOpen, onClose, event }: EventModalProps) 
                     Prize Pool: ₹{event.prizePool.toLocaleString()}
                   </p>
                 </div>
-                <div className="p-4 bg-gray-800 rounded-lg border border-red-800">
-                  <p className="text-lg font-semibold text-red-500">
-                    Registration Fee: ₹{event.fee.toLocaleString()}
-                  </p>
-                </div>
+                {event.fee !== 0 && (
+                  <div className="p-4 bg-gray-800 rounded-lg border border-red-800">
+                    <p className="text-lg font-semibold text-red-500">
+                      Registration Fee: ₹{event.fee.toLocaleString()}
+                    </p>
+                  </div>
+                )}
               </div>
 
               {/* Action Buttons */}
@@ -99,8 +121,8 @@ export default function EventModal({ isOpen, onClose, event }: EventModalProps) 
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 px-6 py-3 bg-gray-800 text-gray-100 rounded-lg hover:bg-gray-700 transition-colors font-semibold border border-red-800"
                 >
-                  <Download className="w-5 h-5" />
-                  Download Rules PDF
+                  <ExternalLink className="w-5 h-5" />
+                  View Event Rules
                 </a>
               </div>
 

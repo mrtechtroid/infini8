@@ -3,12 +3,15 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import Hero from '@/components/Hero'
-import Navbar from "@/components/Navbar"
-import About from '@/components/About'
-import Events from '@/components/Events'
-import Footer from '@/components/Footer'
-import CherryBlossoms from '@/components/CherryBlossoms'
+import Hero from "@/components/Hero";
+import Navbar from "@/components/Navbar";
+import About from "@/components/About";
+import Events from "@/components/faqs";
+import Footer from "@/components/Footer";
+import CherryBlossoms from "@/components/CherryBlossoms";
+import AboutKoi from "@/components/AboutKoi";
+import TemsGrid from "@/components/ArtistGrid";
+import TeamsGrid from "@/components/ArtistGrid";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -44,8 +47,9 @@ export default function Home() {
       <Navbar/>
       <Hero />
       <CherryBlossoms />
-      <About />
+      <About/>
       <Events />
+      <TeamsGrid/>
       <Footer />
     </main>
   )

@@ -6,6 +6,11 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+/* Add smooth scrolling to the html element */
+html {
+  scroll-behavior: smooth;
+}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -108,12 +113,12 @@ body {
 /* this is for the neon about building flicker */
 .neon-flicker {
   animation: neonFlicker 1.5s infinite alternate-reverse;
-  filter: drop-shadow(0 0 5px #ff4933) drop-shadow(0 0 10px #ff4933);
+  filter: drop-shadow(0 0 5px #4ae5ac) drop-shadow(0 0 50px #4ae5ac);
 }
 
 @keyframes neonFlicker {
   0%, 18%, 22%, 25%, 53%, 57%, 100% {
-    filter: drop-shadow(0 0 5px #ff4933) drop-shadow(0 0 10px #ff4933);
+    filter: drop-shadow(0 0 5px #4ae5ac) drop-shadow(0 0 50px #4ae5ac);
   }
   20%, 24%, 55% {
     filter: none;
@@ -204,4 +209,15 @@ box-shadow: 1703px 1208px #FFF , 381px 207px #FFF , 1516px 1990px #FFF , 1960px 
   right: 0;
   bottom: 0;
   z-index: 0;
+}
+
+.faq-card {
+  opacity: 0;
+  transform: translateY(2rem) rotateX(-10deg);
+  transition: all 0.7s ease-out;
+}
+
+.faq-card.visible {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
 }
