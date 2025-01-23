@@ -205,7 +205,7 @@ export default function About() {
             className="w-full lg:w-1/2 text-white space-y-8 px-6 lg:px-0"
           >
             <h3 
-              className="text-4xl md:text-5xl mb-8 text-[#FF4533]"
+              className="text-4xl md:text-5xl mb-8 text-[#4AE5AC]"
               // deciding style={{ fontFamily: 'Tektur, sans-serif' }}
               style={{fontFamily: 'The Last Shuriken, sans-serif'}}
             >
@@ -221,7 +221,7 @@ export default function About() {
               </p>
 
               <blockquote 
-                className="text-2xl text-[#FF4533] pl-6 border-l-2 border-[#FF4533] my-8"
+                className="text-2xl text-[#4AE5AC] pl-6 border-l-2 border-[#4AE5AC] my-8"
                 style={{fontFamily: 'Tektur, sans-serif'}}
               >
                 A unique and exciting experience for everyone
