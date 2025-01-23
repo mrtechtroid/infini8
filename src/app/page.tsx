@@ -1,17 +1,15 @@
-'use client'
+"use client"
 
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
-import About from "@/components/About";
-import Events from "@/components/faqs";
-import Footer from "@/components/Footer";
-import CherryBlossoms from "@/components/CherryBlossoms";
-import AboutKoi from "@/components/AboutKoi";
-import TemsGrid from "@/components/ArtistGrid";
-import TeamsGrid from "@/components/ArtistGrid";
+import { useEffect, useRef } from "react"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import Hero from "../components/Hero"
+import About from "../components/About"
+import Events from "../components/Events"
+import Footer from "../components/Footer"
+import CherryBlossoms from "../components/CherryBlossoms"
+import Navbar from "@/components/Navbar"
+// import GalleryScene from "@/components/GalleryScene"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -19,23 +17,36 @@ export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    const sections = gsap.utils.toArray<HTMLElement>("section")
+
     const ctx = gsap.context(() => {
-      gsap.utils.toArray<HTMLElement>('section:not(:first-child)').forEach((section, i) => {
-        gsap.fromTo(section, 
-          { opacity: 0, y: 50 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            ease: 'power3.out',
-            scrollTrigger: {
-              trigger: section,
-              start: 'top 80%',
-              end: 'bottom 20%',
-              toggleActions: 'play none none reverse'
-            }
-          }
-        )
+      sections.forEach((section, i) => {
+        ScrollTrigger.create({
+          trigger: section,
+          start: "top top",
+          pin: true,
+          pinSpacing: false,
+          snap: 1,
+        })
+
+        if (i > 0) {
+          gsap.fromTo(
+            section,
+            { opacity: 0, y: 50 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.25,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: section,
+                start: "top center",
+                end: "center center",
+                toggleActions: "play none none reverse",
+              },
+            },
+          )
+        }
       })
     }, containerRef)
 
@@ -43,14 +54,24 @@ export default function Home() {
   }, [])
 
   return (
-    <main ref={containerRef} className="relative overflow-hidden">
-      <Navbar/>
-      <Hero />
+    <main ref={containerRef} className="relative">
+      <Navbar />
       <CherryBlossoms />
-      <About/>
-      <Events />
-      <TeamsGrid/>
-      <Footer />
+      <section className="h-screen">
+        <Hero />
+      </section>
+      <section className="h-screen">
+        <About />
+      </section>
+      <section className="h-screen">
+        <Events />
+      </section>
+      <section className="h-screen">
+        {/* <GalleryScene /> */}
+      </section>
+      <section className="h-screen">
+        <Footer />
+      </section>
     </main>
   )
 }

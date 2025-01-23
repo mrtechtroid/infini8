@@ -1,36 +1,73 @@
+import Image from "next/image"
+import Link from "next/link"
+import { Twitter, Instagram, Linkedin, Facebook } from "lucide-react"
+
 export default function Footer() {
-    return (
-      <footer className="bg-gray-900 text-white py-8">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-between">
-            <div className="w-full md:w-1/3 mb-6 md:mb-0">
-              <h3 className="text-2xl font-bold mb-4">Japanese Festival</h3>
-              <p className="text-gray-400">Experience Japan on our campus!</p>
-            </div>
-            <div className="w-full md:w-1/3 mb-6 md:mb-0">
-              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2">
-                <li><a href="#" className="hover:text-gray-300">Home</a></li>
-                <li><a href="#" className="hover:text-gray-300">About</a></li>
-                <li><a href="#" className="hover:text-gray-300">Events</a></li>
-                <li><a href="#" className="hover:text-gray-300">Contact</a></li>
-              </ul>
-            </div>
-            <div className="w-full md:w-1/3">
-              <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
-              <div className="flex space-x-4">
-                <a href="#" className="hover:text-gray-300">Facebook</a>
-                <a href="#" className="hover:text-gray-300">Twitter</a>
-                <a href="#" className="hover:text-gray-300">Instagram</a>
-              </div>
-            </div>
+  return (
+    <footer className="relative w-full h-screen bg-white overflow-hidden">
+      <Image src="/rectangle-60.png" alt="Background pattern" layout="fill" objectFit="cover" quality={100} />
+
+      {/* Decorative SVGs */}
+      <img src="/vector0.svg" alt="" className="absolute right-0 top-0 h-1/4" />
+      <img src="/vector1.svg" alt="" className="absolute left-0 top-0 h-1/4" />
+      <img
+        src="/vector2.svg"
+        alt=""
+        layout="fill"
+        className="absolute left-[8.67%] top-[12.1%] w-[2.66%] h-[4.07%]"
+      />
+
+      {/* Main content container */}
+      {/* <div className="absolute inset-0 flex flex-col justify-between p-8 md:p-16"> */}
+        {/* Logo and title */}
+        {/* <div className="max-w-4xl mx-auto text-center"> */}
+          <img src="/infin8_footer.png" alt="INFIN8 Logo" className="w-1/2 h-auto absolute top-[30%] left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+        {/* </div> */}
+        <img src="/iiit-b-logo-10.png" alt="IIIT-B Logo" className="w-[100px] h-auto absolute bottom-[4%] left-[4%] transform -translate-x-1 -translate-y-1" />
+        {/* Contact section */}
+        <div className="flex flex-col md:flex-row justify-between items-end  mt-8">
+          {/* IIIT-B Logo */}
+          <div className="mb-8 md:mb-0">
+            
           </div>
-          <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-            <p>&copy; 2023 College Japanese Festival. All rights reserved.</p>
+
+          {/* Social links */}
+          <div className="text-right absolute w-1/2 h-auto bottom-[10%] right-[4%]">
+            <h2 className="text-4xl md:text-5xl mb-4 " style={{fontFamily: 'The Last Shuriken',color:'#000000'}}>GET IN TOUCH</h2>
+            <div className="space-y-2">
+              {[
+                { name: "Twitter", icon: Twitter },
+                { name: "Instagram", icon: Instagram },
+                { name: "LinkedIn", icon: Linkedin },
+                { name: "Facebook", icon: Facebook },
+              ].map((social) => (
+                <Link
+                  key={social.name}
+                  href={social.name!="LinkedIn"?`https://${social.name.toLowerCase()}.com`:`https://www.linkedin.com/company/infin8-iitb/`}
+                  className="flex items-center justify-end space-x-2 text-2xl md:text-3xl font-hinaminchou hover:text-gray-600 transition-colors"
+                >
+                  <span>{social.name}</span>
+                  <social.icon className="w-6 h-6 md:w-8 md:h-8" />
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
-      </footer>
-    )
-  }
-  
-  
+      {/* </div> */}
+
+      {/* Decorative elements */}
+      <img src="/group0.svg" alt=""  className="absolute left-[29%] bottom-0 w-[15%] h-auto" />
+      <img src="/group1.svg"alt=""  className="absolute left-[67%] top-[59%] w-[2%] h-auto" />
+      <img src="/group2.svg"alt=""  className="absolute left-[88%] top-[70%] w-[2%] h-auto" />
+      <img src="/group3.svg"alt=""  className="absolute left-[81%] top-[55%] w-[2%] h-auto" />
+      <img src="/group-399660.svg" alt=""  className="absolute left-[40%] bottom-0 w-[20%] h-auto" />
+      <img src="/group4.svg" alt=""  className="absolute left-[47%] bottom-[20%] w-[5%] h-auto" />
+      <img src="/group5.svg" alt=""  className="absolute left-2 bottom-[30%] w-[24%] h-auto" />
+      <img src="/group6.svg" alt=""  className="absolute left-[-11%] top-[43%] w-[17%] h-auto" />
+      <img src="/group7.svg" alt=""  className="absolute left-[-1%] top-[55%] w-[5%] h-auto" />
+      <img src="/group8.svg" alt=""  className="absolute left-[20%] bottom-[10%] w-[3%] h-auto" />
+      <img src="/group9.svg" alt=""  className="absolute left-[-1%] bottom-[20%] w-[5%] h-auto" />
+    </footer>
+  )
+}
+
