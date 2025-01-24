@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-<<<<<<< Updated upstream
 
 :root {
   --background: #ffffff;
@@ -14,8 +13,6 @@
     --foreground: #ededed;
   }
 }
-=======
->>>>>>> Stashed changes
 @font-face {
   font-family: 'Osake';
   src: url('/Osake.otf') format('opentype');
@@ -228,9 +225,6 @@ box-shadow: 1703px 1208px #FFF , 381px 207px #FFF , 1516px 1990px #FFF , 1960px 
   z-index: 0;
 }
 
-<<<<<<< Updated upstream
-=======
-
 .glitch-text {
   position: relative;
   animation: glitch 0.15s infinite;
@@ -257,8 +251,6 @@ box-shadow: 1703px 1208px #FFF , 381px 207px #FFF , 1516px 1990px #FFF , 1960px 
   }
 }
 
-
->>>>>>> Stashed changes
 .faq-card {
   opacity: 0;
   transform: translateY(2rem) rotateX(-10deg);
@@ -269,8 +261,7 @@ box-shadow: 1703px 1208px #FFF , 381px 207px #FFF , 1516px 1990px #FFF , 1960px 
   opacity: 1;
   transform: translateY(0) rotateX(0);
 }
-<<<<<<< Updated upstream
-=======
+
 
 /* Custom scrollbar styles */
 .custom-scrollbar::-webkit-scrollbar {

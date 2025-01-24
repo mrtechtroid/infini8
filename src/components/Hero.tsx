@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-<<<<<<< Updated upstream
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -20,20 +19,6 @@ export default function Hero() {
   const birdRef = useRef<HTMLImageElement>(null)
   const pseudoMountainRef = useRef<HTMLDivElement>(null)
   const logoRef = useRef<HTMLDivElement>(null)
-=======
-
-gsap.registerPlugin(ScrollTrigger);
-
-export default function Hero() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const buildingRef = useRef<HTMLImageElement>(null);
-  const blossomRef = useRef<HTMLImageElement>(null);
-  const mountainRef = useRef<HTMLImageElement>(null);
-  const sunRef = useRef<HTMLDivElement>(null);
-  const birdRef = useRef<HTMLImageElement>(null);
-  const pseudoMountainRef = useRef<HTMLDivElement>(null);
-  const logoRef = useRef<HTMLDivElement>(null);
->>>>>>> Stashed changes
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -81,12 +66,7 @@ export default function Hero() {
         }
       );
 
-<<<<<<< Updated upstream
       gsap.fromTo(blossomRef.current,
-=======
-      gsap.fromTo(
-        blossomRef.current,
->>>>>>> Stashed changes
         { x: 0 }, // Starting position
         {
           x: 200,
@@ -101,12 +81,7 @@ export default function Hero() {
         }
       );
 
-<<<<<<< Updated upstream
       gsap.fromTo(mountainRef.current,
-=======
-      gsap.fromTo(
-        mountainRef.current,
->>>>>>> Stashed changes
         { y: 0, scale: 1 },
         {
           y: -50, // Reduced movement for smoother transition
@@ -122,12 +97,7 @@ export default function Hero() {
         }
       );
 
-<<<<<<< Updated upstream
       gsap.fromTo(sunRef.current,
-=======
-      gsap.fromTo(
-        sunRef.current,
->>>>>>> Stashed changes
         { y: 0, opacity: 1 },
         {
           y: 200,
@@ -159,12 +129,7 @@ export default function Hero() {
         }
       );
 
-<<<<<<< Updated upstream
       gsap.fromTo(pseudoMountainRef.current,
-=======
-      gsap.fromTo(
-        pseudoMountainRef.current,
->>>>>>> Stashed changes
         { height: 30 },
         {
           height: 250,
@@ -179,12 +144,7 @@ export default function Hero() {
         }
       );
 
-<<<<<<< Updated upstream
       gsap.fromTo(birdRef.current,
-=======
-      gsap.fromTo(
-        birdRef.current,
->>>>>>> Stashed changes
         { x: 0 },
         {
           x: -150,
@@ -197,21 +157,12 @@ export default function Hero() {
             toggleActions: "play reverse play reverse",
           },
         }
-<<<<<<< Updated upstream
       )
     })
 
     return () => ctx.revert()
   }, [])
 
-=======
-      );
-    });
-
-    return () => ctx.revert();
-  }, []);
-
->>>>>>> Stashed changes
   return (
     <section
       ref={containerRef}
