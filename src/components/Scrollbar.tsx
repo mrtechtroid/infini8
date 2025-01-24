@@ -18,11 +18,15 @@ export default function CustomScrollbar() {
     checkMobile();
 
     // Add resize listener
+<<<<<<< Updated upstream
     window.addEventListener('resize', checkMobile);
+=======
+    window.addEventListener("resize", checkMobile);
+>>>>>>> Stashed changes
 
     // Register the ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
-  
+
     // Create an Intersection Observer to track which section is in view
     const observer = new IntersectionObserver(
       (entries) => {
@@ -36,13 +40,17 @@ export default function CustomScrollbar() {
         threshold: 0.3,
       }
     );
+<<<<<<< Updated upstream
   
+=======
+
+>>>>>>> Stashed changes
     // Observe all sections
     const sections = document.querySelectorAll("section");
     sections.forEach((section) => {
       observer.observe(section);
     });
-  
+
     // GSAP ScrollTrigger for scroll indicator
     gsap.to(".scroll-indicator", {
       height: "100%",
@@ -53,10 +61,14 @@ export default function CustomScrollbar() {
         scrub: true,
       },
     });
-  
+
     // Cleanup
     return () => {
+<<<<<<< Updated upstream
       window.removeEventListener('resize', checkMobile);
+=======
+      window.removeEventListener("resize", checkMobile);
+>>>>>>> Stashed changes
       sections.forEach((section) => observer.unobserve(section));
       observer.disconnect();
     };
@@ -74,10 +86,17 @@ export default function CustomScrollbar() {
 
   return (
     <div
+<<<<<<< Updated upstream
       className={`fixed left-0 top-0 h-full bg-red-600 border-r flex flex-col items-center justify-center gap-4 md:gap-8 transition-all duration-300
         ${isMobile ? 'w-12 md:w-16' : 'w-16'}`}
       style={{
         backgroundImage: "url('/eventsbg.jpg')",
+=======
+      className={`fixed left-0 top-0 h-full bg-black border-r flex flex-col items-center justify-center gap-4 md:gap-8 transition-all duration-300
+        ${isMobile ? "w-12 md:w-16" : "w-16"}`}
+      style={{
+        backgroundImage: "url('/eveTATTIntsbg.jpg')",
+>>>>>>> Stashed changes
         zIndex: 10,
       }}
     >
@@ -108,7 +127,11 @@ export default function CustomScrollbar() {
           }}
           className={`relative z-10 rounded-md flex items-center justify-start pl-2 md:pl-4
            transition-all duration-200 group overflow-hidden
+<<<<<<< Updated upstream
            ${isMobile ? 'w-20 h-8 md:w-24 md:h-10' : 'w-24 h-10'}
+=======
+           ${isMobile ? "w-20 h-8 md:w-24 md:h-10" : "w-24 h-10"}
+>>>>>>> Stashed changes
            ${
              activeSection === day
                ? "bg-yellow-600 text-white"
@@ -155,7 +178,11 @@ export default function CustomScrollbar() {
                 fontSize: isMobile ? "18px" : "24px",
                 textTransform: "uppercase",
                 fontFamily: "The Last Shuriken",
+<<<<<<< Updated upstream
                 color: "black"
+=======
+                color: "black",
+>>>>>>> Stashed changes
               }}
             >
               {day}
@@ -170,11 +197,21 @@ export default function CustomScrollbar() {
               backgroundColor: "#DC2626",
             }}
           ></div>
+<<<<<<< Updated upstream
           
           {/* Tooltip */}
           <div className={`absolute top-1/2 -translate-y-1/2 px-2 py-1 rounded bg-popover text-popover-foreground 
             opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 whitespace-nowrap
             ${isMobile ? 'left-[100%] ml-2' : 'left-[120%]'}`}>
+=======
+
+          {/* Tooltip */}
+          <div
+            className={`absolute top-1/2 -translate-y-1/2 px-2 py-1 rounded bg-popover text-popover-foreground 
+            opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 whitespace-nowrap
+            ${isMobile ? "left-[100%] ml-2" : "left-[120%]"}`}
+          >
+>>>>>>> Stashed changes
             Go to Day {day.replace("day", "")}
           </div>
         </button>

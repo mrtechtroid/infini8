@@ -1,5 +1,10 @@
-'use client'
+"use client";
 
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+<<<<<<< Updated upstream
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -15,6 +20,20 @@ export default function Hero() {
   const birdRef = useRef<HTMLImageElement>(null)
   const pseudoMountainRef = useRef<HTMLDivElement>(null)
   const logoRef = useRef<HTMLDivElement>(null)
+=======
+
+gsap.registerPlugin(ScrollTrigger);
+
+export default function Hero() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const buildingRef = useRef<HTMLImageElement>(null);
+  const blossomRef = useRef<HTMLImageElement>(null);
+  const mountainRef = useRef<HTMLImageElement>(null);
+  const sunRef = useRef<HTMLDivElement>(null);
+  const birdRef = useRef<HTMLImageElement>(null);
+  const pseudoMountainRef = useRef<HTMLDivElement>(null);
+  const logoRef = useRef<HTMLDivElement>(null);
+>>>>>>> Stashed changes
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -23,30 +42,31 @@ export default function Hero() {
         x: 200,
         opacity: 0,
         duration: 1,
-        ease: 'power1.out'
-      })
+        ease: "power1.out",
+      });
       gsap.from(birdRef.current, {
         x: -200,
         opacity: 0,
         duration: 1,
         delay: 0.2,
-        ease: 'power1.out'
-      })
+        ease: "power1.out",
+      });
       gsap.from(blossomRef.current, {
         x: 200,
         opacity: 0,
         duration: 1,
         delay: 0.4,
-        ease: 'power1.out'
-      })
+        ease: "power1.out",
+      });
       gsap.to(logoRef.current, {
         opacity: 1,
         duration: 0.5,
-        ease: 'power2.out'
+        ease: "power2.out",
       });
 
       // Modified scroll animations with more gradual movement
-      gsap.fromTo(buildingRef.current,
+      gsap.fromTo(
+        buildingRef.current,
         { x: 0 }, // Starting position (where it ended after load animation)
         {
           x: -150,
@@ -56,12 +76,17 @@ export default function Hero() {
             start: "top top",
             end: "+=500", // Extended scroll distance for more gradual movement
             scrub: 0.5, // Increased from 1 to 2 for smoother movement
-            toggleActions: "play reverse play reverse" // Ensures animation reverses on scroll up
-          }
+            toggleActions: "play reverse play reverse", // Ensures animation reverses on scroll up
+          },
         }
-      )
+      );
 
+<<<<<<< Updated upstream
       gsap.fromTo(blossomRef.current,
+=======
+      gsap.fromTo(
+        blossomRef.current,
+>>>>>>> Stashed changes
         { x: 0 }, // Starting position
         {
           x: 200,
@@ -71,12 +96,17 @@ export default function Hero() {
             start: "top top",
             end: "+=500",
             scrub: 0.5,
-            toggleActions: "play reverse play reverse"
-          }
+            toggleActions: "play reverse play reverse",
+          },
         }
-      )
+      );
 
+<<<<<<< Updated upstream
       gsap.fromTo(mountainRef.current,
+=======
+      gsap.fromTo(
+        mountainRef.current,
+>>>>>>> Stashed changes
         { y: 0, scale: 1 },
         {
           y: -50, // Reduced movement for smoother transition
@@ -87,12 +117,17 @@ export default function Hero() {
             start: "top top",
             end: "+=400", // Adjusted scroll distance
             scrub: 1, // Increased smoothness
-            toggleActions: "play none none reverse"
-          }
+            toggleActions: "play none none reverse",
+          },
         }
-      )
+      );
 
+<<<<<<< Updated upstream
       gsap.fromTo(sunRef.current,
+=======
+      gsap.fromTo(
+        sunRef.current,
+>>>>>>> Stashed changes
         { y: 0, opacity: 1 },
         {
           y: 200,
@@ -103,11 +138,12 @@ export default function Hero() {
             start: "top top",
             end: "+=500",
             scrub: 0.5,
-            toggleActions: "play reverse play reverse"
-          }
+            toggleActions: "play reverse play reverse",
+          },
         }
-      )
-      gsap.fromTo(logoRef.current,
+      );
+      gsap.fromTo(
+        logoRef.current,
         { y: 0 },
         {
           y: 200,
@@ -118,12 +154,17 @@ export default function Hero() {
             start: "top top",
             end: "+=500",
             scrub: 0.5,
-            toggleActions: "play reverse play reverse"
-          }
+            toggleActions: "play reverse play reverse",
+          },
         }
-      )
+      );
 
+<<<<<<< Updated upstream
       gsap.fromTo(pseudoMountainRef.current,
+=======
+      gsap.fromTo(
+        pseudoMountainRef.current,
+>>>>>>> Stashed changes
         { height: 30 },
         {
           height: 250,
@@ -133,12 +174,17 @@ export default function Hero() {
             start: "top top",
             end: "+=1000",
             scrub: 0.5,
-            toggleActions: "play reverse play reverse"
-          }
+            toggleActions: "play reverse play reverse",
+          },
         }
-      )
+      );
 
+<<<<<<< Updated upstream
       gsap.fromTo(birdRef.current,
+=======
+      gsap.fromTo(
+        birdRef.current,
+>>>>>>> Stashed changes
         { x: 0 },
         {
           x: -150,
@@ -148,15 +194,24 @@ export default function Hero() {
             start: "top top",
             end: "+=500",
             scrub: 0.5,
-            toggleActions: "play reverse play reverse"
-          }
+            toggleActions: "play reverse play reverse",
+          },
         }
+<<<<<<< Updated upstream
       )
     })
 
     return () => ctx.revert()
   }, [])
 
+=======
+      );
+    });
+
+    return () => ctx.revert();
+  }, []);
+
+>>>>>>> Stashed changes
   return (
     <section
       ref={containerRef}
@@ -238,12 +293,17 @@ export default function Hero() {
         > */}
         <div
           ref={pseudoMountainRef}
-          className='absolute bottom-0 left-0 w-full h-[30px] bg-black transform-gpu z-10'
-          style={{ marginBottom: '-1px' }} // This eliminates any potential gap
-        >
-        </div>
+          className="absolute bottom-0 left-0 w-full h-[30px] bg-[#0a0a0a] transform-gpu z-10 "
+          style={{ marginBottom: "-1px" }} // This eliminates any potential gap
+        ></div>
       </div>
+<<<<<<< Updated upstream
     </section >
 
   )
 }
+=======
+    </section>
+  );
+}
+>>>>>>> Stashed changes

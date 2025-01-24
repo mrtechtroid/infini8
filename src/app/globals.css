@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+<<<<<<< Updated upstream
 
 :root {
   --background: #ffffff;
@@ -13,6 +14,8 @@
     --foreground: #ededed;
   }
 }
+=======
+>>>>>>> Stashed changes
 @font-face {
   font-family: 'Osake';
   src: url('/Osake.otf') format('opentype');
@@ -22,15 +25,22 @@
   font-family: 'The Last Shuriken';
   src: url('/The Last Shuriken.otf') format('opentype');
 }
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
 
 @font-face {
   font-family: 'Hina Mincho';
   src: url('/HinaMincho-Regular.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Onsen';
+  src: url('/OnsenJapanDemoRegular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Softly';
+  src: url('/Softly Handwritten Demo.otf') format('opentype');
+}
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 /* this is for scrollbar */
@@ -218,6 +228,37 @@ box-shadow: 1703px 1208px #FFF , 381px 207px #FFF , 1516px 1990px #FFF , 1960px 
   z-index: 0;
 }
 
+<<<<<<< Updated upstream
+=======
+
+.glitch-text {
+  position: relative;
+  animation: glitch 0.15s infinite;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+
+>>>>>>> Stashed changes
 .faq-card {
   opacity: 0;
   transform: translateY(2rem) rotateX(-10deg);
@@ -228,3 +269,45 @@ box-shadow: 1703px 1208px #FFF , 381px 207px #FFF , 1516px 1990px #FFF , 1960px 
   opacity: 1;
   transform: translateY(0) rotateX(0);
 }
+<<<<<<< Updated upstream
+=======
+
+/* Custom scrollbar styles */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #1F2937;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #DC2626;
+  border-radius: 4px;
+  border: 2px solid #1F2937;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+@keyframes bambooWind {
+  0% {
+    transform: translateX(0px) skewX(0deg);
+  }
+  25% {
+    transform: translateX(15px) skewX(-1deg);
+  }
+  50% {
+    transform: translateX(-10px) skewX(0.5deg);
+  }
+  75% {
+    transform: translateX(12px) skewX(-0.8deg);
+  }
+  100% {
+    transform: translateX(0px) skewX(0deg);
+  }
+}
+
+>>>>>>> Stashed changes

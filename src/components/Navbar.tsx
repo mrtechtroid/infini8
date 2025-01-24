@@ -1,22 +1,32 @@
-'use client'
+"use client";
 
-import { useState,useEffect } from 'react'
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className={"fixed w-full top-0 z-50 bg-black/30 backdrop-blur-sm border-b border-white/10 ease-in-out" }>
+    <nav
+      className={
+        "fixed w-full top-0 z-50 bg-black/30 backdrop-blur-sm border-b border-white/10 ease-in-out"
+      }
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Brand */}
           <div className="flex-shrink-0">
-            <span className="text-white font-bold text-xl font-['Osake']">INFIN8</span>
+            <span className="text-white font-bold text-xl font-['Osake']">
+              INFIN8
+            </span>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
+<<<<<<< Updated upstream
               {['Events', 'Team', 'About', 'Sponsors'].map((item) => (
+=======
+              {["Home", "Events", "Team", "Sponsors"].map((item) => (
+>>>>>>> Stashed changes
                 <a
                   key={item}
                   href={`/${item.toLowerCase()}`}
@@ -62,9 +72,17 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navigation */}
-      <div className={`${isOpen ? 'block' : 'hidden'} md:hidden bg-black/50 backdrop-blur-sm`}>
+      <div
+        className={`${
+          isOpen ? "block" : "hidden"
+        } md:hidden bg-black/50 backdrop-blur-sm`}
+      >
         <div className="px-2 pt-2 pb-3 space-y-1">
+<<<<<<< Updated upstream
           {['Events', 'Team', 'About', 'Sponsors'].map((item) => (
+=======
+          {["Home", "Events", "Team", "Sponsors"].map((item) => (
+>>>>>>> Stashed changes
             <a
               key={item}
               href={`/${item.toLowerCase()}`}
@@ -77,7 +95,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
