@@ -166,7 +166,7 @@ export default function EventsPage() {
               id={event.id}
               name={event.name}
               prizePool={event.prizePool}
-              image={"/infin8_logo.png"}
+              image={event.image||"/infin8_logo.png"}
               about={event.about}
               rulespdf={event.rulespdf}
               spocs={event.spocs}
@@ -199,7 +199,7 @@ export default function EventsPage() {
                 id={event.id}
                 name={event.name}
                 prizePool={event.prizePool}
-                image={"/infin8_logo.png"}
+                image={event.image||"/infin8_logo.png"}
                 about={event.about}
                 rulespdf={event.rulespdf}
                 spocs={event.spocs}
@@ -231,7 +231,7 @@ export default function EventsPage() {
                 id={event.id}
                 name={event.name}
                 prizePool={event.prizePool}
-                image={"/infin8_logo.png"}
+                image={event.image||"/infin8_logo.png"}
                 about={event.about}
                 rulespdf={event.rulespdf}
                 spocs={event.spocs}
