@@ -15,6 +15,7 @@ import GalleryScene from "@/components/Gallery"
 import FAQs from "@/components/faqs"
 import { useLayoutEffect } from "react";
 // import useScrollSnap from "@/hooks/useScrollSnap";
+import ArtistSection from "@/components/seggsyArtist";
 import useScrollSnap from "react-use-scroll-snap";
 //import GalleryScene from "@/components/GalleryScene";
 
@@ -158,6 +159,9 @@ export default function App() {
       </section>
       <section className="section h-screen">
           <GalleryScene />
+      </section>
+      <section className="section h-screen">
+          <ArtistSection />
       </section>
       <section className="section h-screen">
           <FAQs />

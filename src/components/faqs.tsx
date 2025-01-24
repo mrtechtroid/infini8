@@ -180,7 +180,13 @@ export default function FAQs() {
           </div>
 
           {/* FAQ Cards */}
-          <div className="space-y-4">
+          <div
+          className="custom-scrollbar max-h-[70vh] overflow-y-auto pr-4 -mr-4 space-y-4"
+          style={{
+            scrollbarWidth: "thin",
+            scrollbarColor: "#DC2626 #1F2937",
+          }}
+        >
             {faqs.map((faq, index) => (
               <div
                 key={index}

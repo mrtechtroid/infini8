@@ -199,10 +199,10 @@ const TeamGrid = () => {
                 backdrop-blur-sm rounded-lg overflow-hidden shadow-xl 
              transform transition-all duration-300 hover:scale-105 hover:-translate-y-2"
                   >
-                    <Image
+                    <img
                       src={member.image}
                       alt={member.name}
-                      fill
+                      fill="true"
                       className="object-cover rounded-t-lg"
                       priority
                     />
