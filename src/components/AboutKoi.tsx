@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import { AnimatedElement } from "@/components/AnimatedElement";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutKoi() {
@@ -291,13 +291,15 @@ export default function AboutKoi() {
             ref={textRef}
             className="relative w-full lg:w-1/2 text-white space-y-8 px-6 lg:px-0 z-10"
           >
+            <AnimatedElement>
             <h3
               className="text-4xl md:text-5xl mb-8 text-[#4AE5AC]"
               style={{ fontFamily: "The Last Shuriken, sans-serif" }}
             >
               The Cultural Extravaganza
             </h3>
-
+            </AnimatedElement>
+            <AnimatedElement>
             <div className="space-y-6">
               <p
                 className="text-xl text-gray-300 leading-relaxed"
@@ -326,6 +328,7 @@ export default function AboutKoi() {
                 celebration.
               </p>
             </div>
+            </AnimatedElement>
           </div>
         </div>
       </div>
