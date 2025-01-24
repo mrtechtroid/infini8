@@ -53,9 +53,10 @@ export default function AboutKoi() {
   return (
     <section
     ref={sectionRef}
+    id = "aboutkoi"
     className="relative min-h-screen w-full bg-cover bg-center overflow-hidden py-20"
     style={{
-      backgroundImage: "url('/koibg.png')",
+      // backgroundImage: "url('/koibg.png')",
     }}
     >
     <div className="container relative h-full">
@@ -282,8 +283,8 @@ export default function AboutKoi() {
             </svg>
           </div>
 
-          {/* Content container with relative positioning */}
-          <div className="relative w-full lg:w-1/2 min-h-[400px]"></div>
+          {/* Content container with relative positioning
+          <div className="relative w-full lg:w-1/2 min-h-[400px]"></div> */}
 
           <div
             ref={textRef}

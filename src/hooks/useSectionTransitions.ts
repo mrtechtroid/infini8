@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -21,7 +21,7 @@ export const useSectionTransitions = (
   const sectionsRef = useRef<HTMLDivElement[]>([])
   const [currentIndex, setCurrentIndex] = useState(0)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const container = containerRef.current
     const sectionElements = sectionsRef.current
     if (!container || sectionElements.length === 0) return

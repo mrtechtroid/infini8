@@ -117,7 +117,6 @@ export default function FAQs() {
       ref={sectionRef} 
       className="relative min-h-screen overflow-hidden"
     >
-      
       {/* Background with gradient, patterns, and Japanese cultural SVGs */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-800 to-white">
         {/* New Japanese Cultural Background SVG */}

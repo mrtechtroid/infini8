@@ -17,6 +17,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-spring": "^9.7.5",
+    "react-use-scroll-snap": "^1.0.0",
+    "scroll-snap": "^4.0.5",
     "three": "^0.172.0",
     "three-gltf-loader": "^1.111.0"
   },

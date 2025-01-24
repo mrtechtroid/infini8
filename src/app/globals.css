@@ -182,6 +182,18 @@ box-shadow: 1703px 1208px #FFF , 381px 207px #FFF , 1516px 1990px #FFF , 1960px 
   margin-top: -60px;
   padding-left: 10px;
 }
+#aboutkoi::before{
+  background: url('/koibg.png');
+  transform: rotate(180deg);
+  width:100vw;
+  height:100vh;
+  position: absolute;
+  top:0;
+  left: 0;
+  content: "";
+  background-size: cover;
+  background-position: center;
+}
 #title span {
   background: -webkit-linear-gradient(white, #38495a);
   background-clip:text;
