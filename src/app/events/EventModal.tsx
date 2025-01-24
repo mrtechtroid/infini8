@@ -1,4 +1,4 @@
-import { X, Download, ExternalLink, Calendar, MapPin } from 'lucide-react';
+import { X, Download, ExternalLink, Calendar, MapPin } from "lucide-react";
 
 interface Spoc {
   name: string;
@@ -18,12 +18,16 @@ interface EventModalProps {
     fee: number;
     image: string;
     time: string;
-    venue:string,
+    venue: string;
     registration_form: string;
   };
 }
 
-export default function EventModal({ isOpen, onClose, event }: EventModalProps) {
+export default function EventModal({
+  isOpen,
+  onClose,
+  event,
+}: EventModalProps) {
   if (!isOpen) return null;
 
   return (
@@ -35,9 +39,8 @@ export default function EventModal({ isOpen, onClose, event }: EventModalProps) 
       />
 
       {/* Modal Content */}
-      <div className="relative bg-gray-900 rounded-lg w-full max-w-4xl mx-4 overflow-y-auto max-h-[90vh] animate-scale-up border border-red-800">
-        {/* Japanese-style top border */}
-        <div className="h-1 bg-red-800 bg-[url('/japanese-pattern.png')] bg-repeat-x" />
+      <div className="relative bg-[url('/eventModalbg.png')] rounded-lg w-full max-w-4xl mx-4 overflow-y-auto max-h-[90vh] animate-scale-up border border-red-800">
+        {/* Background Layer */}
 
         {/* Close button */}
         <button
@@ -58,14 +61,15 @@ export default function EventModal({ isOpen, onClose, event }: EventModalProps) 
                   alt={event.name}
                   className="object-cover w-full h-full"
                 />
-                {/* Corner decorations */}
               </div>
             </div>
 
             {/* Main Info */}
             <div className="w-full md:w-3/5">
-              <h2 className="text-3xl font-['The Last Shuriken'] text-gray-100 mb-6">{event.name}</h2>
-              
+              <h2 className="text-3xl font-['The Last Shuriken'] text-gray-100 mb-6">
+                {event.name}
+              </h2>
+
               {/* Date & Venue Section */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                 {event.time && (
@@ -77,15 +81,6 @@ export default function EventModal({ isOpen, onClose, event }: EventModalProps) 
                     </div>
                   </div>
                 )}
-                {/*event.venue && (
-                  <div className="p-4 bg-gray-800 rounded-lg border border-red-800 flex items-center gap-3">
-                    <MapPin className="w-6 h-6 text-red-500" />
-                    <div>
-                      <p className="text-lg font-semibold text-red-500">Venue</p>
-                      <p className="text-gray-300">{event.venue}</p>
-                    </div>
-                  </div>
-                )*/}
               </div>
 
               {/* Prize Pool & Fee */}
@@ -127,8 +122,16 @@ export default function EventModal({ isOpen, onClose, event }: EventModalProps) 
               </div>
 
               {/* About Section */}
-              <div className="prose prose-invert max-w-none mb-6">
-                <h3 className="text-xl font-['The Last Shuriken'] text-gray-100 mb-3">About the Event</h3>
+              <div
+                className="prose prose-invert max-w-none mb-6 bg-gray-900/50 backdrop-blur-lg rounded-lg p-6"
+                style={{
+                  boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+                  border: "1px solid #991b1b",
+                }}
+              >
+                <h3 className="text-xl font-['The Last Shuriken'] text-gray-100 mb-3">
+                  About the Event
+                </h3>
                 <p className="text-gray-300">{event.about}</p>
               </div>
             </div>
@@ -136,7 +139,9 @@ export default function EventModal({ isOpen, onClose, event }: EventModalProps) 
 
           {/* SPOCs Section */}
           <div className="bg-gray-800 rounded-lg p-6 mt-8 border border-red-800">
-            <h3 className="text-xl font-['The Last Shuriken'] text-gray-100 mb-4">Event Coordinators</h3>
+            <h3 className="text-xl font-['The Last Shuriken'] text-gray-100 mb-4">
+              Event Coordinators
+            </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {event.spocs.map((spoc, index) => (
                 <div
