@@ -248,13 +248,7 @@ export default function Hero() {
           style={{ marginBottom: "-1px" }} // This eliminates any potential gap
         ></div>
       </div>
-<<<<<<< Updated upstream
     </section >
 
   )
 }
-=======
-    </section>
-  );
-}
->>>>>>> Stashed changes

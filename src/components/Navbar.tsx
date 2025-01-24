@@ -22,11 +22,7 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
-<<<<<<< Updated upstream
               {['Events', 'Team', 'About', 'Sponsors'].map((item) => (
-=======
-              {["Home", "Events", "Team", "Sponsors"].map((item) => (
->>>>>>> Stashed changes
                 <a
                   key={item}
                   href={`/${item.toLowerCase()}`}
@@ -78,11 +74,7 @@ const Navbar = () => {
         } md:hidden bg-black/50 backdrop-blur-sm`}
       >
         <div className="px-2 pt-2 pb-3 space-y-1">
-<<<<<<< Updated upstream
           {['Events', 'Team', 'About', 'Sponsors'].map((item) => (
-=======
-          {["Home", "Events", "Team", "Sponsors"].map((item) => (
->>>>>>> Stashed changes
             <a
               key={item}
               href={`/${item.toLowerCase()}`}
