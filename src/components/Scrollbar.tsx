@@ -74,8 +74,7 @@ export default function CustomScrollbar() {
 
   return (
     <div
-      className={`fixed left-0 top-0 h-full bg-red-600 border-r flex flex-col items-center justify-center gap-4 md:gap-8 transition-all duration-300
-        ${isMobile ? 'w-12 md:w-16' : 'w-16'}`}
+      className={`fixed left-0 top-0 h-full bg-red-600 border-r flex flex-col items-center justify-center gap-4 md:gap-8 transition-all duration-300 w-4 md:w-16`}
       style={{
         backgroundImage: "url('/eventsbg.jpg')",
         zIndex: 10,
