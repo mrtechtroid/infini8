@@ -54,13 +54,13 @@ export default function AboutKoi() {
     <section
     ref={sectionRef}
     id = "aboutkoi"
-    className="relative min-h-screen w-full bg-cover bg-center overflow-hidden py-20"
+    className="relative min-h-screen w-full bg-cover bg-center overflow-hidden"
     style={{
       // backgroundImage: "url('/koibg.png')",
     }}
     >
     <div className="container relative h-full">
-      <div className="flex flex-col lg:flex-row items-center justify-center h-full min-h-screen">
+      <div className="relative flex flex-col lg:flex-row items-center justify-center h-full min-h-screen">
           {/* Absolute positioned SVG container that covers the entire section */}
           <div className="absolute inset-0 w-full h-full pointer-events-none">
             <svg ref={koiRef} viewBox="0 0 540 540" className="w-full h-full">
@@ -288,7 +288,7 @@ export default function AboutKoi() {
 
           <div
             ref={textRef}
-            className="relative w-full lg:w-1/2 text-white space-y-8 px-6 lg:px-0 z-10"
+            className="relative w-full lg:w-1/2 text-white space-y-8 px-6 lg:px-0 "
           >
             <AnimatedElement>
             <h3
@@ -301,7 +301,7 @@ export default function AboutKoi() {
             <AnimatedElement>
             <div className="space-y-6">
               <p
-                className="text-xl text-gray-300 leading-relaxed"
+                className="text-l md:text-xl text-gray-300 leading-relaxed"
                 style={{ fontFamily: "Tektur, sans-serif" }}
               >
                 Infin8, the yearly cultural bash at IIITB, is a three-day
@@ -310,14 +310,14 @@ export default function AboutKoi() {
               </p>
 
               <blockquote
-                className="text-2xl text-[#4AE5AC] pl-6 border-l-2 border-[#4AE5AC] my-8"
+                className="text-xl md:text-2xl text-[#4AE5AC] pl-6 border-l-2 border-[#4AE5AC] my-8"
                 style={{ fontFamily: "Tektur, sans-serif" }}
               >
                 A unique and exciting experience for everyone
               </blockquote>
 
               <p
-                className="text-xl text-gray-300 leading-relaxed"
+                className="text-l md:text-xl text-gray-300 leading-relaxed"
                 style={{ fontFamily: "Tektur, sans-serif" }}
               >
                 Talented artists from all corners of India come to showcase

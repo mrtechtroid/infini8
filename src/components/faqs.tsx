@@ -190,7 +190,7 @@ export default function FAQs() {
           </div>
 
           {/* Image Section */}
-          <div className="w-full md:w-1/2 relative overflow-hidden">
+          <div className="hidden md:block h-full md:w-1/2 relative overflow-hidden ">
             <img
               src="/noodles.png"
               alt="Japanese Noodles"

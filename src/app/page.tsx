@@ -158,9 +158,6 @@ export default function App() {
           <Events />
       </section>
       <section className="section h-screen">
-          <GalleryScene />
-      </section>
-      <section className="section h-screen">
           <ArtistSection />
       </section>
       <section className="section h-screen">
