@@ -219,7 +219,7 @@ export default function Hero() {
           className="absolute bottom-[0%] w-[150px] md:w-[220px] lg:w-[320px] z-30 transform-gpu"
         />
 
-        <div className="absolute bottom-0 left-0 w-full flex justify-center items-end z-20">
+        <div className="absolute bottom-0 left-[100px] md:left-[160px] lg:left-[230px] w-full flex items-end z-20">
           <img
             ref={mountainRef}
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mountain-LnAQuV6tIuBDPnQfkWj5osBZQT4eOD.svg"
