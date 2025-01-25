@@ -127,7 +127,7 @@
           "rules": ["Individual participation", "Time limit: 5 minutes", "Original content only"],
           "about": "Are you ready to showcase your creativity and storytelling skills? Join our Reel-Making Writing Competition and bring your ideas to life! This competition is your chance to shine. Below are the competition details, guidelines, and the theme for this year",
           "image": "/posters/Reel_making_competition.jpg",
-          "rulespdf":"https://docs.google.com/document/d/17TTu33dUdRNjvpjIUpDSRstMtfgkkXp9hkLQQzjZfIg/edit?usp=sharing",
+          "rulespdf":"https://drive.google.com/file/d/10hdgbhYg5ObUojVCHy3Xgq0mhqCY9GtP/view?usp=sharing",
           "time":"7th,8th and 9th Feb",
           "venue":"TBD",
           "spocs": [
@@ -140,11 +140,11 @@
         {
           "id": 25,
           "name": "Photography Competition",
-          "prizePool": 4000,
+          "prizePool": 5000,
           "rules": ["Individual participation", "Time limit: 5 minutes", "Original content only"],
           "about": "Join us for a unique photography event! Explore symmetry through geometry and object framing, showcasing the world with an artist's eye. Capture and share your creative perspective in a celebration of balanced compositions. Elevate your skills and connect with fellow photographers in this memorable experience. Don't miss out! Theme: Symmetry",
           "image": "/posters/Photography_Competition.jpg",
-          "rulespdf":"/rules/Photography_Competition.pdf",
+          "rulespdf":"https://drive.google.com/file/d/1LTlgtTMOyUoRCAaCPAR1X3O3IM0budAF/view?usp=sharing",
           "time":"7th,8th and 9th Feb",
           "venue":"TBD",
           "spocs": [
@@ -152,8 +152,7 @@
             { "name": "Shivek Ranjan", "contact": "9546515111" }
           ],
           "fee":0,
-          "registration_form":"https://forms.gle/UxgUPdnitBNteCSA7",
-          "pending":"rules"
+          "registration_form":"https://forms.gle/UxgUPdnitBNteCSA7"
         }
 
       ],

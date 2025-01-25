@@ -21,25 +21,25 @@ const TeamGrid = () => {
           name: "Prakrititz Borah",
           role: "Lead Developer",
           accent: "bg-blue-500",
-          image: `/Prakrititz.png`,
+          image: `/team/Prakrititz.png`,
         },
         {
           name: "Pramatha Rao",
           role: "UX Designer",
           accent: "bg-green-500",
-          image: `/PramathaRao.jpg`,
+          image: `/team/PramathaRao.jpg`,
         },
         {
           name: "Sriram Srikanth",
           role: "Frontend Developer",
           accent: "bg-yellow-500",
-          image: `/SriramSrikanth.jpg`,
+          image: `/team/SriramSrikanth.jpg`,
         },
         {
           name: "Unnath Chittimalla",
           role: "Backend Developer",
           accent: "bg-red-500",
-          image: `/Unnath.png`,
+          image: `/team/Unnath.png`,
         },
       ],
     },
@@ -50,31 +50,31 @@ const TeamGrid = () => {
           name: "Gathik Jindal",
           role: "President",
           accent: "bg-purple-500",
-          image: `/GathikJindal.jpg`,
+          image: `/team/GathikJindal.jpg`,
         },
         {
           name: "Kenji Suzuki",
           role: "Vice President",
           accent: "bg-indigo-500",
-          image: `/KenjiSuzuki.jpg`,
+          image: `/team/KenjiSuzuki.jpg`,
         },
         {
           name: "Sakura Ito",
           role: "Secretary",
           accent: "bg-pink-500",
-          image: `/SakuraIto.jpg`,
+          image: `/team/SakuraIto.jpg`,
         },
         {
           name: "Hiroshi Kimura",
           role: "Treasurer",
           accent: "bg-orange-500",
-          image: `/HiroshiKimura.jpg`,
+          image: `/team/HiroshiKimura.jpg`,
         },
         {
           name: "Aiko Kobayashi",
           role: "Event Coordinator",
           accent: "bg-teal-500",
-          image: `/AikoKobayashi.jpg`,
+          image: `/team/AikoKobayashi.jpg`,
         },
       ],
     },
@@ -85,49 +85,49 @@ const TeamGrid = () => {
           name: "Hemanth Mada",
           role: "Creative Director",
           accent: "bg-cyan-500",
-          image: `/Hemanth.png`,
+          image: `/team/Hemanth.png`,
         },
         {
           name: "Santosh Vodnala",
           role: "Graphic Designer",
           accent: "bg-lime-500",
-          image: `/SantoshVodnala.jpg`,
+          image: `/team/SantoshVodnala.jpg`,
         },
         {
           name: "Kazuki Yamaguchi",
           role: "UI Designer",
           accent: "bg-emerald-500",
-          image: `/KazukiYamaguchi.jpg`,
+          image: `/team/KazukiYamaguchi.jpg`,
         },
         {
           name: "Chaitya Shah",
           role: "Motion Designer",
           accent: "bg-fuchsia-500",
-          image: `/Chaitya.png`,
+          image: `/team/Chaitya.png`,
         },
         {
           name: "Tahir Khandarbad",
           role: "Illustrator",
           accent: "bg-amber-500",
-          image: `/TahirKhandarbad.jpg`,
+          image: `/team/TahirKhandarbad.jpg`,
         },
         {
           name: "Shota Nakajima",
           role: "Brand Designer",
           accent: "bg-rose-500",
-          image: `/ShotaNakajima.jpg`,
+          image: `/team/ShotaNakajima.jpg`,
         },
       ],
     },
   ];
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e:React.MouseEvent) => {
     const container = e.currentTarget;
     const rect = container.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width;
     const y = (e.clientY - rect.top) / rect.height;
     setMousePosition({ x, y });
   };
-  const getLayerStyle = (depth) => {
+  const getLayerStyle = (depth:number) => {
     const xMove = (mousePosition.x - 0.5) * depth * 50;
     const yMove = (mousePosition.y - 0.5) * depth * 50;
     const scrollMove = scrollPosition * depth * 0.1;

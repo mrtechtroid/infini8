@@ -1,7 +1,6 @@
 "use client";
 
 import TeamsGrid from "@/components/Teams";
-import Navbar from "@/components/Navbar";
 
 export default function TeamsPage() {
   return (

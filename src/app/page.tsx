@@ -13,6 +13,8 @@ import Navbar from "@/components/Navbar"
 import AboutKoi from "@/components/AboutKoi"
 import GalleryScene from "@/components/Gallery"
 import FAQs from "@/components/faqs"
+//import Team from "@/components/MeetOurTeam"
+import Team from "@/components/MeetOurTeam"
 import { useLayoutEffect } from "react";
 // import useScrollSnap from "@/hooks/useScrollSnap";
 import ArtistSection from "@/components/seggsyArtist";
@@ -145,7 +147,6 @@ export default function App() {
 
   return (
     <main className="relative h-screen">
-      <Navbar />
       <div ref={containerRef} className="relative h-screen" id = "main">
       {/* <CherryBlossoms /> */}
       <section className="section h-screen">
@@ -159,6 +160,9 @@ export default function App() {
       </section>
       <section className="section h-screen">
           <ArtistSection />
+      </section>
+      <section className="screen h-screen">
+          <Team/>
       </section>
       <section className="section h-screen">
           <FAQs />

@@ -300,3 +300,89 @@ box-shadow: 1703px 1208px #FFF , 381px 207px #FFF , 1516px 1990px #FFF , 1960px 
     transform: translateX(0px) skewX(0deg);
   }
 }
+
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(188, 0, 45, 0.3);
+}
+
+.line-glow {
+  box-shadow: 0 0 20px rgba(188, 0, 45, 0.5);
+}
+
+.corner-glow {
+  box-shadow: 0 0 10px rgba(188, 0, 45, 0.5);
+}
+
+.red-circle-glow {
+  box-shadow: 0 0 50px rgba(188, 0, 45, 0.3);
+}
+
+.kanji-glow {
+  text-shadow: 0 0 30px rgba(188, 0, 45, 0.2);
+}
+
+/* Animated Button Styles */
+.animated-button {
+  position: relative;
+  background: linear-gradient(45deg, #BC002D, #FF0044, #BC002D);
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+  border: none;
+  overflow: hidden;
+}
+
+.animated-button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #BC002D, #FF0044, #BC002D);
+  background-size: 400% 400%;
+  animation: gradientBorder 3s ease infinite;
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.animated-button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, 
+    rgba(255,255,255,0.1), 
+    rgba(255,255,255,0.2), 
+    rgba(255,255,255,0.1)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.animated-button:hover::after {
+  opacity: 1;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradientBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
