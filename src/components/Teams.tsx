@@ -1,10 +1,17 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
+import { useRouter } from 'next/navigation';
+import { ArrowLeft } from 'lucide-react';
 
 const TeamGrid = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [scrollPosition, setScrollPosition] = useState(0);
+  const router = useRouter();
+
+  const handleGoBack = () => {
+    router.push('/');
+  };
 
   const teamSections = [
     {
@@ -136,6 +143,14 @@ const TeamGrid = () => {
       className="w-full min-h-screen overflow-x-hidden"
       onMouseMove={handleMouseMove}
     >
+      <button
+        onClick={handleGoBack}
+        className="fixed top-4 left-4 z-50 bg-black/50 hover:bg-black/70 
+        rounded-full p-2 transition-colors duration-200 
+        md:top-6 md:left-6"
+      >
+        <ArrowLeft className="text-white w-6 h-6 md:w-8 md:h-8" />
+      </button>
       <div className="relative w-full">
         {/* Parallax Layers */}
         <div className="absolute inset-0 overflow-hidden">
