@@ -9,7 +9,7 @@ export default function Footer() {
 
       {/* Decorative SVGs */}
       <img src="/vector0.svg" alt="" className="absolute right-0 top-0 h-1/4" />
-      <img src="/vector1.svg" alt="" className="absolute left-0 top-0 h-1/4" />
+      <img src="/vector0.svg" alt="" className="absolute left-0 top-0 h-1/4 transform scale-x-[-1]" />
       <img
         src="/vector2.svg"
         alt=""

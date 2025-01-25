@@ -124,7 +124,7 @@ export default function EventsPage() {
   return (
     <div className="min-h-screen bg-red-600 bg-[url('/eventsbg.jpg')] bg-repeat relative">
     {/* Left Onigiri */}
-    <div className="fixed left-0 bottom-0 pointer-events-none z-10">
+    <div className="fixed left-0 bottom-0 pointer-events-none z-20">
       <img 
         src="/onigiri_l.png" 
         alt="Left Onigiri" 
@@ -135,9 +135,9 @@ export default function EventsPage() {
     {/* Right Onigiri */}
     <div className="fixed right-0 bottom-0 pointer-events-none z-10">
       <img 
-        src="/onigiri_r.png" 
+        src="/onigiri_l.png" 
         alt="Right Onigiri" 
-        className="w-32 md:w-48 lg:w-64 object-contain"
+        className="w-32 md:w-48 lg:w-64 object-contain transform scale-x-[-1]"
       />
     </div>
 
