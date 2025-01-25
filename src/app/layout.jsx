@@ -17,8 +17,8 @@ const notoSerifJP = Noto_Serif_JP({
 });
 
 export const metadata = {
-  title: "Discover Japan",
-  description: "Experience the beauty and culture of Japan",
+  title: "Infin8 2025 - Osaka Odyssey",
+  description: "Infin8, the yearly cultural bash at IIITB, is a three-day extravaganza filled with loads of vibrant shows, performances, competitions, games, and stalls.",
 };
 
 export default function RootLayout({
