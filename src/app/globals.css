@@ -25,10 +25,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
 
 @font-face {
-  font-family: 'Hina Mincho';
-  src: url('/HinaMincho-Regular.ttf') format('truetype');
-}
-@font-face {
   font-family: 'Onsen';
   src: url('/OnsenJapanDemoRegular.ttf') format('truetype');
 }
@@ -190,7 +186,7 @@ box-shadow: 1703px 1208px #FFF , 381px 207px #FFF , 1516px 1990px #FFF , 1960px 
   padding-left: 10px;
 }
 #aboutkoi::before{
-  background: url('/koibg.png');
+  background: url('/koibg-min.png');
   transform: rotate(180deg);
   width:100vw;
   height:100vh;

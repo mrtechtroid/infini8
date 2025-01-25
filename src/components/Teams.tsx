@@ -120,14 +120,14 @@ const TeamGrid = () => {
       ],
     },
   ];
-  const handleMouseMove = (e:React.MouseEvent) => {
+  const handleMouseMove = (e:any) => {
     const container = e.currentTarget;
     const rect = container.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width;
     const y = (e.clientY - rect.top) / rect.height;
     setMousePosition({ x, y });
   };
-  const getLayerStyle = (depth:number) => {
+  const getLayerStyle = (depth:any) => {
     const xMove = (mousePosition.x - 0.5) * depth * 50;
     const yMove = (mousePosition.y - 0.5) * depth * 50;
     const scrollMove = scrollPosition * depth * 0.1;
@@ -217,9 +217,9 @@ const TeamGrid = () => {
                     <img
                       src={member.image}
                       alt={member.name}
-                      fill="true"
+                      // fill="true"
                       className="object-cover rounded-t-lg"
-                      priority
+                      // priority
                     />
 
                     <div

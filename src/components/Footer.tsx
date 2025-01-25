@@ -5,15 +5,15 @@ import { Twitter, Instagram, Linkedin, Facebook } from "lucide-react"
 export default function Footer() {
   return (
     <footer className="relative w-full h-screen bg-white overflow-hidden">
-      <img src="/rectangle-60.png" alt="Background pattern" layout="fill" style={{objectFit:"cover",quality:100}} />
+      <img src="/rectangle-60.png" alt="Background pattern" style={{objectFit:"cover"}} />
 
       {/* Decorative SVGs */}
       <img src="/vector0.svg" alt="" className="absolute right-0 top-0 h-1/4" />
-      <img src="/vector1.svg" alt="" className="absolute left-0 top-0 h-1/4" />
+      <img src="/vector0.svg" alt="" className="absolute left-0 top-0 h-1/4 transform scale-x-[-1]" />
       <img
         src="/vector2.svg"
         alt=""
-        layout="fill"
+        // style={{layout:"fill"}}
         className="absolute left-[8.67%] top-[12.1%] w-[2.66%] h-[4.07%]"
       />
 
