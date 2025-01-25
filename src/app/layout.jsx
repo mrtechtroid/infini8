@@ -41,7 +41,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap"
           rel="stylesheet"
         />
-        <link rel="favicon" href="/public/infin8_footer.png" />
+        <link rel="icon" type="image/x-icon" href="/Logo.png"/>
       </head>
       <body className={inter.className}>{children}</body>
     </html>

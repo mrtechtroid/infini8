@@ -36,14 +36,14 @@ export default function Footer() {
             <h2 className="text-4xl md:text-5xl mb-4 " style={{fontFamily: 'The Last Shuriken',color:'#000000'}}>GET IN TOUCH</h2>
             <div className="space-y-2">
               {[
-                { name: "Twitter", icon: Twitter },
-                { name: "Instagram", icon: Instagram },
-                { name: "LinkedIn", icon: Linkedin },
-                { name: "Facebook", icon: Facebook },
+                { name: "Twitter", url:"https://twitter.com/infin8_iiitb", icon: Twitter },
+                { name: "Instagram", url:"https://www.instagram.com/infin8_iiitb/", icon: Instagram },
+                { name: "LinkedIn", url:"https://www.linkedin.com/company/infin8-iitb/", icon: Linkedin },
+                { name: "Facebook", url:"https://www.facebook.com/infin8iiitb/", icon: Facebook },
               ].map((social) => (
                 <Link
                   key={social.name}
-                  href={social.name!="LinkedIn"?`https://${social.name.toLowerCase()}.com`:`https://www.linkedin.com/company/infin8-iitb/`}
+                  href={social.url}
                   className="flex items-center justify-end space-x-2 text-2xl md:text-3xl font-hinaminchou hover:text-gray-600 transition-colors"
                 >
                   <span>{social.name}</span>
