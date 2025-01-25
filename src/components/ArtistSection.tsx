@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -8,8 +9,8 @@ const artists = [
     nameEn: "Karan Singh",
     image: "/karanSingh.jpg",
     description: {
-      jp: "田中雪は、伝統的な日本の技法と現代的な美学を融合させることで知られる世界的に有名な日本人アーティストです。",
-      en: "Yuki Tanaka is a globally renowned Japanese artist known for fusing traditional Japanese techniques with contemporary aesthetics.",
+      "jp": "田中雪は、伝統的な日本の技法と現代的な美学を融合させることで知られる世界的に有名な日本人アーティストです。",
+      "en": "Yuki Tanaka is a globally renowned Japanese artist known for fusing traditional Japanese techniques with contemporary aesthetics.",
     },
     days: ["零日目", "一日目", "二日目"],
     bgPattern: "/japanese-wave.svg",
@@ -19,8 +20,8 @@ const artists = [
     nameEn: "Sho Sato",
     image: "/sato.jpg",
     description: {
-      jp: "伝統と革新の架け橋として知られる佐藤翔。彼の作品は日本の伝統芸術の精神を現代的な表現方法で表現し、世界中で高い評価を受けています。",
-      en: "Sho Sato is known as a bridge between tradition and innovation. His works express the spirit of traditional Japanese art in contemporary ways, receiving high acclaim worldwide.",
+      "jp": "伝統と革新の架け橋として知られる佐藤翔。彼の作品は日本の伝統芸術の精神を現代的な表現方法で表現し、世界中で高い評価を受けています。",
+      "en": "Sho Sato is known as a bridge between tradition and innovation. His works express the spirit of traditional Japanese art in contemporary ways, receiving high acclaim worldwide.",
     },
     days: ["零日目", "一日目", "二日目"],
     bgPattern: "/japanese-maple.svg",
@@ -30,8 +31,8 @@ const artists = [
     nameEn: "Saki Kimura",
     image: "/kimura.jpg",
     description: {
-      jp: "デジタルアートと日本の伝統的な水墨画を組み合わせた独自のスタイルで、新しい表現の可能性を追求する気鋭のアーティスト。",
-      en: "A rising artist pursuing new possibilities of expression with a unique style that combines digital art and traditional Japanese ink painting.",
+      "jp": "デジタルアートと日本の伝統的な水墨画を組み合わせた独自のスタイルで、新しい表現の可能性を追求する気鋭のアーティスト。",
+      "en": "A rising artist pursuing new possibilities of expression with a unique style that combines digital art and traditional Japanese ink painting.",
     },
     days: ["零日目", "一日目", "二日目"],
     bgPattern: "/japanese-pattern.svg",

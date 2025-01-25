@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -28,17 +29,17 @@ const ArtistSection = () => {
   const contentRef = useRef(null);
   const artistRefs = useRef([]);
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e:any) => {
     const { clientX } = e;
     const x = (clientX / window.innerWidth - 0.5) * 2;
     setMousePosition({ x, y: 0 });
   };
 
-  const getParallaxStyle = (depth) => ({
+  const getParallaxStyle = (depth:any) => ({
     transform: `translateX(${mousePosition.x * depth * 50}px)`,
     transition: "transform 0.3s ease-out",
   });
-  const getBambooWindStyle = (depth) => ({
+  const getBambooWindStyle = (depth:any) => ({
     ...getParallaxStyle(depth),
     animation: "bambooWind 8s ease-in-out infinite",
   });

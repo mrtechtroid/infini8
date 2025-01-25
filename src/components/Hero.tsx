@@ -170,7 +170,7 @@ export default function Hero() {
       <div className="relative h-full w-full max-w-[1920px] mx-auto">
         <img
           ref={birdRef}
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Birds-EiB1bMKlqOM77MoS6SzA7P3WXsHbyy.svg"
+          src="/Birds.svg"
           alt="Flying birds"
           className="absolute top-[15%] left-[15%] w-[120px] md:w-[180px] lg:w-[220px] z-20"
         />
@@ -214,7 +214,7 @@ export default function Hero() {
 
         <img
           ref={buildingRef}
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/building-QfSshdJncVB1b9cfYiOkkz3izBLM9L.svg"
+          src="building.svg"
           alt="Japanese pagoda"
           className="absolute bottom-[0%] w-[150px] md:w-[220px] lg:w-[320px] z-30 transform-gpu"
         />
@@ -222,7 +222,7 @@ export default function Hero() {
         <div className="absolute bottom-0 left-[100px] md:left-[160px] lg:left-[230px] w-full flex items-end z-20">
           <img
             ref={mountainRef}
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mountain-LnAQuV6tIuBDPnQfkWj5osBZQT4eOD.svg"
+            src="mountain.svg"
             alt="Mount Fuji"
             className="w-[500px] md:w-[600px] lg:w-[1000px] transform-gpu"
           />
@@ -230,7 +230,7 @@ export default function Hero() {
 
         <img
           ref={blossomRef}
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cherry_blossom-9tlvCGBNKYu5I1mHJw2PwMfu9kkOpS.svg"
+          src="cherry_blossom.svg"
           alt="Cherry blossoms"
           className="absolute top-[0%] right-[0%] w-[180px] md:w-[250px] lg:w-[320px] z-30 transform-gpu"
         />

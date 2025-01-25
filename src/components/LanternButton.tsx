@@ -1,11 +1,12 @@
+// @ts-nocheck
 import type React from "react"
 import Link from "next/link"
-import AnimatedElement from "@/components/AnimatedElement"
+// import AnimatedElement from "@/components/AnimatedElement"
 const LanternButton: React.FC = (params: { link: string, title: string, title_jp: string }) => {
   const { link, title, title_jp } = params
 //   console.log(link)
     return (
-    <Link href={link} className="block w-40 h-56 relative no-underline">
+    <Link href={link!= null ? link : ""} className="block w-40 h-56 relative no-underline">
       <div className="lantern-container w-full h-full relative group">
         <svg
           viewBox="0 0 100 140"

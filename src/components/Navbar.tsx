@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const Navbar = () => {
@@ -14,9 +14,10 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo/Brand */}
           <div className="flex-shrink-0">
+            <Link href="/">
             <span className="text-white font-bold text-xl font-['Osake']">
               INFIN8
-            </span>
+            </span></Link>
           </div>
 
           {/* Desktop Navigation */}

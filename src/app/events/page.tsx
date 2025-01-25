@@ -84,8 +84,8 @@ function EventCard({  id,name,spocs,about,rulespdf,prizePool,fee,image,registrat
               >
                 {name}
               </h3>
-              <p className="text-red-400 font-['Hina Mincho']"
-                style={{ fontFamily: 'Hina Mincho, sans-serif' }}>
+              <p className="text-red-400"
+                >
                 Prize Pool: ₹{prizePool.toLocaleString()}
               </p>
             </div>
