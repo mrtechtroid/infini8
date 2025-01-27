@@ -109,7 +109,7 @@
           "rules": ["Individual participation", "Time limit: 5 minutes", "Original content only"],
           "about": "JAM, originating from the renowned BBC radio show, is a captivating verbal challenge game where participants strive to speak for exactly one minute on a given topic without breaking three fundamental rules. The game has evolved into a delightful and light-hearted event, emphasizing wit, spontaneity, and linguistic agility. Reference -Please watch the first few rounds in the video below for reference. It’s a very fun and light-hearted event so we might have bonus points for entertaining speeches and challenges ;) https://www.youtube.com/watch?v=2Zu-2eNYmMM",
           "image": "/posters/JAM.jpg",
-          "rulespdf":"/rules/JAM.pdf",
+          "rulespdf":"https://drive.google.com/file/d/1_Ws5fxye78M9eORCZJ3YddAZstp7ST0M/view?usp=sharing",
           "time":"7th Feb 4:00 PM",
           "venue":"TBD",
           "spocs": [
@@ -117,8 +117,7 @@
             { "name": "Vishruth Vijay", "contact": "9449960095" }
           ],
           "fee":0,
-          "registration_form":"https://forms.gle/nbdT6d1Z5rwfdQuq9",
-          "pending":"rules"
+          "registration_form":"https://forms.gle/nbdT6d1Z5rwfdQuq9"
         },
         {
           "id": 24,
