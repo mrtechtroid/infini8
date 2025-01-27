@@ -1,72 +1,135 @@
+import { Card } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
+import { Twitter, Instagram, Linkedin, Facebook, Bold } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { Twitter, Instagram, Linkedin, Facebook } from "lucide-react"
+import styles from "./footer.module.css"
 
 export default function Footer() {
   return (
-    <footer className="relative w-full h-screen bg-white overflow-hidden">
-      <img src="/rectangle-60.png" alt="Background pattern" style={{objectFit:"cover"}} />
+    <footer className={styles.footerContainer}>
+      <div className={styles.footerWaves} />
 
-      {/* Decorative SVGs */}
-      <img src="/vector0.svg" alt="" className="absolute right-0 top-0 h-1/4" />
-      <img src="/vector0.svg" alt="" className="absolute left-0 top-0 h-1/4 transform scale-x-[-1]" />
-      <img
-        src="/vector2.svg"
-        alt=""
-        // style={{layout:"fill"}}
-        className="absolute left-[8.67%] top-[12.1%] w-[2.66%] h-[4.07%]"
-      />
+      {/* Lanterns */}
+      <div className={styles.lanternContainer}>
+        {[...Array(5)].map((_, i) => (
+          <div key={i} className={styles.lantern} />
+        ))}
+      </div>
 
-      {/* Main content container */}
-      {/* <div className="absolute inset-0 flex flex-col justify-between p-8 md:p-16"> */}
-        {/* Logo and title */}
-        {/* <div className="max-w-4xl mx-auto text-center"> */}
-          <img src="/infin8_footer.png" alt="INFIN8 Logo" className="w-1/2 h-auto absolute top-[30%] left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-        {/* </div> */}
-        <img src="/iiit-b-logo-10.png" alt="IIIT-B Logo" className="w-[100px] h-auto absolute bottom-[4%] left-[4%] transform -translate-x-1 -translate-y-1" />
-        {/* Contact section */}
-        <div className="flex flex-col md:flex-row justify-between items-end  mt-8">
-          {/* IIIT-B Logo */}
-          <div className="mb-8 md:mb-0">
-            
-          </div>
-
-          {/* Social links */}
-          <div className="text-right absolute w-1/2 h-auto bottom-[10%] right-[4%]">
-            <h2 className="text-4xl md:text-5xl mb-4 " style={{fontFamily: 'The Last Shuriken',color:'#000000'}}>GET IN TOUCH</h2>
-            <div className="space-y-2">
-              {[
-                { name: "Twitter", url:"https://twitter.com/infin8_iiitb", icon: Twitter },
-                { name: "Instagram", url:"https://www.instagram.com/infin8_iiitb/", icon: Instagram },
-                { name: "LinkedIn", url:"https://www.linkedin.com/company/infin8-iitb/", icon: Linkedin },
-                { name: "Facebook", url:"https://www.facebook.com/infin8iiitb/", icon: Facebook },
-              ].map((social) => (
-                <Link
-                  key={social.name}
-                  href={social.url}
-                  className="flex items-center justify-end space-x-2 text-2xl md:text-3xl font-hinaminchou hover:text-gray-600 transition-colors"
-                >
-                  <span>{social.name}</span>
-                  <social.icon className="w-6 h-6 md:w-8 md:h-8" />
-                </Link>
-              ))}
+      <div className="container mx-auto">
+        <div className={styles.gridContainer}>
+          {/* Event Section
+          <Card className={styles.bentoBox}>
+            <div className="space-y-4">
+              <Image
+                src="/infin8_logo.png"
+                alt="Infin8 Logo"
+                width={200}
+                height={200}
+                className="mx-auto transition-transform hover:scale-105"
+              />
+              <h2 className="text-2xl font-bold text-center bg-gradient-to-r from-rose-100 to-teal-100 bg-clip-text text-transparent">
+                INFIN8
+              </h2>
             </div>
-          </div>
-        </div>
-      {/* </div> */}
+          </Card> */}
 
-      {/* Decorative elements */}
-      <img src="/group0.svg" alt=""  className="absolute left-[29%] bottom-0 w-[15%] h-auto" />
-      <img src="/group1.svg"alt=""  className="absolute left-[67%] top-[59%] w-[2%] h-auto" />
-      <img src="/group2.svg"alt=""  className="absolute left-[88%] top-[70%] w-[2%] h-auto" />
-      <img src="/group3.svg"alt=""  className="absolute left-[81%] top-[55%] w-[2%] h-auto" />
-      <img src="/group-399660.svg" alt=""  className="absolute left-[40%] bottom-0 w-[20%] h-auto" />
-      <img src="/group4.svg" alt=""  className="absolute left-[47%] bottom-[20%] w-[5%] h-auto" />
-      <img src="/group5.svg" alt=""  className="absolute left-2 bottom-[30%] w-[24%] h-auto" />
-      <img src="/group6.svg" alt=""  className="absolute left-[-11%] top-[43%] w-[17%] h-auto" />
-      <img src="/group7.svg" alt=""  className="absolute left-[-1%] top-[55%] w-[5%] h-auto" />
-      <img src="/group8.svg" alt=""  className="absolute left-[20%] bottom-[10%] w-[3%] h-auto" />
-      <img src="/group9.svg" alt=""  className="absolute left-[-1%] bottom-[20%] w-[5%] h-auto" />
+          {/* Institute Section */}
+          <Card className={styles.bentoBox}>
+            <Link href="https://iiitb.ac.in" className="block space-y-4" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/iiit-b-logo-10.png"
+                alt="IIIT-B Logo"
+                width={200}
+                height={200}
+                className="mx-auto transition-transform hover:scale-105 bg-white"
+                style={{
+                  borderRadius: 10
+                }}
+              />
+              <p className="text-center text-sm text-muted-foreground text-white">
+                International Institute of Information Technology, Bangalore
+              </p>
+            </Link>
+          </Card>
+
+          {/* Social Links */}
+          <Card className={styles.bentoBox}>
+            <div className="space-y-4">
+              <h3 className="text-lg font-medium text-center text-white"
+                              style={{ fontFamily: "Tektur, sans-serif" }}
+>Get in Touch</h3>
+              <div className={styles.socialGrid}>
+                {[
+                  { icon: Twitter, href: "https://twitter.com/infin8_iiitb" },
+                  { icon: Instagram, href: "https://www.instagram.com/infin8_iiitb/" },
+                  { icon: Linkedin, href: "https://www.linkedin.com/company/infin8-iitb/" },
+                  { icon: Facebook, href: "https://www.facebook.com/infin8iiitb/" },
+                ].map((social, index) => (
+                  <Link
+                    key={index}
+                    href={social.href}
+                    className="flex items-center justify-center p-2 rounded-full hover:bg-accent transition-colors bg-white text-red-700"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </Card>
+
+          {/* Sponsors */}
+          <Card className={styles.bentoBox}>
+            <div className="space-y-4">
+              <h3 className="text-lg font-medium text-center text-white"
+                              style={{ fontFamily: "Tektur, sans-serif" }}
+>Our Sponsors</h3>
+              <div className={styles.sponsorGrid}>
+                {[1, 2, 3].map((num) => (
+                  <Image
+                    key={num}
+                    // src={`/sponsor${num}.png`}
+                    src='/infin8_logo.png'
+                    alt={`Sponsor ${num}`}
+                    width={160}
+                    height={160}  
+                    className="transition-transform hover:scale-110"
+                  />
+                ))}
+              </div>
+            </div>
+          </Card>
+        </div>
+
+        {/* Powered by Section */}
+        <div className="mt-12 text-center">
+          <p className="text-sm text-muted-foreground text-white"
+                          style={{ fontFamily: "Tektur, sans-serif",
+                            fontSize: 35
+                           }}
+>Powered by</p>
+          <Image
+            src="/jhense.png"
+            alt="Zense Logo"
+            width={500}
+            height={250}
+            className="mx-auto mt-2 invert transition-transform hover:scale-105"
+          />
+        </div>
+
+        <Separator className="my-8 opacity-50" />
+
+        {/* Footer Bottom */}
+        <div className="text-center space-y-4">
+          <p className="text-sm text-muted-foreground text-white">
+            &copy; {new Date().getFullYear()} IIIT-B. All rights reserved.
+          </p>
+          <p className={styles.kanji}>無限の可能性</p>
+        </div>
+      </div>
     </footer>
   )
 }

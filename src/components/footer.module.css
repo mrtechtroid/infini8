@@ -1,0 +1,95 @@
+.footerWaves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-KRI8hV8oVvfJgsMjBHw1DOSBcAbGom.png");
+  background-size: 400px;
+  background-repeat: repeat;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.footerContainer {
+  position: relative;
+  background-color: #ed3c1f;
+  overflow: hidden;
+  padding: 4rem 2rem 2rem;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.bentoBox {
+  backdrop-filter: blur(8px);
+  background-color: hsl(0 0% 3.9% / 0.7);
+  border: 1px solid hsl(0 0% 100% / 0.1);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bentoBox:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px hsl(0 0% 100% / 0.1);
+}
+
+.socialGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.sponsorGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  place-items: center;
+}
+
+.lanternContainer {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  z-index: 2;
+}
+
+.lantern {
+  width: 30px;
+  height: 45px;
+  background: linear-gradient(to bottom, #ff9999, #ff6666);
+  border-radius: 15px;
+  position: relative;
+  animation: float 3s ease-in-out infinite;
+  box-shadow: 0 0 15px rgba(255, 102, 102, 0.5);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.kanji {
+  font-family: "Noto Sans JP", sans-serif;
+  background: linear-gradient(to right, #ffffff, #a2a2a2);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+

@@ -195,4 +195,4 @@ const ArtistSection = () => {
   );
 };
 
-export default ArtistSection;
+export default ArtistSection; 
