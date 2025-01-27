@@ -28,8 +28,8 @@ export default function Events() {
       <AnimatedElement><h2 className="text-4xl font-bold mb-12" style={{fontFamily:"The Last Shuriken"}}>Events</h2></AnimatedElement>
         <span>
           <AnimatedElement>
-          <p className="text-xl text-gray-300 leading-relaxed bg-brown-400">
-            Infin8 is a three-day extravaganza filled with vibrant shows, performances, competitions, games, and stalls.
+          <p className="text-m md:text-xl text-gray-300 leading-relaxed bg-brown-400 ">
+          From heart-thumping dance battles and soulful musical performances to intense gaming showdowns and quirky quizzes, Infin8’s events are a treasure trove of opportunities to shine. Dive in, compete, and experience the thrill of creating memories that last a lifetime.
           </p>
           </AnimatedElement>
         </span>
