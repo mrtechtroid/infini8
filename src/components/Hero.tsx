@@ -118,6 +118,67 @@ export default function Hero() {
           },
         }
       );
+      gsap.fromTo(sunRef.current,
+        { y: 0, opacity: 1 },
+        {
+          y: 200,
+          opacity: 0.5,
+          ease: "power1.inOut",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            end: "+=500",
+            scrub: 0.5,
+            toggleActions: "play reverse play reverse",
+          },
+        }
+      );
+      gsap.fromTo(
+        logoRef.current,
+        { y: 0 },
+        {
+          y: 200,
+          opacity: 0.5,
+          ease: "power1.inOut",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            end: "+=500",
+            scrub: 0.5,
+            toggleActions: "play reverse play reverse",
+          },
+        }
+      );
+
+      gsap.fromTo(pseudoMountainRef.current,
+        { height: 30 },
+        {
+          height: 250,
+          ease: "power1.inOut",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            end: "+=1000",
+            scrub: 0.5,
+            toggleActions: "play reverse play reverse",
+          },
+        }
+      );
+
+      gsap.fromTo(birdRef.current,
+        { x: 0 },
+        {
+          x: -150,
+          ease: "power1.inOut",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            end: "+=500",
+            scrub: 0.5,
+            toggleActions: "play reverse play reverse",
+          },
+        }
+      )
 
       // Add immediateRender: false to all other ScrollTrigger animations...
     });

@@ -34,7 +34,7 @@ export default function Events() {
           </AnimatedElement>
         </span>
         <div className="flex flex-row md:flex-row gap-4 mb-6">
-        <LanternButton url="/events#day1" title="Day 1" title_jp="日1"/>
+        <LanternButton url="/events" title="Day 1" title_jp="日1"/>
         <LanternButton url="/events#day2" title="Day 2" title_jp="日2"/>
         <LanternButton url="/events#day3" title="Day 3" title_jp="日3"/>
         </div>
