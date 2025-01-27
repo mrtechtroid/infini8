@@ -1,3 +1,13 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Redirect /events/ to /events.html
+RewriteRule ^events/$ /events.html [L]
+
+# Redirect /team to /team.html
+RewriteRule ^team$ /team.html [L]
+
+# Caching for static assets
 <filesMatch "\.(css|jpg|jpeg|png|gif|js|ico|woff|ttf|svg|eot|otf)$">
-Header set Cache-Control "max-age=2628000, public"
+    Header set Cache-Control "max-age=2628000, public"
 </filesMatch>
