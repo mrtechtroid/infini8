@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
 
+
 const TeamGrid = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -15,66 +16,66 @@ const TeamGrid = () => {
 
   const teamSections = [
     {
+      title: "Organizing Committee 学生会",
+      members: [
+        {
+          name: "Dheeraj Muppiri",
+          role: "President",
+          accent: "bg-purple-500",
+          image: '/Dheeraj_oc.png',
+        },
+        {
+          name: "Siddharth Ayathu",
+          role: "Vice President",
+          accent: "bg-indigo-500",
+          image: '/Ayathu_oc.png',
+        },
+        {
+          name: "Akshat Betala",
+          role: "Secretary",
+          accent: "bg-pink-500",
+          image: '/Betala-oc.png',
+        },
+        {
+          name: "Niveditha Varma",
+          role: "Treasurer",
+          accent: "bg-orange-500",
+          image: '/Niveditha_oc.png',
+        },
+        {
+          name: "Bhavya",
+          role: "Event Coordinator",
+          accent: "bg-teal-500",
+          image: '/Bhavya_oc.png',
+        },
+      ],
+    },
+    {
       title: "Website ウェブサイト",
       members: [
         {
           name: "Prakrititz Borah",
           role: "Lead Developer",
           accent: "bg-blue-500",
-          image: `/team/Prakrititz.png`,
+          image: '/Prakrititz_design_webdev.png',
         },
         {
           name: "Pramatha Rao",
           role: "UX Designer",
           accent: "bg-green-500",
-          image: `/team/PramathaRao.jpg`,
+          image: '/Pramatha_webdev.png',
         },
         {
           name: "Sriram Srikanth",
           role: "Frontend Developer",
           accent: "bg-yellow-500",
-          image: `/team/SriramSrikanth.jpg`,
+          image: '/Sriram_webdev.png',
         },
         {
           name: "Unnath Chittimalla",
           role: "Backend Developer",
           accent: "bg-red-500",
-          image: `/team/Unnath.png`,
-        },
-      ],
-    },
-    {
-      title: "Student Affairs Council 学生会",
-      members: [
-        {
-          name: "Gathik Jindal",
-          role: "President",
-          accent: "bg-purple-500",
-          image: `/team/GathikJindal.jpg`,
-        },
-        {
-          name: "Kenji Suzuki",
-          role: "Vice President",
-          accent: "bg-indigo-500",
-          image: `/team/KenjiSuzuki.jpg`,
-        },
-        {
-          name: "Sakura Ito",
-          role: "Secretary",
-          accent: "bg-pink-500",
-          image: `/team/SakuraIto.jpg`,
-        },
-        {
-          name: "Hiroshi Kimura",
-          role: "Treasurer",
-          accent: "bg-orange-500",
-          image: `/team/HiroshiKimura.jpg`,
-        },
-        {
-          name: "Aiko Kobayashi",
-          role: "Event Coordinator",
-          accent: "bg-teal-500",
-          image: `/team/AikoKobayashi.jpg`,
+          image: '/Unnath_webdev.png',
         },
       ],
     },
@@ -85,49 +86,61 @@ const TeamGrid = () => {
           name: "Hemanth Mada",
           role: "Creative Director",
           accent: "bg-cyan-500",
-          image: `/team/Hemanth.png`,
+          image: '/Hemanth.png',
         },
         {
-          name: "Santosh Vodnala",
+          name: "Tahir Khandarbad",
           role: "Graphic Designer",
           accent: "bg-lime-500",
-          image: `/team/SantoshVodnala.jpg`,
+          image: '/Tahir_design.png',
         },
         {
-          name: "Kazuki Yamaguchi",
+          name: "Nathan Mathew",
           role: "UI Designer",
           accent: "bg-emerald-500",
-          image: `/team/KazukiYamaguchi.jpg`,
+          image: '/Nathan_design.png',
         },
         {
           name: "Chaitya Shah",
           role: "Motion Designer",
           accent: "bg-fuchsia-500",
-          image: `/team/Chaitya.png`,
+          image: '/Chaitya.png',
         },
         {
-          name: "Tahir Khandarbad",
+          name: "Siddharth Menon",
           role: "Illustrator",
           accent: "bg-amber-500",
-          image: `/team/TahirKhandarbad.jpg`,
+          image: '/Menon_design.png',
         },
         {
-          name: "Shota Nakajima",
+          name: "Navya Balaji",
           role: "Brand Designer",
           accent: "bg-rose-500",
-          image: `/team/ShotaNakajima.jpg`,
+          image: '/Navya_design.png',
+        },
+        {
+          name: "Tharanth ",
+          role: "Brand Designer",
+          accent: "bg-rose-500",
+          image: '/Tharanth_design.png',
+        },
+        {
+          name: "Srikar",
+          role: "Brand Designer",
+          accent: "bg-rose-500",
+          image: '/Srikar_design.png',
         },
       ],
     },
   ];
-  const handleMouseMove = (e:any) => {
+  const handleMouseMove = (e) => {
     const container = e.currentTarget;
     const rect = container.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width;
     const y = (e.clientY - rect.top) / rect.height;
     setMousePosition({ x, y });
   };
-  const getLayerStyle = (depth:any) => {
+  const getLayerStyle = (depth) => {
     const xMove = (mousePosition.x - 0.5) * depth * 50;
     const yMove = (mousePosition.y - 0.5) * depth * 50;
     const scrollMove = scrollPosition * depth * 0.1;
@@ -143,7 +156,7 @@ const TeamGrid = () => {
       className="w-full min-h-screen overflow-x-hidden"
       onMouseMove={handleMouseMove}
     >
-      <button
+       <button
         onClick={handleGoBack}
         className="fixed top-4 left-4 z-50 bg-black/50 hover:bg-black/70 
         rounded-full p-2 transition-colors duration-200 
@@ -214,12 +227,12 @@ const TeamGrid = () => {
                 backdrop-blur-sm rounded-lg overflow-hidden shadow-xl 
              transform transition-all duration-300 hover:scale-105 hover:-translate-y-2"
                   >
-                    <img
+                    <Image
                       src={member.image}
                       alt={member.name}
-                      // fill="true"
+                      fill
                       className="object-cover rounded-t-lg"
-                      // priority
+                      priority
                     />
 
                     <div
@@ -244,7 +257,7 @@ const TeamGrid = () => {
                                         hover:bg-gray-800 hover:scale-105 hover:shadow-lg
                                         relative overflow-hidden group text-sm"
                         >
-                          <span className="relative z-10">詳細を見る</span>
+                          <span className="relative z-10">プロフィールを見る</span>
                           <div
                             className="absolute inset-0 h-full w-0 bg-white opacity-20 
                                         transform -skew-x-12 transition-all duration-300 

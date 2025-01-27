@@ -14,11 +14,16 @@ const ArtistSection = () => {
     {
       name: "Karan Singh",
       description: "8th Feb 2024",
+      imageExtension: "svg",
     },
     {
-      name: "Oxygen  DJ Kawal",
+      name: "Oxygen",
       description: "9th Feb 2024",
     },
+    {
+      name: "DJ Kawal",
+      description: "9th Feb 2024",
+    }
   ];
   const [screenHeight, setScreenHeight] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -52,7 +57,7 @@ const ArtistSection = () => {
 
   const handleArtistChange = (newIndex) => {
     if (isAnimating || newIndex === currentIndex) return;
-    
+
     setIsAnimating(true);
 
     gsap.to(artistRefs.current[currentIndex], {
@@ -93,11 +98,9 @@ const ArtistSection = () => {
           <div
             key={index}
             ref={(el) => (artistRefs.current[index] = el)}
-            className={`absolute w-full min-h-full ${
-              screenHeight >= 768 ? "flex items-center" : ""
-            } transition-opacity duration-250 ${
-              index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
-            }`}
+            className={`absolute w-full min-h-full ${screenHeight >= 768 ? "flex items-center" : ""
+              } transition-opacity duration-250 ${index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+              }`}
             style={{
               pointerEvents: index === currentIndex ? "auto" : "none",
               position: "absolute",
@@ -109,15 +112,16 @@ const ArtistSection = () => {
               <div className="w-full max-w-6xl px-4 md:pl-20 flex flex-col md:flex-row items-center gap-6 md:gap-8 mt-[-40px] md:mt-0">
                 <div className="relative w-[280px] md:w-[400px] h-[420px] md:h-[600px] rounded-lg flex items-center justify-center">
                   <img
-                    src={"/artists/" + String(index + 1) + ".png"}
+                    src={`/artists/${String(index + 1)}.${artist.imageExtension || 'png'}`}
                     alt={artist.name}
                     className="max-w-full max-h-full w-auto h-auto object-contain"
                     style={{
                       width: '100%',
                       height: '100%',
-                      objectFit: 'contain'
+                      objectFit: 'contain',
                     }}
                   />
+
                 </div>
                 <div className="md:ml-12 text-center md:text-left px-4 md:px-0 flex flex-col justify-center">
                   <h2
@@ -152,11 +156,10 @@ const ArtistSection = () => {
           <button
             key={index}
             onClick={() => handleArtistChange(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentIndex
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
                 ? "bg-red-500 w-8"
                 : "bg-white/50 hover:bg-white/80"
-            }`}
+              }`}
             style={{
               transform: index === currentIndex ? "scale(1.2)" : "scale(1)",
             }}
@@ -183,9 +186,8 @@ const ArtistSection = () => {
           style={{
             ...getParallaxStyle(1),
             zIndex: 16,
-            transform: `translate3d(${mousePosition.x * 40}px, ${
-              mousePosition.x * -5
-            }px, 0) scale(${1 + mousePosition.x * 0.05})`,
+            transform: `translate3d(${mousePosition.x * 40}px, ${mousePosition.x * -5
+              }px, 0) scale(${1 + mousePosition.x * 0.05})`,
           }}
         />
       </div>
