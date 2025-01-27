@@ -20,7 +20,7 @@ const ArtistSection = () => {
       description: "9th Feb 2024",
     },
   ];
-
+  const [screenHeight, setScreenHeight] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const contentRef = useRef(null);
@@ -37,7 +37,9 @@ const ArtistSection = () => {
     transform: `translateX(${mousePosition.x * depth * 50}px)`,
     transition: "transform 0.3s ease-out",
   });
-
+  useEffect(() => {
+    setScreenHeight(window.innerHeight);
+  }, []);
   useEffect(() => {
     const interval = setInterval(() => {
       if (!isAnimating) {
@@ -92,7 +94,7 @@ const ArtistSection = () => {
             key={index}
             ref={(el) => (artistRefs.current[index] = el)}
             className={`absolute w-full min-h-full ${
-              window.innerWidth >= 768 ? "flex items-center" : ""
+              screenHeight >= 768 ? "flex items-center" : ""
             } transition-opacity duration-250 ${
               index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
