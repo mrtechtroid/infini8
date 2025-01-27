@@ -35,6 +35,7 @@ function EventCard({  id,name,spocs,about,rulespdf,prizePool,fee,image,registrat
 
   const handleGoBack = () => {
     router.push('/');
+    router.refresh();
   };
   return (
     <>

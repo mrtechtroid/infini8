@@ -10,17 +10,17 @@ const ArtistSection = () => {
     {
       name: "Twinkle Agarwal",
       description:
-        "7th Feb 2024 - ",
+        "7th Feb 2024",
     },
     {
       name: "Karan Singh",
       description:
-        "8th Feb 2024 - ",
+        "8th Feb 2024",
     },
     {
-      name: "Oxygen + DJ Kawal",
+      name: "Oxygen  DJ Kawal",
       description:
-        "9th Feb 2024 - ",
+        "9th Feb 2024",
     },
   ];
 
