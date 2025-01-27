@@ -8,19 +8,19 @@ gsap.registerPlugin(ScrollTrigger);
 const ArtistSection = () => {
   const artists = [
     {
-      name: "Chaitya Shah",
+      name: "Twinkle Agarwal",
       description:
-        "Chaitya this mf makes us go to expensive as VEG restaurants :(\nKeyuki usse jain food chahiye",
+        "7th Feb 2024 - ",
     },
     {
-      name: "Emma Gonzalez",
+      name: "Karan Singh",
       description:
-        "Emma is a passionate activist who advocates for gun control and youth empowerment.",
+        "8th Feb 2024 - ",
     },
     {
-      name: "Neil deGrasse Tyson",
+      name: "Oxygen + DJ Kawal",
       description:
-        "Neil is a renowned astrophysicist who makes complex science accessible and engaging.",
+        "9th Feb 2024 - ",
     },
   ];
 
@@ -49,7 +49,7 @@ const ArtistSection = () => {
       gsap.to(artistRefs.current[currentIndex], {
         y: -100,
         opacity: 0,
-        duration: 0.5,
+        duration: 0.25,
         onComplete: () => {
           setCurrentIndex((prev) => (prev + 1) % artists.length);
         },
@@ -65,8 +65,8 @@ const ArtistSection = () => {
         {
           y: 0,
           opacity: 1,
-          duration: 0.5,
-          delay: 0.5,
+          duration: 0.25,
+          delay: 0.25,
         }
       );
     }, 5000);
@@ -78,7 +78,7 @@ const ArtistSection = () => {
     gsap.to(artistRefs.current[currentIndex], {
       y: -100,
       opacity: 0,
-      duration: 0.5,
+      duration: 0.25,
       onComplete: () => {
         setCurrentIndex(newIndex);
         // Animate new artist in
@@ -91,7 +91,7 @@ const ArtistSection = () => {
           {
             y: 0,
             opacity: 1,
-            duration: 0.5,
+            duration: 0.25,
           }
         );
       },
@@ -119,9 +119,9 @@ const ArtistSection = () => {
               <div className="w-full max-w-6xl px-4 md:pl-20 flex flex-col md:flex-row items-center gap-6 md:gap-8 mt-[-40px] md:mt-0">
                 <div className="relative w-[280px] md:w-[400px] h-[420px] md:h-[600px] overflow-hidden rounded-lg">
                   <img
-                    src="/test_artist.png"
+                    src={"/artists/"+String(index+1)+".png"}
                     alt={artist.name}
-                    className="w-full h-full object-cover"
+                    className=" object-cover"
                   />
                 </div>
                 <div className="md:ml-12 text-center md:text-left px-4 md:px-0 flex flex-col justify-center">
@@ -136,9 +136,9 @@ const ArtistSection = () => {
                   </h2>
                   <p
                     style={{
-                      fontSize: "50px",
+                      fontSize: "30px",
                       fontStyle: "bold",
-                      fontFamily: "Softly, sans-serif",
+                      fontFamily: "Tektur, sans-serif",
                       zIndex: 100,
                     }}
                     className="text-black p-4 max-w-xl"
