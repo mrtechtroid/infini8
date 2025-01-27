@@ -103,7 +103,7 @@ const TeamGrid = () => {
           name: "Hemanth Mada",
           role: "Creative Director",
           accent: "bg-cyan-500",
-          image: '/Hemanth.png',
+          image: '/team/Hemanth.png',
           linkedInUrl: 'https://www.linkedin.com/in/hemanth-mada-41337229a/',
 
         },
@@ -127,7 +127,7 @@ const TeamGrid = () => {
           name: "Chaitya Shah",
           role: "Motion Designer",
           accent: "bg-fuchsia-500",
-          image: '/Chaitya.png',
+          image: '/team/Chaitya.png',
           linkedInUrl: 'https://www.linkedin.com/in/chaitya-shah-0a7589267/',
 
         },
