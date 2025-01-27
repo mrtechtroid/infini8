@@ -97,9 +97,9 @@ export default function FAQs() {
     return (
       <div ref={sectionRef} className="relative min-h-screen pb-16">
         {/* Background with gradient and patterns */}
-        <div className="absolute inset-0 bg-[#EBE1CE]">
+        {/* <div className="absolute inset-0 bg-[#EBE1CE]">
           {/* ... background divs remain the same ... */}
-        </div>
+        {/* </div>  */}
 
         {/* Content Container */}
         <div className="relative z-10 h-full mt-5">
