@@ -37,49 +37,49 @@ const ArtistSection = () => {
     transition: "transform 0.3s ease-out",
   });
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (!isAnimating) {
-        handleArtistChange((currentIndex + 1) % artists.length);
-      }
-    }, 5000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (!isAnimating) {
+  //       handleArtistChange((currentIndex + 1) % artists.length);
+  //     }
+  //   }, 5000);
 
-    return () => clearInterval(interval);
-  }, [currentIndex, artists.length, isAnimating]);
+  //   return () => clearInterval(interval);
+  // }, [currentIndex, artists.length, isAnimating]);
 
-  const handleArtistChange = (newIndex) => {
-    if (isAnimating || newIndex === currentIndex) return;
+  // const handleArtistChange = (newIndex) => {
+  //   if (isAnimating || newIndex === currentIndex) return;
     
-    setIsAnimating(true);
+  //   setIsAnimating(true);
 
-    gsap.to(artistRefs.current[currentIndex], {
-      y: -100,
-      opacity: 0,
-      duration: 0.25,
-      onComplete: () => {
-        setCurrentIndex(newIndex);
-        gsap.fromTo(
-          artistRefs.current[newIndex],
-          {
-            y: 100,
-            opacity: 0,
-          },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.25,
-            onComplete: () => {
-              setIsAnimating(false);
-            }
-          }
-        );
-      },
-    });
-  };
+  //   gsap.to(artistRefs.current[currentIndex], {
+  //     y: -100,
+  //     opacity: 0,
+  //     duration: 0.25,
+  //     onComplete: () => {
+  //       setCurrentIndex(newIndex);
+  //       gsap.fromTo(
+  //         artistRefs.current[newIndex],
+  //         {
+  //           y: 100,
+  //           opacity: 0,
+  //         },
+  //         {
+  //           y: 0,
+  //           opacity: 1,
+  //           duration: 0.25,
+  //           onComplete: () => {
+  //             setIsAnimating(false);
+  //           }
+  //         }
+  //       );
+  //     },
+  //   });
+  // };
 
   return (
     <div
-      className="relative w-full min-h-[160vh] md:min-h-screen overflow-hidden bg-[url('/artistbg.png')] bg-cover bg-center bg-no-repeat"
+      className="relative w-full h-[160vh] md:h-screen overflow-hidden bg-[url('/artistbg.png')] bg-cover bg-center bg-no-repeat"
       onMouseMove={handleMouseMove}
     >
       <div
@@ -143,8 +143,8 @@ const ArtistSection = () => {
           </div>
         ))}
       </div>
-
-      <div className="absolute bottom-8 left-0 w-full flex justify-center gap-4 z-20">
+        {/* Removed dots  */}
+      {/* <div className="absolute bottom-8 md:bottom-12 left-0 w-full flex justify-center gap-4 z-20">
         {artists.map((_, index) => (
           <button
             key={index}
@@ -159,7 +159,7 @@ const ArtistSection = () => {
             }}
           />
         ))}
-      </div>
+      </div> */}
 
       <div className="absolute bottom-0 left-0 w-full h-full pointer-events-none">
         <img

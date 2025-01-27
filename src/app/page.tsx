@@ -28,7 +28,7 @@ export default function App() {
   const containerRef = useRef<HTMLElement | null>(null);
   // useLayoutEffect(() => {
     // if (containerRef==null){return;}
-    useScrollSnap({ ref: containerRef, duration: 50, delay: 20 });
+    useScrollSnap({ ref: containerRef, duration: 5, delay: 1 });
   // const [bind, unbind] = useScrollSnap(
   //   containerRef,
   //   {

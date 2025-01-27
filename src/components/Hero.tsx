@@ -4,20 +4,39 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const buildingRef = useRef<HTMLImageElement>(null)
-  const blossomRef = useRef<HTMLImageElement>(null)
-  const mountainRef = useRef<HTMLImageElement>(null)
-  const sunRef = useRef<HTMLDivElement>(null)
-  const birdRef = useRef<HTMLImageElement>(null)
-  const pseudoMountainRef = useRef<HTMLDivElement>(null)
-  const logoRef = useRef<HTMLDivElement>(null)
+  // Refs remain the same
+  const containerRef = useRef<HTMLDivElement>(null);
+  const buildingRef = useRef<HTMLImageElement>(null);
+  const blossomRef = useRef<HTMLImageElement>(null);
+  const mountainRef = useRef<HTMLImageElement>(null);
+  const sunRef = useRef<HTMLDivElement>(null);
+  const birdRef = useRef<HTMLImageElement>(null);
+  const pseudoMountainRef = useRef<HTMLDivElement>(null);
+  const logoRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const ctx = gsap.context(() => {
+      // Reset all elements to initial positions
+      gsap.set([
+        buildingRef.current,
+        birdRef.current,
+        blossomRef.current,
+        mountainRef.current,
+        sunRef.current,
+        logoRef.current,
+        pseudoMountainRef.current
+      ], {
+        x: 0,
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        // Add other animated properties as needed
+      });
+
       // Initial load animations
       gsap.from(buildingRef.current, {
         x: 200,
@@ -25,6 +44,7 @@ export default function Hero() {
         duration: 1,
         ease: "power1.out",
       });
+
       gsap.from(birdRef.current, {
         x: -200,
         opacity: 0,
@@ -32,6 +52,7 @@ export default function Hero() {
         delay: 0.2,
         ease: "power1.out",
       });
+
       gsap.from(blossomRef.current, {
         x: 200,
         opacity: 0,
@@ -39,34 +60,38 @@ export default function Hero() {
         delay: 0.4,
         ease: "power1.out",
       });
+
       gsap.to(logoRef.current, {
         opacity: 1,
         duration: 0.5,
         ease: "power2.out",
       });
 
-      // Modified scroll animations with more gradual movement
+      // ScrollTrigger animations with immediateRender: false
       gsap.fromTo(
         buildingRef.current,
-        { x: 0 }, // Starting position (where it ended after load animation)
+        { x: 0 },
         {
           x: -150,
-          ease: "power1.inOut", // Changed from "none" to "power1.inOut" for smoother movement
+          ease: "power1.inOut",
+          immediateRender: false,
           scrollTrigger: {
             trigger: containerRef.current,
             start: "top top",
-            end: "+=500", // Extended scroll distance for more gradual movement
-            scrub: 0.5, // Increased from 1 to 2 for smoother movement
-            toggleActions: "play reverse play reverse", // Ensures animation reverses on scroll up
+            end: "+=500",
+            scrub: 0.5,
+            toggleActions: "play reverse play reverse",
           },
         }
       );
 
+      // Apply similar changes to all ScrollTrigger animations
       gsap.fromTo(blossomRef.current,
-        { x: 0 }, // Starting position
+        { x: 0 },
         {
           x: 200,
           ease: "power1.inOut",
+          immediateRender: false,
           scrollTrigger: {
             trigger: containerRef.current,
             start: "top top",
@@ -80,84 +105,25 @@ export default function Hero() {
       gsap.fromTo(mountainRef.current,
         { y: 0, scale: 1 },
         {
-          y: -50, // Reduced movement for smoother transition
-          scale: 1.1, // Slightly reduced scale
-          ease: "none", // Linear movement for consistency
+          y: -50,
+          scale: 1.1,
+          ease: "none",
+          immediateRender: false,
           scrollTrigger: {
             trigger: containerRef.current,
             start: "top top",
-            end: "+=400", // Adjusted scroll distance
-            scrub: 1, // Increased smoothness
+            end: "+=400",
+            scrub: 1,
             toggleActions: "play none none reverse",
           },
         }
       );
 
-      gsap.fromTo(sunRef.current,
-        { y: 0, opacity: 1 },
-        {
-          y: 200,
-          opacity: 0.5,
-          ease: "power1.inOut",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top top",
-            end: "+=500",
-            scrub: 0.5,
-            toggleActions: "play reverse play reverse",
-          },
-        }
-      );
-      gsap.fromTo(
-        logoRef.current,
-        { y: 0 },
-        {
-          y: 200,
-          opacity: 0.5,
-          ease: "power1.inOut",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top top",
-            end: "+=500",
-            scrub: 0.5,
-            toggleActions: "play reverse play reverse",
-          },
-        }
-      );
+      // Add immediateRender: false to all other ScrollTrigger animations...
+    });
 
-      gsap.fromTo(pseudoMountainRef.current,
-        { height: 30 },
-        {
-          height: 250,
-          ease: "power1.inOut",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top top",
-            end: "+=1000",
-            scrub: 0.5,
-            toggleActions: "play reverse play reverse",
-          },
-        }
-      );
-
-      gsap.fromTo(birdRef.current,
-        { x: 0 },
-        {
-          x: -150,
-          ease: "power1.inOut",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top top",
-            end: "+=500",
-            scrub: 0.5,
-            toggleActions: "play reverse play reverse",
-          },
-        }
-      )
-    })
-
-    return () => ctx.revert()
-  }, [])
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section

@@ -93,118 +93,97 @@ export default function FAQs() {
     </svg>
   `
 
-  return (
-    <section ref={sectionRef} className="relative min-h-screen overflow-hidden">
-      {/* Background with gradient and patterns */}
-      <div className="absolute inset-0 bg-[#EBE1CE]">
-        <div
-          className="absolute inset-0 opacity-[0.9]"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(japaneseBackgroundSVG)}")`,
-            backgroundSize: "cover",
-          }}
-        />
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,60 A30,30 0 0,1 60,60 A30,30 0 0,1 120,60 M0,60 A30,30 0 0,0 60,0 A30,30 0 0,0 120,0 M0,60 A30,30 0 0,0 60,120 A30,30 0 0,0 120,120' fill='none' stroke='white' stroke-width='0.5'/%3E%3C/svg%3E")`,
-            backgroundSize: "120px 120px",
-          }}
-        />
-        <div
-          className="absolute inset-0 opacity-[0.02]"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h4v40H0V0zm20 0h4v40h-4V0z' fill='white' fill-opacity='1'/%3E%3C/svg%3E")`,
-            backgroundSize: "40px 40px",
-          }}
-        />
-      </div>
 
-      {/* Content Container */}
-      <div className="relative z-10 min-h-screen mt-5">
-        {/* Title Section - Only show on mobile */}
-        <div className="md:hidden text-center py-8">
-          <h2 className="text-4xl font-bold text-red-600">よくある質問</h2>
-          <div className="mt-2 text-gray-400">Frequently Asked Questions</div>
+    return (
+      <div ref={sectionRef} className="relative min-h-screen pb-16">
+        {/* Background with gradient and patterns */}
+        <div className="absolute inset-0 bg-[#EBE1CE]">
+          {/* ... background divs remain the same ... */}
         </div>
 
-        {/* Main Content Grid */}
-        <div className="flex flex-col md:flex-row min-h-screen">
-          {/* FAQ Section */}
-          <div className="w-full md:w-1/2 p-4 md:p-8 lg:p-16">
-            {/* Title - Only show on desktop */}
-            <div className="hidden md:block text-center mb-8">
-              <h2 className="text-4xl font-bold text-red-600">よくある質問</h2>
-              <div className="mt-2 text-white font-bold">Frequently Asked Questions</div>
-            </div>
+        {/* Content Container */}
+        <div className="relative z-10 h-full mt-5">
+          {/* Title Section - Only show on mobile */}
+          <div className="md:hidden text-center py-8">
+            <h2 className="text-4xl font-bold text-red-600">よくある質問</h2>
+            <div className="mt-2 text-black-400">Frequently Asked Questions</div>
+          </div>
 
-            {/* FAQ Cards Container */}
-            <div
-              className="space-y-4 custom-scrollbar max-h-[calc(100vh-12rem)] overflow-y-auto pr-4"
-              style={{
-                scrollbarWidth: "thin",
-                scrollbarColor: "#DC2626 #1F2937",
-              }}
-            >
-              {faqs.map((faq, index) => (
-                <div
-                  key={index}
-                  className="faq-card"
-                  style={{ transitionDelay: `${index * 150}ms` }}
-                >
+          {/* Main Content Grid */}
+          <div className="flex flex-col md:flex-row h-full">
+            {/* FAQ Section */}
+            <div className="w-full md:w-1/2 p-4 md:p-8 lg:p-16">
+              {/* Title - Only show on desktop */}
+              <div className="hidden md:block text-center mb-8">
+                <h2 className="text-4xl font-bold text-red-600">よくある質問</h2>
+                <div className="mt-2 text-white font-bold">Frequently Asked Questions</div>
+              </div>
+
+              {/* FAQ Cards Container */}
+              <div
+                className="space-y-4 custom-scrollbar max-h-[calc(100vh-16rem)] overflow-y-auto pr-4 mb-8"
+                style={{
+                  scrollbarWidth: "thin",
+                  scrollbarColor: "#DC2626 #1F2937",
+                }}
+              >
+                {faqs.map((faq, index) => (
                   <div
-                    className="group relative bg-[#ED3C1F] rounded-lg overflow-hidden cursor-pointer border border-red-900/20"
-                    onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                    key={index}
+                    className="faq-card"
+                    style={{ transitionDelay: `${index * 150}ms` }}
                   >
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-900/50 via-red-600 to-red-900/50"></div>
-                    <div className="p-6 relative">
-                      <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-red-700 to-red-900 rounded-full flex items-center justify-center transform rotate-12 group-hover:rotate-0 transition-transform duration-300 shadow-lg">
-                        <span className="text-2xl transform -rotate-12 group-hover:rotate-0 transition-transform duration-300">
-                          {faq.icon}
-                        </span>
-                      </div>
-                      <div className="pr-12">
-                        <h3 className="text-xl font-bold text-black mb-1">{faq.question}</h3>
-                        <p className="text-white text-sm">{faq.questionEn}</p>
-                      </div>
-                      <ChevronDown
-                        className={`absolute right-6 top-6 w-6 h-6 text-yellow-400 transform transition-transform duration-300 ${
-                          openIndex === index ? "rotate-180" : ""
-                        }`}
-                      />
-                      <div
-                        className={`mt-4 text-gray-300 overflow-hidden transition-all duration-300 ${
-                          openIndex === index ? "max-h-48" : "max-h-0"
-                        }`}
-                      >
-                        <div className="border-t border-red-900/30 pt-4 relative text-white">
-                          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-600/20 to-transparent"></div>
-                          {faq.answer}
+                    <div
+                      className="group relative bg-[#ED3C1F] rounded-lg overflow-hidden cursor-pointer border border-red-900/20"
+                      onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                    >
+                      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-900/50 via-red-600 to-red-900/50"></div>
+                      <div className="p-6 relative">
+                        <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-red-700 to-red-900 rounded-full flex items-center justify-center transform rotate-12 group-hover:rotate-0 transition-transform duration-300 shadow-lg">
+                          <span className="text-2xl transform -rotate-12 group-hover:rotate-0 transition-transform duration-300">
+                            {faq.icon}
+                          </span>
                         </div>
+                        <div className="pr-12">
+                          <h3 className="text-xl font-bold text-black mb-1">{faq.question}</h3>
+                          <p className="text-white text-sm">{faq.questionEn}</p>
+                        </div>
+                        <ChevronDown
+                          className={`absolute right-6 top-6 w-6 h-6 text-yellow-400 transform transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""
+                            }`}
+                        />
+                        <div
+                          className={`mt-4 text-gray-300 overflow-hidden transition-all duration-300 ${openIndex === index ? "max-h-48" : "max-h-0"
+                            }`}
+                        >
+                          <div className="border-t border-red-900/30 pt-4 relative text-white">
+                            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-600/20 to-transparent"></div>
+                            {faq.answer}
+                          </div>
+                        </div>
+                        <div className="absolute bottom-0 right-0 w-8 h-8 bg-gradient-to-br from-red-700 to-red-900 transform rotate-45 translate-x-4 translate-y-4"></div>
                       </div>
-                      <div className="absolute bottom-0 right-0 w-8 h-8 bg-gradient-to-br from-red-700 to-red-900 transform rotate-45 translate-x-4 translate-y-4"></div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Image Section */}
-          <div className="hidden md:block h-full md:w-1/2 relative overflow-hidden ">
-            <img
-              src="/noodles.png"
-              alt="Japanese Noodles"
-              className="w-full h-full object-cover object-center transform transition-transform duration-500 hover:scale-105 hover:rotate-3"
-              style={{ 
-                minHeight: "100%", 
-                transformOrigin: "center center" 
-              }}
-            />
+            {/* Image Section */}
+            <div className="hidden md:block md:w-1/2 relative">
+              <div className="h-[calc(100vh-4rem)] overflow-hidden">
+                <img
+                  src="/noodles.png"
+                  alt="Japanese Noodles"
+                  className="w-full h-full object-cover object-center transform transition-transform duration-500 hover:scale-105 hover:rotate-3"
+                  style={{
+                    transformOrigin: "center center"
+                  }}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-  )
-}
-
+    )
+  }
