@@ -108,7 +108,7 @@ const TeamGrid = () => {
 
         },
         {
-          name: "Tahir Khandarbad",
+          name: "Tahir Khadarabad",
           role: "Graphic Designer",
           accent: "bg-lime-500",
           image: '/Tahir_design.png',
