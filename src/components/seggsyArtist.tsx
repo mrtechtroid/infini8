@@ -111,7 +111,7 @@ const ArtistSection = () => {
           <div
             key={index}
             ref={(el) => (artistRefs.current[index] = el)}
-            className={`absolute w-full min-h-full ${
+            className={`absolute w-full min-h-full ${window.innerWidth>768?"flex items-center":""} ${
               index === currentIndex ? "opacity-100" : "opacity-0"
             }`}
           >
