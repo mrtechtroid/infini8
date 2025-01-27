@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -9,18 +8,15 @@ const ArtistSection = () => {
   const artists = [
     {
       name: "Twinkle Agarwal",
-      description:
-        "7th Feb 2024",
+      description: "7th Feb 2024",
     },
     {
       name: "Karan Singh",
-      description:
-        "8th Feb 2024",
+      description: "8th Feb 2024",
     },
     {
       name: "Oxygen  DJ Kawal",
-      description:
-        "9th Feb 2024",
+      description: "9th Feb 2024",
     },
   ];
 
@@ -28,60 +24,40 @@ const ArtistSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const contentRef = useRef(null);
   const artistRefs = useRef([]);
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  const handleMouseMove = (e:any) => {
+  const handleMouseMove = (e) => {
     const { clientX } = e;
     const x = (clientX / window.innerWidth - 0.5) * 2;
     setMousePosition({ x, y: 0 });
   };
 
-  const getParallaxStyle = (depth:any) => ({
+  const getParallaxStyle = (depth) => ({
     transform: `translateX(${mousePosition.x * depth * 50}px)`,
     transition: "transform 0.3s ease-out",
-  });
-  const getBambooWindStyle = (depth:any) => ({
-    ...getParallaxStyle(depth),
-    animation: "bambooWind 8s ease-in-out infinite",
   });
 
   useEffect(() => {
     const interval = setInterval(() => {
-      gsap.to(artistRefs.current[currentIndex], {
-        y: -100,
-        opacity: 0,
-        duration: 0.25,
-        onComplete: () => {
-          setCurrentIndex((prev) => (prev + 1) % artists.length);
-        },
-      });
-
-      const nextIndex = (currentIndex + 1) % artists.length;
-      gsap.fromTo(
-        artistRefs.current[nextIndex],
-        {
-          y: 100,
-          opacity: 0,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.25,
-          delay: 0.25,
-        }
-      );
+      if (!isAnimating) {
+        handleArtistChange((currentIndex + 1) % artists.length);
+      }
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [currentIndex, artists.length]);
-  const handleArtistChange = (newIndex: number) => {
-    // Animate current artist out
+  }, [currentIndex, artists.length, isAnimating]);
+
+  const handleArtistChange = (newIndex) => {
+    if (isAnimating || newIndex === currentIndex) return;
+    
+    setIsAnimating(true);
+
     gsap.to(artistRefs.current[currentIndex], {
       y: -100,
       opacity: 0,
       duration: 0.25,
       onComplete: () => {
         setCurrentIndex(newIndex);
-        // Animate new artist in
         gsap.fromTo(
           artistRefs.current[newIndex],
           {
@@ -92,6 +68,9 @@ const ArtistSection = () => {
             y: 0,
             opacity: 1,
             duration: 0.25,
+            onComplete: () => {
+              setIsAnimating(false);
+            }
           }
         );
       },
@@ -111,17 +90,30 @@ const ArtistSection = () => {
           <div
             key={index}
             ref={(el) => (artistRefs.current[index] = el)}
-            className={`absolute w-full min-h-full ${window.innerWidth>768?"flex items-center":""} ${
-              index === currentIndex ? "opacity-100" : "opacity-0"
+            className={`absolute w-full min-h-full ${
+              window.innerWidth >= 768 ? "flex items-center" : ""
+            } transition-opacity duration-250 ${
+              index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
+            style={{
+              pointerEvents: index === currentIndex ? "auto" : "none",
+              position: "absolute",
+              top: 0,
+              left: 0,
+            }}
           >
             <div className="w-full h-full flex items-center">
               <div className="w-full max-w-6xl px-4 md:pl-20 flex flex-col md:flex-row items-center gap-6 md:gap-8 mt-[-40px] md:mt-0">
-                <div className="relative w-[280px] md:w-[400px] h-[420px] md:h-[600px] overflow-hidden rounded-lg">
+                <div className="relative w-[280px] md:w-[400px] h-[420px] md:h-[600px] rounded-lg flex items-center justify-center">
                   <img
-                    src={"/artists/"+String(index+1)+".png"}
+                    src={"/artists/" + String(index + 1) + ".png"}
                     alt={artist.name}
-                    className=" object-cover"
+                    className="max-w-full max-h-full w-auto h-auto object-contain"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'contain'
+                    }}
                   />
                 </div>
                 <div className="md:ml-12 text-center md:text-left px-4 md:px-0 flex flex-col justify-center">
@@ -151,8 +143,8 @@ const ArtistSection = () => {
           </div>
         ))}
       </div>
-      {/* artist scrolling dots*/}
-      <div className="absolute bottom-8 left-0 w-full flex justify-center gap-4 z-10">
+
+      <div className="absolute bottom-8 left-0 w-full flex justify-center gap-4 z-20">
         {artists.map((_, index) => (
           <button
             key={index}
@@ -176,7 +168,7 @@ const ArtistSection = () => {
           className="absolute bottom-0 md:left-0 left-[-13%] md:right-0 w-[50%] md:w-full h-full object-cover object-right-bottom"
           style={{
             ...getParallaxStyle(0.5),
-            zIndex: 1,
+            zIndex: 15,
             animation: "bambooWind 6s ease-in-out infinite",
             transformOrigin: "bottom center",
           }}
@@ -187,7 +179,7 @@ const ArtistSection = () => {
           className="absolute bottom-0 right-[-30%] md:right-0 w-[160%] md:w-full h-full object-cover object-right-bottom"
           style={{
             ...getParallaxStyle(1),
-            zIndex: 2,
+            zIndex: 16,
             transform: `translate3d(${mousePosition.x * 40}px, ${
               mousePosition.x * -5
             }px, 0) scale(${1 + mousePosition.x * 0.05})`,
