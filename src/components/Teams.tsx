@@ -166,14 +166,14 @@ const TeamGrid = () => {
       ],
     },
   ];
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e:any) => {
     const container = e.currentTarget;
     const rect = container.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width;
     const y = (e.clientY - rect.top) / rect.height;
     setMousePosition({ x, y });
   };
-  const getLayerStyle = (depth) => {
+  const getLayerStyle = (depth:any) => {
     const xMove = (mousePosition.x - 0.5) * depth * 50;
     const yMove = (mousePosition.y - 0.5) * depth * 50;
     const scrollMove = scrollPosition * depth * 0.1;
@@ -260,12 +260,12 @@ const TeamGrid = () => {
                 backdrop-blur-sm rounded-lg overflow-hidden shadow-xl 
              transform transition-all duration-300 hover:scale-105 hover:-translate-y-2"
                   >
-                    <Image
+                    <img
                       src={member.image}
                       alt={member.name}
-                      fill
-                      className="object-cover rounded-t-lg"
-                      priority
+                      // fill
+                      style={{ objectFit: "cover" }}
+                      className="object-cover rounded-t-lg z-0 absolute top-0 left-0"
                     />
 
                     <div
@@ -273,7 +273,7 @@ const TeamGrid = () => {
                                   transform rotate-45 opacity-80 z-10`}
                     />
 
-                    <div className="relative h-full w-full p-6 border-4 border-red-400">
+                    <div className="relative h-[100%] w-[100%] p-6 border-4 border-red-400 top-0 left-0 z-10">
                       {/* <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-100 to-gray-200 opacity-90" /> */}
 
                       <div className="relative z-20 h-full flex flex-col justify-between">
