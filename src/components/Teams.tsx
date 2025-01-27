@@ -23,30 +23,39 @@ const TeamGrid = () => {
           role: "President",
           accent: "bg-purple-500",
           image: '/Dheeraj_oc.png',
+          linkedInUrl: 'https://www.linkedin.com/in/dheeraj-muppiri-5b177a2aa/',
         },
         {
           name: "Siddharth Ayathu",
           role: "Vice President",
           accent: "bg-indigo-500",
           image: '/Ayathu_oc.png',
+          linkedInUrl: 'https://www.linkedin.com/in/siddharth-ayathu-843565327/',
+
         },
         {
           name: "Akshat Betala",
           role: "Secretary",
           accent: "bg-pink-500",
           image: '/Betala-oc.png',
+          linkedInUrl: 'https://www.linkedin.com/in/akshat-betala-2303682a7/',
+
         },
         {
           name: "Niveditha Varma",
           role: "Treasurer",
           accent: "bg-orange-500",
           image: '/Niveditha_oc.png',
+          linkedInUrl: '/team',
+
         },
         {
           name: "Bhavya",
           role: "Event Coordinator",
           accent: "bg-teal-500",
           image: '/Bhavya_oc.png',
+          linkedInUrl: 'https://www.linkedin.com/in/bhavya-joshi-52a919202/',
+
         },
       ],
     },
@@ -58,24 +67,32 @@ const TeamGrid = () => {
           role: "Lead Developer",
           accent: "bg-blue-500",
           image: '/Prakrititz_design_webdev.png',
+          linkedInUrl: 'https://www.linkedin.com/in/prakrititz-borah-348b04287/',
+
         },
         {
           name: "Pramatha Rao",
           role: "UX Designer",
           accent: "bg-green-500",
           image: '/Pramatha_webdev.png',
+          linkedInUrl: 'https://www.linkedin.com/in/pramatharao/',
+
         },
         {
           name: "Sriram Srikanth",
           role: "Frontend Developer",
           accent: "bg-yellow-500",
           image: '/Sriram_webdev.png',
+          linkedInUrl: 'https://www.linkedin.com/in/sriram-srikanth-066376284/',
+
         },
         {
           name: "Unnath Chittimalla",
           role: "Backend Developer",
           accent: "bg-red-500",
           image: '/Unnath_webdev.png',
+          linkedInUrl: 'https://www.linkedin.com/in/unnath-chittimalla-08aaaa287/',
+
         },
       ],
     },
@@ -87,48 +104,64 @@ const TeamGrid = () => {
           role: "Creative Director",
           accent: "bg-cyan-500",
           image: '/Hemanth.png',
+          linkedInUrl: 'https://www.linkedin.com/in/hemanth-mada-41337229a/',
+
         },
         {
           name: "Tahir Khandarbad",
           role: "Graphic Designer",
           accent: "bg-lime-500",
           image: '/Tahir_design.png',
+          linkedInUrl: 'https://www.linkedin.com/in/tahirkhadarabad/',
+
         },
         {
           name: "Nathan Mathew",
           role: "UI Designer",
           accent: "bg-emerald-500",
           image: '/Nathan_design.png',
+          linkedInUrl: 'https://www.linkedin.com/in/nathanmv/',
+
         },
         {
           name: "Chaitya Shah",
           role: "Motion Designer",
           accent: "bg-fuchsia-500",
           image: '/Chaitya.png',
+          linkedInUrl: 'https://www.linkedin.com/in/chaitya-shah-0a7589267/',
+
         },
         {
           name: "Siddharth Menon",
           role: "Illustrator",
           accent: "bg-amber-500",
           image: '/Menon_design.png',
+          linkedInUrl: 'https://www.linkedin.com/in/siddharth-menon-2192a1278/',
+
         },
         {
           name: "Navya Balaji",
           role: "Brand Designer",
           accent: "bg-rose-500",
           image: '/Navya_design.png',
+          linkedInUrl: 'https://www.linkedin.com/in/navya-balaji-657821320/',
+
         },
         {
           name: "Tharanth ",
           role: "Brand Designer",
           accent: "bg-rose-500",
           image: '/Tharanth_design.png',
+          linkedInUrl: '/team',
+
         },
         {
           name: "Srikar",
           role: "Brand Designer",
           accent: "bg-rose-500",
           image: '/Srikar_design.png',
+          linkedInUrl: '/team',
+
         },
       ],
     },
@@ -156,7 +189,7 @@ const TeamGrid = () => {
       className="w-full min-h-screen overflow-x-hidden"
       onMouseMove={handleMouseMove}
     >
-       <button
+      <button
         onClick={handleGoBack}
         className="fixed top-4 left-4 z-50 bg-black/50 hover:bg-black/70 
         rounded-full p-2 transition-colors duration-200 
@@ -252,12 +285,18 @@ const TeamGrid = () => {
                           """ {member.name}
                         </h3>
                         <button
+                          onClick={() => window.open(member.linkedInUrl, '_blank')}
                           className="mt-4 px-6 py-2 bg-black text-white font-bold tracking-wider 
-                                        uppercase transform -skew-x-12 transition-all duration-300 
-                                        hover:bg-gray-800 hover:scale-105 hover:shadow-lg
-                                        relative overflow-hidden group text-sm"
+            uppercase transform -skew-x-12 transition-all duration-300 
+            hover:bg-gray-800 hover:scale-105 hover:shadow-lg
+            relative overflow-hidden group text-sm"
                         >
-                          <span className="relative z-10">プロフィールを見る</span>
+                          <span className="relative z-10 group-hover:opacity-0">
+                            プロフィールを見る
+                          </span>
+                          <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            View Profile
+                          </span>
                           <div
                             className="absolute inset-0 h-full w-0 bg-white opacity-20 
                                         transform -skew-x-12 transition-all duration-300 

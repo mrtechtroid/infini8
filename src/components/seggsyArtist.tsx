@@ -17,7 +17,7 @@ const ArtistSection = () => {
       imageExtension: "svg",
     },
     {
-      name: "Oxygen",
+      name: "Oxygen On the Rocks",
       description: "9th Feb 2024",
     },
     {
