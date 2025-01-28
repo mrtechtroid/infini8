@@ -71,7 +71,7 @@ export default function CustomScrollbar() {
              : "bg-blue-600 hover:bg-blue-800"}`}
         >
           <div className="text-center w-full"
-          style={{ fontFamily: "The Last Shuriken", fontStyle: "bold" }}>
+          style={{ fontFamily: "The Last Shuriken", fontStyle: "bold", fontSize: 15}}>
             {isMobile ? `Day ${day.replace("day", "")}` : day}
           </div>
         </button>
