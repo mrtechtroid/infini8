@@ -93,10 +93,10 @@ export default function Navigation() {
 
         {/* Navigation Links */}
         <div ref={linksRef} className="absolute inset-0 flex flex-col items-end justify-center pr-16 md:pr-24">
-          <nav className="space-y-8 text-right">
+          <nav className="space-y-8 text-right" style={{ fontFamily:"The Last Shuriken"}}>
             {[
               { href: "/", label: "Home" },
-              { href: "/about", label: "About" },
+              { href: "#aboutkoi", label: "About" },
               { href: "/events", label: "Events" },
               { href: "/team", label: "Team" },
             ].map((link) => (
