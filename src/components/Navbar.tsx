@@ -93,7 +93,7 @@ export default function Navigation() {
 
         {/* Navigation Links */}
         <div ref={linksRef} className="absolute inset-0 flex flex-col items-end justify-center pr-16 md:pr-24">
-          <nav className="space-y-8 text-right" style={{ fontFamily:"The Last Shuriken"}}>
+          <nav className="space-y-8 text-right">
             {[
               { href: "/", label: "Home" },
               { href: "/about", label: "About" },
