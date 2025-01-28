@@ -19,7 +19,7 @@ import Team from "@/components/MeetOurTeam"
 import { useLayoutEffect } from "react";
 // import useScrollSnap from "@/hooks/useScrollSnap";
 import ArtistSection from "@/components/seggsyArtist";
-import useScrollSnap from "react-use-scroll-snap";
+// import useScrollSnap from "react-use-scroll-snap";
 //import GalleryScene from "@/components/GalleryScene";
 
 // gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
@@ -28,7 +28,7 @@ export default function App() {
   const containerRef = useRef<HTMLElement | null>(null);
   // useLayoutEffect(() => {
     // if (containerRef==null){return;}
-    useScrollSnap({ ref: containerRef, duration: 5, delay: 1 });
+    // useScrollSnap({ ref: containerRef, duration: 5, delay: 1 });
   // const [bind, unbind] = useScrollSnap(
   //   containerRef,
   //   {
