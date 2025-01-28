@@ -110,12 +110,12 @@ const ArtistSection = () => {
   const artists = [
     {
       name: "Twinkle Aggrwal",
-      date: "7th Feb 2024",
+      date: "7th Feb 2025",
       description: "Hailed by The New York Times as a 'modern day wizard,' Twinkle Aggrwal stuns audiences by reading minds of celebrities like Shah Rukh Khan and cricket legends Sachin Tendulkar and Virat Kohli.",
     },
     {
       name: "Karan Singh",
-      date: "8th Feb 2024",
+      date: "8th Feb 2025",
       description: "Hailed by The New York Times as a 'modern day wizard,' Karan Singh Magic stuns audiences by reading minds of celebrities like Shah Rukh Khan and cricket legends Sachin Tendulkar and Virat Kohli.",
       imageExtension: "svg",
     },
@@ -126,7 +126,7 @@ const ArtistSection = () => {
     },
     {
       name: "DJ Kawal",
-      date: "9th Feb 2024",
+      date: "9th Feb 2025",
       description: "Hailed by The New York Times as a 'modern day wizard,' DJ Kawal stuns audiences by reading minds of celebrities like Shah Rukh Khan and cricket legends Sachin Tendulkar and Virat Kohli.",
     }
   ];
