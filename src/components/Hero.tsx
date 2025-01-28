@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -16,6 +16,19 @@ export default function Hero() {
   const birdRef = useRef<HTMLImageElement>(null);
   const pseudoMountainRef = useRef<HTMLDivElement>(null);
   const logoRef = useRef<HTMLDivElement>(null);
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  const checkMobile = () => {
+    setIsMobile(window.innerWidth < window.innerHeight);
+  };
+
+  useEffect(() => {
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -212,7 +225,7 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative h-screen w-full overflow-hidden watercolor-bg" //put this for css background
+      className={`relative h-screen w-full overflow-hidden watercolor-bg ${isMobile ? "mobile-class" : ""}`} //put this for css background
       // className="relative h-screen w-full overflow-hidden" uncoment for image background
       // style={{ backgroundImage: "url('/bg-upscale.png')" }} uncomment for image background
     >

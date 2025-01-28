@@ -2,12 +2,25 @@
 
 import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export default function PortfolioHero() {
   const router = useRouter();
+  const [isMobile, setIsMobile] = useState(false);
+
+  const checkMobile = () => {
+    setIsMobile(window.innerWidth < window.innerHeight);
+  };
+
+  useEffect(() => {
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   return (
-    <section className="min-h-screen bg-[#0A0A0F] flex items-center p-8 relative overflow-hidden">
+    <section className={`min-h-screen bg-[#0A0A0F] flex items-center p-8 relative overflow-hidden ${isMobile ? "mobile-class" : ""}`}>
       {/* Decorative Circles */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -right-40 -top-40 w-[500px] h-[500px] border-2 border-white/5 rounded-full animate-slow-spin" />
