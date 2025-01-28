@@ -89,14 +89,14 @@ const ArtistModal = ({ artist, index, isOpen, onClose }: ArtistModalProps) => {
               <p className="text-base md:text-lg leading-relaxed">{artist.description}</p>
               
               {/* Additional Content */}
-              <div className="mt-6 space-y-4">
+              {/* <div className="mt-6 space-y-4">
                 <h3 className="text-lg md:text-xl font-semibold">Performance Details</h3>
                 <ul className="list-disc pl-5 space-y-2 text-sm md:text-base">
                   <li>Duration: 90 minutes</li>
                   <li>Genre: Mind Reading & Illusion</li>
                   <li>Venue: Main Stage</li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
