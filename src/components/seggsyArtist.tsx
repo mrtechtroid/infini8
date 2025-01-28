@@ -63,7 +63,7 @@ const ArtistModal = ({ artist, index, isOpen, onClose }: ArtistModalProps) => {
           {/* Image Section */}
           <div className="relative aspect-[3/4] md:aspect-auto">
             <img
-              src={`/artists/${String(index + 1)}.${artist.imageExtension || 'png'}`}
+              src={`/artists/0${String(index + 1)}.${artist.imageExtension || 'png'}`}
               alt={artist.name}
               className="w-full h-full object-cover"
             />
@@ -222,7 +222,7 @@ const ArtistSection = () => {
                   {/* Image Container */}
                   <div className="relative w-full aspect-[2/3] max-h-[60vh] group">
                     <img
-                      src={`/artists/${String(index + 1)}.${artist.imageExtension || 'png'}`}
+                      src={`/artists/0${String(index + 1)}.${artist.imageExtension || 'png'}`}
                       alt={artist.name}
                       className="w-full h-full object-contain"
                     />

@@ -148,6 +148,7 @@ export default function App() {
 
   return (
     <main className="relative h-screen">
+      <Navbar />
       <div ref={containerRef} className="relative h-screen" id = "main">
       {/* <CherryBlossoms /> */}
       <section className="section h-screen">
@@ -159,6 +160,7 @@ export default function App() {
       <section className="section h-screen">
           <Events />
       </section>
+      {/* Remove section until Wednesday*/}
       <section className="section h-screen">
           <ArtistSection />
       </section>

@@ -7,39 +7,19 @@ const Navbar = () => {
   return (
     <nav
       className={
-        "fixed w-full top-0 z-50 bg-black/30 backdrop-blur-sm border-b border-white/10 ease-in-out"
+        "fixed w-full top-0 z-50 bg-transparent backdrop-blur-sm border-b border-white/10 ease-in-out"
       }
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Brand */}
-          <div className="flex-shrink-0">
-            <Link href="/">
-            <span className="text-white font-bold text-xl font-['Osake']">
-              INFIN8
-            </span></Link>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-center space-x-8">
-              {['Events', 'Team', 'About', 'Sponsors'].map((item) => (
-                <a
-                  key={item}
-                  href={`/${item.toLowerCase()}`}
-                  className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-300 hover:bg-white/10 rounded-md"
-                >
-                  {item}
-                </a>
-              ))}
-            </div>
-          </div>
+          
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none"
+              className="float-right inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none"
             >
               <svg
                 className="h-6 w-6"
@@ -72,7 +52,7 @@ const Navbar = () => {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } md:hidden bg-black/50 backdrop-blur-sm`}
+        } bg-black/50 backdrop-blur-sm`}
       >
         <div className="px-2 pt-2 pb-3 space-y-1">
           {['Events', 'Team', 'About', 'Sponsors'].map((item) => (
