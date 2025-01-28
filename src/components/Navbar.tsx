@@ -96,7 +96,7 @@ export default function Navigation() {
           <nav className="space-y-8 text-right">
             {[
               { href: "/", label: "Home" },
-              { href: "/about", label: "About" },
+              { href: "/#about", label: "About" },
               { href: "/events", label: "Events" },
               { href: "/team", label: "Team" },
             ].map((link) => (

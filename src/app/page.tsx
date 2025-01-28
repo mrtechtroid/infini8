@@ -151,26 +151,26 @@ export default function App() {
       <Navbar />
       <div ref={containerRef} className="relative h-screen" id = "main">
       {/* <CherryBlossoms /> */}
-      <section className="section h-screen">
+      <section id="hero" className="section h-screen">
           <Hero />
       </section>
-      <section className="section h-screen">
+      <section id="about" className="section h-screen">
           <AboutKoi />
       </section>
-      <section className="section h-screen">
+      <section id="events" className="section h-screen">
           <Events />
       </section>
       {/* Remove section until Wednesday*/}
-      <section className="section h-screen">
+      <section id="artists" className="section h-screen">
           <ArtistSection />
       </section>
-      <section className="screen h-screen">
+      <section id="team" className="screen h-screen">
           <Team/>
       </section>
-      <section className="section h-screen">
+      <section id="faqs" className="section h-screen">
           <FAQs />
       </section>
-      <section className="section h-screen">
+      <section id="footer" className="section h-screen">
           <Footer />
       </section>
       </div>
