@@ -189,6 +189,13 @@ const TeamGrid = () => {
           linkedInUrl: '/team',
 
         },
+        {
+          name:"Srikar Vellanki",
+          role:"Poster Designer",
+          accent:"bg-rose-500",
+          image:"/Srikar_design.png",
+          linkedInUrl:'/team'
+        }
       ],
     },
   ];
