@@ -121,7 +121,7 @@ const ArtistSection = () => {
     },
     {
       name: "Oxygen On the Rocks",
-      date: "9th Feb 2024",
+      date: "9th Feb 2025",
       description: "Hailed by The New York Times as a 'modern day wizard,' Oxygen On the Rocks stuns audiences by reading minds of celebrities like Shah Rukh Khan and cricket legends Sachin Tendulkar and Virat Kohli.",
     },
     {
