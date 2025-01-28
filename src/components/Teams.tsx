@@ -4,15 +4,26 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
 
-
 const TeamGrid = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const router = useRouter();
 
   const handleGoBack = () => {
     router.push('/');
   };
+
+  const checkMobile = () => {
+    setIsMobile(window.innerWidth < window.innerHeight);
+  };
+
+  useEffect(() => {
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const teamSections = [
     {
@@ -64,6 +75,22 @@ const TeamGrid = () => {
           linkedInUrl: 'https://www.linkedin.com/in/bhavya-joshi-52a919202/',
 
         },
+        {
+          name: "Aira",
+          role: "Event Coordinator",
+          accent: "bg-teal-500",
+          image: '/Aira_sac.png',
+          linkedInUrl: 'https://www.linkedin.com/in/airajain/',
+
+        },
+        {
+          name: "Harshal",
+          role: "Event Coordinator",
+          accent: "bg-teal-500",
+          image: '/Harshal_sac.png',
+          linkedInUrl: 'https://www.linkedin.com/in/harshalpurohit/',
+
+        }
       ],
     },
     {
@@ -185,7 +212,7 @@ const TeamGrid = () => {
 
   return (
     <main
-      className="w-full min-h-screen overflow-x-hidden"
+      className={`w-full min-h-screen overflow-x-hidden ${isMobile ? "mobile-class" : ""}`}
       onMouseMove={handleMouseMove}
     >
       <button
