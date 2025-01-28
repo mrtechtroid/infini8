@@ -7,7 +7,7 @@
           "prizePool": 15000,
           "rules": ["Time limit - Maximum 15 minutes from entry to exit.", "We can provide basic props if informed in advance.", "Instruments are allowed.","There’s no upper bound on team sizes.","Script submissions due by 1st Feb 2025. Please mail them to parvaaz@iiitb.ac.in.","The play should preferably be in Hindi or English.","The organizers have the power to disqualify any team based on any grounds they seem fit."],
           "about": "Explore the vibrant world of street theater with 'NUKKAD NAATAK' This event invites you to harness the power of compelling performances to raise your voice and drive societal change.",
-          "image": "/posters/Nukkad_Natak.jpg",
+          "image": "/posters/Nukkad_Natak.png",
           "rulespdf":"https://drive.google.com/file/d/1I7SXSvLodwWRWNJCiTrrM7v2UmxblP28/view?usp=sharing",
           "time":"7th Feb 9:00 AM",
           "venue":"TBD",
@@ -74,7 +74,7 @@
           "prizePool": 10000,
           "rules": ["Time Limit:","Solo instrumentalists are allotted a maximum of 4 minutes for their entire stage performance.","Musical Diversity:","Participants are required to showcase their versatility by playing at least one percussion or non-percussive instrument. Separate prizes will be awarded for each category.","Backing Track or Accompanist Options:","Participants may choose to use a pre-submitted backing track or have one accompanist.However, it is emphasized that the judging will solely be based on the instrumentalist's performance, not the backing track.","Basic Effects Allowance:","Instrumentalists are permitted to request basic effects such as compression, reverb, etc., to enhance their performance. Note that looping is allowed, but will not affect the judgement.","Judging Criteria:","Performances will be evaluated based on several factors, including pitch accuracy, rhythm,musicality, skill level, stage presence, and other relevant aspects. The judging panel will consider these elements to determine the overall quality of the solo singing performance."],
           "about": "Showcase your mastery and passion for music at Infin8 ’25’s Solo Instrumental Competition! Whether you play strings, keys, or anything in between, this is your moment to shine. Complete the form below to register and claim your spot in this incredible musical journey. Let your instrument tell your story!",
-          "image": "/posters/Saaz,_Sur_and_Taal.jpg",
+          "image": "/posters/Solo_Instrumentals.png",
           "rulespdf":"https://drive.google.com/file/d/1zvVAPJyW5L9wc6nnEkdSoZ6FtRA-wwEY/view?usp=sharing",
           "time":"7th Feb 11:00 AM",
           "venue":"TBD",
@@ -401,7 +401,7 @@
           "prizePool": 12000,
           "rules": ["Round 1: Choose Your Track","1.Anime & Sports (Who believe Naruto run is peak athletic form)","2.Movies & Games (who've finished more fictional storylines than conversations)","3.Music & Books (who sing theme songs in the shower)","Top 4 teams from each category advance! Your parents still won't be impressed, but we will be.","Round 2: The Mashup","12 teams split into 2 groups. Time to prove you didn't waste all those hours watching 'just one more episode.' Top 3 from each group advances.","Final Round: The Ultimate Showdown 6 teams battle it out to determine who has the most useless knowledge.","Reward:","1st Prize ₹5000","2nd Prize ₹4000","3rd Prize ₹3000"],
           "about": "For everyone whose brain is stuffed with facts that will never help them file taxes (but might win them this competition).",
-          "image": "/posters/League_of_Fanatics.jpg",
+          "image": "/posters/League of Fanatics.png",
           "rulespdf":"https://drive.google.com/file/d/1vherjK35pKF2Ooacx2NPAsxxrzZvJ34W/view?usp=sharing",
           "time":"9th Feb 10:30 AM",
           "venue":"TBD",
@@ -409,7 +409,7 @@
             { "name": "Kanav Bhardwaj", "contact": "8837751558" },
             { "name": "Harsh Modi", "contact": "9660831133" }
           ],
-          "fee":800,
+          "fee":150,
           "registration_form":"https://forms.gle/oeJU4dYXo6is9zNN8"
         },
         {

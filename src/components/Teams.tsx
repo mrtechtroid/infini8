@@ -103,7 +103,7 @@ const TeamGrid = () => {
           name: "Hemanth Mada",
           role: "Creative Director",
           accent: "bg-cyan-500",
-          image: '/team/Hemanth.png',
+          image: '/Hemanth_nothing.png',
           linkedInUrl: 'https://www.linkedin.com/in/hemanth-mada-41337229a/',
 
         },
