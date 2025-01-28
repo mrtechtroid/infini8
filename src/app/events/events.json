@@ -21,18 +21,35 @@
         {
           "id": 16,
           "name": "Sargam",
-          "prizePool": 10000,
+          "prizePool": 6000,
           "rules": ["Time Limit:Solo singers are allotted a maximum of 4 minutes for their entire stage performance.","Musical Diversity:Participants are required to showcase their versatility by presenting at least one of Indian classical/semi-classical and non-classical genre. Separate prizes will be awarded for each category.","Restrictions on Beatboxing and Rapping:Beatboxing and rapping are not allowed as part of the solo singing performance.","Backing Track or Accompanist Options: Participants may choose to use a pre-submitted backing track, have one accompanist, or play a musical instrument themselves. However, it is emphasized that the judging will solely be based on the singer's vocals, not the backing track.","Basic Effects Allowance: Singers are permitted to request basic effects such as compression, reverb, etc., to enhance their performance.","Judging Criteria: Performances will be evaluated based on several factors, including pitch accuracy, rhythm,musicality, skill level, stage presence, and other relevant aspects. The judging panel will consider these elements to determine the overall quality of the solo singing performance."],
           "about": "Step into the spotlight at Infin8 ’25’s Solo Singing Competition! This is your chance to mesmerize the audience with your voice and compete for glory. Fill out the registration form below to secure your place in this thrilling vocal showcase. Let your voice soar and steal the show!",
           "image": "/posters/Sargam.png",
           "rulespdf":"https://drive.google.com/file/d/1jQLPTZLzi11Uh9aLaY_wX27rpfycaFIw/view?usp=sharing",
-          "time":"7th Feb 11:00 AM",
+          "time":"7th Feb 9:00 AM",
           "venue":"TBD",
           "spocs": [
             { "name": "Hemanth Mada", "contact": "8501024315" }
           ],
           "fee":250,
           "registration_form":"https://docs.google.com/forms/d/e/1FAIpQLScYBNHdB3Kqi09tLEeAIVVNrkqmD_0sNW9CjqyBJFioj_NmSw/viewform?usp=sharing"
+        },
+        {
+          "id": 26,
+          "name": "Stock-A-thon",
+          "prizePool": 10000,
+          "rules": ["Time Limit:Solo singers are allotted a maximum of 4 minutes for their entire stage performance.","Musical Diversity:Participants are required to showcase their versatility by presenting at least one of Indian classical/semi-classical and non-classical genre. Separate prizes will be awarded for each category.","Restrictions on Beatboxing and Rapping:Beatboxing and rapping are not allowed as part of the solo singing performance.","Backing Track or Accompanist Options: Participants may choose to use a pre-submitted backing track, have one accompanist, or play a musical instrument themselves. However, it is emphasized that the judging will solely be based on the singer's vocals, not the backing track.","Basic Effects Allowance: Singers are permitted to request basic effects such as compression, reverb, etc., to enhance their performance.","Judging Criteria: Performances will be evaluated based on several factors, including pitch accuracy, rhythm,musicality, skill level, stage presence, and other relevant aspects. The judging panel will consider these elements to determine the overall quality of the solo singing performance."],
+          "about": "Stock-A-thon is an online event in which participants have to build their portfolio in a virtual environment, simulating the real-world stock market, using virtual money for trading hypothetical stocks, bonds, or other securities over a set period of time.",
+          "image": "/posters/Stock_A_thon.png",
+          "rulespdf":"https://drive.google.com/open?id=1IC_180T6QCxozAWV3ILKbhLeXyLHAwNK",
+          "time":"7th,8th,9th Feb",
+          "venue":"TBD",
+          "spocs": [
+            { "name": "Parthiv", "contact": "9883015685" },
+            {"name":"Ashok","contact":"7993140049"}
+          ],
+          "fee":0,
+          "registration_form":"https://community.stockgro.club/form/fda814f2-20da-4eb4-9742-c6c20cb2a1ae"
         },
         {
           "id": 3,
@@ -76,7 +93,7 @@
           "about": "Showcase your mastery and passion for music at Infin8 ’25’s Solo Instrumental Competition! Whether you play strings, keys, or anything in between, this is your moment to shine. Complete the form below to register and claim your spot in this incredible musical journey. Let your instrument tell your story!",
           "image": "/posters/Solo_Instrumentals.png",
           "rulespdf":"https://drive.google.com/file/d/1zvVAPJyW5L9wc6nnEkdSoZ6FtRA-wwEY/view?usp=sharing",
-          "time":"7th Feb 9:00 AM",
+          "time":"7th Feb 11:00 AM",
           "venue":"TBD",
           "spocs": [
             { "name": "Vinay Ramesh", "contact": "6369602159" },
@@ -270,7 +287,7 @@
           "venue":"TBD",
           "spocs": [
             { "name": "Kaustubh Manda", "contact": "8142890001" },
-            {"name":"Arnav Orungaty","contact":"9049005484"}
+            {"name":"Arnav Orunganty","contact":"9049005484"}
           ],
           "fee":0,
           "registration_form":"https://docs.google.com/forms/d/e/1FAIpQLSe00GrDsJNnKxSh-l8sPpM95mOZdyxRIPcF-HbhCrJhlbtHdw/viewform?usp=sf_link"
@@ -402,7 +419,7 @@
           "rules": ["Round 1: Choose Your Track","1.Anime & Sports (Who believe Naruto run is peak athletic form)","2.Movies & Games (who've finished more fictional storylines than conversations)","3.Music & Books (who sing theme songs in the shower)","Top 4 teams from each category advance! Your parents still won't be impressed, but we will be.","Round 2: The Mashup","12 teams split into 2 groups. Time to prove you didn't waste all those hours watching 'just one more episode.' Top 3 from each group advances.","Final Round: The Ultimate Showdown 6 teams battle it out to determine who has the most useless knowledge.","Reward:","1st Prize ₹5000","2nd Prize ₹4000","3rd Prize ₹3000"],
           "about": "For everyone whose brain is stuffed with facts that will never help them file taxes (but might win them this competition).",
           "image": "/posters/League of Fanatics.png",
-          "rulespdf":"https://drive.google.com/file/d/1vherjK35pKF2Ooacx2NPAsxxrzZvJ34W/view?usp=sharing",
+          "rulespdf":"https://docs.google.com/document/d/1V1Y7cGb_GpprsN2HKfELefX0NQhsmb6xIql-lysJpHQ/edit?usp=sharing",
           "time":"9th Feb 10:30 AM",
           "venue":"TBD",
           "spocs": [
