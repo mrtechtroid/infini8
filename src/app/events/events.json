@@ -26,7 +26,7 @@
           "about": "Step into the spotlight at Infin8 ’25’s Solo Singing Competition! This is your chance to mesmerize the audience with your voice and compete for glory. Fill out the registration form below to secure your place in this thrilling vocal showcase. Let your voice soar and steal the show!",
           "image": "/posters/Sargam.png",
           "rulespdf":"https://drive.google.com/file/d/1jQLPTZLzi11Uh9aLaY_wX27rpfycaFIw/view?usp=sharing",
-          "time":"7th Feb 9:00 AM",
+          "time":"7th Feb 11:00 AM",
           "venue":"TBD",
           "spocs": [
             { "name": "Hemanth Mada", "contact": "8501024315" }
@@ -71,12 +71,12 @@
         {
           "id": 12,
           "name": "Saaz, Sur and Taal",
-          "prizePool": 10000,
+          "prizePool": 6000,
           "rules": ["Time Limit:","Solo instrumentalists are allotted a maximum of 4 minutes for their entire stage performance.","Musical Diversity:","Participants are required to showcase their versatility by playing at least one percussion or non-percussive instrument. Separate prizes will be awarded for each category.","Backing Track or Accompanist Options:","Participants may choose to use a pre-submitted backing track or have one accompanist.However, it is emphasized that the judging will solely be based on the instrumentalist's performance, not the backing track.","Basic Effects Allowance:","Instrumentalists are permitted to request basic effects such as compression, reverb, etc., to enhance their performance. Note that looping is allowed, but will not affect the judgement.","Judging Criteria:","Performances will be evaluated based on several factors, including pitch accuracy, rhythm,musicality, skill level, stage presence, and other relevant aspects. The judging panel will consider these elements to determine the overall quality of the solo singing performance."],
           "about": "Showcase your mastery and passion for music at Infin8 ’25’s Solo Instrumental Competition! Whether you play strings, keys, or anything in between, this is your moment to shine. Complete the form below to register and claim your spot in this incredible musical journey. Let your instrument tell your story!",
           "image": "/posters/Solo_Instrumentals.png",
           "rulespdf":"https://drive.google.com/file/d/1zvVAPJyW5L9wc6nnEkdSoZ6FtRA-wwEY/view?usp=sharing",
-          "time":"7th Feb 11:00 AM",
+          "time":"7th Feb 9:00 AM",
           "venue":"TBD",
           "spocs": [
             { "name": "Vinay Ramesh", "contact": "6369602159" },
@@ -88,7 +88,7 @@
         {
           "id": 15,
           "name": "Battle of Bands",
-          "prizePool": 30000,
+          "prizePool": 25000,
           "rules": ["Time Limit:","Bands are allocated a maximum of 20 minutes for their performance, inclusive of stage setup.","Member Limit:","Each participating band can consist of up to 8 members.","Instrumentalists Requirement:","Bands must include a minimum of 2 instrumentalists among their members.","On-Stage Presence:","At any given moment during the performance, there should be a minimum of 3 band members actively performing on stage.","Genre Freedom:","There are no restrictions on the genre of the musical performance; bands are free to explore and showcase their preferred style.","Pre-recorded Backing Tracks:","The use of pre-recorded backing tracks during the performance is strictly prohibited.","Original Composition Bonus:","Extra points will be awarded to bands that present an impressive original composition during their performance.","Judging Criteria:","Bands will be evaluated based on various criteria, including but not limited to – the tightness of their performance, individual skills of each member, musicality, and overall stage presence.Judges will consider these elements to determine the winners of the competition, and their decision will be final."],
           "about": "Welcome to the Battle of the Bands registration for Infin8 ’25! This is your chance to showcase your musical talent, compete with the best, and captivate the crowd. Complete the form below to secure your spot in this electrifying competition. Get ready to rock the stage and make history!",
           "image": "/posters/bob_final.png",
