@@ -168,7 +168,7 @@ export default function App() {
       <section className="section h-screen">
           <FAQs />
       </section>
-      <section className="">
+      <section className="section h-screen">
           <Footer />
       </section>
       </div>
