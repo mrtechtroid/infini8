@@ -26,6 +26,13 @@ const TeamGrid = () => {
           linkedInUrl: 'https://www.linkedin.com/in/dheeraj-muppiri-5b177a2aa/',
         },
         {
+          name: "Gathik Jindal",
+          role: "President",
+          accent: "bg-purple-500",
+          image: '/Gathik_oc.png',
+          linkedInUrl: 'https://www.linkedin.com/in/gathik-jindal-10851428b/',
+        },
+        {
           name: "Siddharth Ayathu",
           role: "Vice President",
           accent: "bg-indigo-500",
@@ -152,14 +159,6 @@ const TeamGrid = () => {
           role: "Brand Designer",
           accent: "bg-rose-500",
           image: '/Tharanth_design.png',
-          linkedInUrl: '/team',
-
-        },
-        {
-          name: "Srikar",
-          role: "Brand Designer",
-          accent: "bg-rose-500",
-          image: '/Srikar_design.png',
           linkedInUrl: '/team',
 
         },
