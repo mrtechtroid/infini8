@@ -46,6 +46,18 @@ const faqs = [
 export default function FAQs() {
   const sectionRef = useRef(null)
   const [openIndex, setOpenIndex] = useState(null)
+  const [isMobile, setIsMobile] = useState(false);
+
+  const checkMobile = () => {
+    setIsMobile(window.innerWidth < window.innerHeight);
+  };
+
+  useEffect(() => {
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   useEffect(() => {
     const faqItems = document.querySelectorAll(".faq-card")
@@ -95,7 +107,7 @@ export default function FAQs() {
 
 
     return (
-      <div ref={sectionRef} className="relative min-h-screen pb-16 bg-[#EBE1CE]">
+      <div ref={sectionRef} className={`relative min-h-screen pb-16 bg-[#EBE1CE] ${isMobile ? "mobile-class" : ""}`}>
         {/* Background with gradient and patterns */}
         {/* <div className="absolute inset-0 bg-[#EBE1CE]">
           {/* ... background divs remain the same ... */}
@@ -105,8 +117,8 @@ export default function FAQs() {
         <div className="relative z-10 h-full mt-5">
           {/* Title Section - Only show on mobile */}
           <div className="md:hidden text-center py-8">
-            <h2 className="text-4xl font-bold text-red-600">よくある質問</h2>
-            <div className="mt-2 text-black-400">Frequently Asked Questions</div>
+            <h2 className="text-4xl font-bold text-red-600" style={{ fontFamily: "Tektur, sans-serif" }}>よくある質問</h2>
+            <div className="mt-2 text-black-400" style={{ fontFamily: "Tektur, sans-serif" }}>Frequently Asked Questions</div>
           </div>
 
           {/* Main Content Grid */}
@@ -115,8 +127,8 @@ export default function FAQs() {
             <div className="w-full md:w-1/2 p-4 md:p-8 lg:p-16">
               {/* Title - Only show on desktop */}
               <div className="hidden md:block text-center mb-8">
-                <h2 className="text-4xl font-bold text-red-600">よくある質問</h2>
-                <div className="mt-2 text-white font-bold">Frequently Asked Questions</div>
+                <h2 className="text-4xl font-bold text-red-600" style={{ fontFamily: "Tektur, sans-serif" }}>よくある質問</h2>
+                <div className="mt-2 text-white font-bold" style={{ fontFamily: "Tektur, sans-serif" }}>Frequently Asked Questions</div>
               </div>
 
               {/* FAQ Cards Container */}
@@ -131,7 +143,7 @@ export default function FAQs() {
                   <div
                     key={index}
                     className="faq-card"
-                    style={{ transitionDelay: `${index * 150}ms` }}
+                    style={{ transitionDelay: `${index * 10}ms` }}
                   >
                     <div
                       className="group relative bg-[#ED3C1F] rounded-lg overflow-hidden cursor-pointer border border-red-900/20"
@@ -145,8 +157,8 @@ export default function FAQs() {
                           </span>
                         </div>
                         <div className="pr-12">
-                          <h3 className="text-xl font-bold text-black mb-1">{faq.question}</h3>
-                          <p className="text-white text-sm">{faq.questionEn}</p>
+                          <h3 className="text-xl font-bold text-black mb-1" style={{ fontFamily: "Tektur, sans-serif" }}>{faq.question}</h3>
+                          <p className="text-white text-sm" style={{ fontFamily: "Tektur, sans-serif" }}>{faq.questionEn}</p>
                         </div>
                         <ChevronDown
                           className={`absolute right-6 top-6 w-6 h-6 text-yellow-400 transform transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""
@@ -156,8 +168,7 @@ export default function FAQs() {
                           className={`mt-4 text-gray-300 overflow-hidden transition-all duration-300 ${openIndex === index ? "max-h-48" : "max-h-0"
                             }`}
                         >
-                          <div className="border-t border-red-900/30 pt-4 relative text-white">
-                            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-600/20 to-transparent"></div>
+                          <div className="border-t border-red-900/30 pt-4 relative text-white" style={{ fontFamily: "Tektur, sans-serif" }}>
                             {faq.answer}
                           </div>
                         </div>

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { AnimatedElement } from "@/components/AnimatedElement";
@@ -8,8 +8,16 @@ export default function AboutKoi() {
   const sectionRef = useRef<HTMLElement>(null);
   const koiRef = useRef<SVGSVGElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const checkMobile = () => {
+    setIsMobile(window.innerWidth < window.innerHeight);
+  };
 
   useEffect(() => {
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
     const ctx = gsap.context(() => {
       gsap.fromTo(
         koiRef.current,
@@ -47,20 +55,23 @@ export default function AboutKoi() {
       );
     });
 
-    return () => ctx.revert();
+    return () => {
+      ctx.revert();
+      window.removeEventListener("resize", checkMobile);
+    };
   }, []);
 
   return (
     <section
-    ref={sectionRef}
-    id = "aboutkoi"
-    className="relative min-h-screen w-full bg-cover bg-center overflow-hidden"
-    style={{
-      // backgroundImage: "url('/koibg.png')",
-    }}
+      ref={sectionRef}
+      id="aboutkoi"
+      className={`relative min-h-screen w-full bg-cover bg-center overflow-hidden ${isMobile ? "mobile-class" : ""}`}
+      style={{
+        // backgroundImage: "url('/koibg.png')",
+      }}
     >
-    <div className="container relative h-full">
-      <div className="relative flex flex-col lg:flex-row items-center justify-center h-full min-h-screen">
+      <div className="container relative h-full">
+        <div className="relative flex flex-col lg:flex-row items-center justify-center h-full min-h-screen">
           {/* Absolute positioned SVG container that covers the entire section */}
           <div className="absolute inset-0 w-full h-full pointer-events-none">
             <svg ref={koiRef} viewBox="0 0 540 540" className="w-full h-full">

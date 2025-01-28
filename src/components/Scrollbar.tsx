@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Bold } from "lucide-react";
 
 export default function CustomScrollbar() {
   const [activeSection, setActiveSection] = useState("day1");
@@ -10,44 +11,33 @@ export default function CustomScrollbar() {
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < window.innerHeight);
     };
 
     checkMobile();
     window.addEventListener('resize', checkMobile);
 
-    gsap.registerPlugin(ScrollTrigger);
+    // Simple scroll-based section detection
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section');
+      const scrollPosition = window.scrollY + window.innerHeight / 3;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-  
-    const sections = document.querySelectorAll("section");
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionBottom = sectionTop + section.offsetHeight;
 
-    gsap.to(".scroll-indicator", {
-      height: "100%",
-      scrollTrigger: {
-        trigger: "body",
-        start: "top top",
-        end: "bottom bottom",
-        scrub: true,
-      },
-    });
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          setActiveSection(section.id);
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial position
 
     return () => {
       window.removeEventListener('resize', checkMobile);
-      sections.forEach((section) => observer.unobserve(section));
-      observer.disconnect();
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -69,105 +59,21 @@ export default function CustomScrollbar() {
         zIndex: 10,
       }}
     >
-      {!isMobile && (
-        <div className="w-[2px] h-full bg-gray-300 absolute left-1/2 -translate-x-1/2">
-          <div
-            className="scroll-indicator w-[2px] h-0 bg-blue-600 absolute left-0 top-0"
-            style={{ transition: "height 0.3s" }}
-          />
-        </div>
-      )}
       {days.map((day) => (
         <button
           key={day}
           onClick={() => scrollToSection(day)}
-          style={{
-            width: isMobile ? "auto" : "280px",
-            height: isMobile ? "40px" : "80px",
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            color: "white",
-            fontFamily: "Arial, sans-serif",
-            fontWeight: "bold",
-            position: "relative",
-            overflow: "hidden",
-            borderRadius: "8px",
-            zIndex: 4,
-          }}
           className={`relative z-10 rounded-md flex items-center justify-start pl-2 md:pl-4
            transition-all duration-200 group overflow-hidden
-           ${isMobile ? 'w-auto px-3' : 'w-24 h-10'}
-           ${
-             activeSection === day
-               ? "bg-yellow-600 text-white"
-               : "bg-blue-600 hover:bg-blue-800"
-           }`}
+           ${isMobile ? 'w-auto px-3 h-10' : 'w-24 h-10'}
+           ${activeSection === day 
+             ? "bg-yellow-600 text-black scale-120" 
+             : "bg-blue-600 hover:bg-blue-800"}`}
         >
-          {!isMobile && (
-            <div
-              style={{
-                width: "20px",
-                height: "100%",
-                backgroundColor: "#080033",
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              {[...Array(5)].map((_, index) => (
-                <div
-                  key={index}
-                  style={{
-                    width: "100%",
-                    height: "20%",
-                    backgroundColor: index % 2 === 0 ? "#080033" : "#DC2626",
-                  }}
-                ></div>
-              ))}
-            </div>
-          )}
-
-          <div
-            style={{
-              flexGrow: 1,
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: isMobile ? "4px" : "12px",
-              padding: isMobile ? "0 5px" : "0 15px",
-            }}
-          >
-            <div
-              className="font-['The Last Shuriken']"
-              style={{
-                fontSize: isMobile ? "14px" : "24px",
-                textTransform: "uppercase",
-                fontFamily: "The Last Shuriken",
-                color: "black"
-              }}
-            >
-              {isMobile ? `Day ${day.replace("day", "")}` : day}
-            </div>
+          <div className="text-center w-full"
+          style={{ fontFamily: "The Last Shuriken", fontStyle: "bold", fontSize: 15}}>
+            {isMobile ? `Day ${day.replace("day", "")}` : day}
           </div>
-
-          {!isMobile && (
-            <div
-              style={{
-                width: "4px",
-                height: "100%",
-                backgroundColor: "#DC2626",
-              }}
-            ></div>
-          )}
-          
-          {!isMobile && (
-            <div className={`absolute top-1/2 -translate-y-1/2 px-2 py-1 rounded bg-popover text-popover-foreground 
-              opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 whitespace-nowrap
-              left-[120%]`}>
-              Go to Day {day.replace("day", "")}
-            </div>
-          )}
         </button>
       ))}
     </div>
