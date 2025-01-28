@@ -5,6 +5,11 @@ interface Spoc {
   contact: string;
 }
 
+interface Registration {
+  link: string;
+  info: string;
+}
+
 interface EventModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -19,7 +24,7 @@ interface EventModalProps {
     image: string;
     time: string;
     venue: string;
-    registration_form: string;
+    registration_form: Array<Registration>;
   };
 }
 
@@ -101,15 +106,15 @@ export default function EventModal({
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mb-6">
-                <a
-                  href={event.registration_form}
+                {event.registration_form.map((form)=> <a
+                  href={form.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors font-semibold"
                 >
                   <ExternalLink className="w-5 h-5" />
-                  Register Now
-                </a>
+                  {form.info==""?"Register Now":form.info}
+                </a>)}
                 <a
                   href={event.rulespdf}
                   target="_blank"

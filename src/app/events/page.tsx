@@ -15,6 +15,11 @@ interface Spoc{
   contact:string
 }
 
+interface Registration {
+  link: string;
+  info: string;
+}
+
 interface EventCardProps {
   id: number;
   name: string;
@@ -26,7 +31,7 @@ interface EventCardProps {
   image: string;
   time:string,
   venue:string
-  registration_form:string
+  registration_form: Array<Registration>;
 }
 
 function EventCard({  id,name,spocs,about,rulespdf,prizePool,fee,image,registration_form,time,venue }: EventCardProps) {
