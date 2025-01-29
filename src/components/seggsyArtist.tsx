@@ -110,7 +110,7 @@ const ArtistSection = () => {
     {
       name: "Twinkle Aggrwal",
       date: "7th Feb 2025",
-      description: "Hailed by The New York Times as a 'modern day wizard,' Twinkle Aggrwal stuns audiences by reading minds of celebrities like Shah Rukh Khan and cricket legends Sachin Tendulkar and Virat Kohli.",
+      description: "",
     },
     {
       name: "Karan Singh",
@@ -121,12 +121,12 @@ const ArtistSection = () => {
     {
       name: "Oxygen On the Rocks",
       date: "9th Feb 2025",
-      description: "Hailed by The New York Times as a 'modern day wizard,' Oxygen On the Rocks stuns audiences by reading minds of celebrities like Shah Rukh Khan and cricket legends Sachin Tendulkar and Virat Kohli.",
+      description: "",
     },
     {
       name: "DJ Kawal",
       date: "9th Feb 2025",
-      description: "Hailed by The New York Times as a 'modern day wizard,' DJ Kawal stuns audiences by reading minds of celebrities like Shah Rukh Khan and cricket legends Sachin Tendulkar and Virat Kohli.",
+      description: "",
     }
   ];
 
@@ -210,7 +210,7 @@ const ArtistSection = () => {
       className={`relative w-full h-screen overflow-hidden bg-[url('/artistbg.png')] bg-cover bg-center bg-no-repeat ${isMobile ? "mobile-class" : ""}`}
       onMouseMove={handleMouseMove}
     >
-      <div className="flex flex-col lg:flex-row tall:flex-col h-full">
+      <div className="flex flex-col tall:flex-col h-full lg:w-[50vw]">
         {/* Photo at Top on Mobile or Tall Devices */}
         <div className="flex-1 flex items-center justify-center p-6">
           <div className="relative group w-full max-w-md aspect-[3/4]">
@@ -230,8 +230,8 @@ const ArtistSection = () => {
         </div>
 
         {/* Description at Bottom */}
-        <div className="flex-1 flex flex-col justify-center items-center p-6 text-center bg-[url('/artistbg.png')] bg-cover bg-center bg-no-repeat backdrop-blur-sm">
-          <h2 className="text-2xl lg:text-4xl font-bold text-gray-800"
+        <div className="flex-1 flex flex-col justify-center items-center p-6 text-center bg-cover bg-center bg-no-repeat md:backdrop-blur-sm z-20">
+          <h2 className="text-2xl lg:text-4xl font-bold"
           style={{ fontFamily: "Onsen, bold" }}>
             {artists[currentIndex].name}
           </h2>
@@ -244,7 +244,29 @@ const ArtistSection = () => {
           </p> */}
         </div>
       </div>
-
+      <div className="absolute bottom-0 left-0 w-full h-full pointer-events-none z-0">
+        <img
+          src="/artistfront.png"
+          alt="Front Layer"
+          className="absolute bottom-0 md:left-0 left-[-13%] md:right-[-10%] w-[50%] md:w-full h-full object-cover object-right-bottom"
+          style={{
+            ...getParallaxStyle(0.5),
+            zIndex: 15,
+            animation: "bambooWind 6s ease-in-out infinite",
+            transformOrigin: "bottom center",
+          }}
+        />
+        <img
+          src="/artistparticle.png"
+          alt="Particle Layer"
+          className="absolute bottom-0 right-[-30%] md:right-0 w-[160%] md:w-full h-full object-cover object-right-bottom"
+          style={{
+            ...getParallaxStyle(1),
+            zIndex: 16,
+            transform: `translate3d(${mousePosition.x * 40}px, ${mousePosition.x * -5}px, 0) scale(${1 + mousePosition.x * 0.05})`,
+          }}
+        />
+        </div>
       {/* Navigation Dots with Semi-Transparent Background */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 flex gap-4 px-4 py-2 bg-black/30 rounded-full backdrop-blur-sm">
         {artists.map((_, index) => (

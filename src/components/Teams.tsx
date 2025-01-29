@@ -90,7 +90,15 @@ const TeamGrid = () => {
           image: '/Harshal_sac.png',
           linkedInUrl: 'https://www.linkedin.com/in/harshalpurohit/',
 
-        }
+        },
+        {
+          name: "Prabhas",
+          role: "Event Coordinator",
+          accent: "bg-teal-500",
+          image: '/Prabhas_oc.png',
+          linkedInUrl: 'https://www.linkedin.com/in/jaswant-prabhas-jupalli-75732b280/',
+
+        },
       ],
     },
     {
