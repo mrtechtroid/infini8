@@ -231,7 +231,7 @@
       {
         "id": 15,
         "name": "Battle of Bands",
-        "prizePool": 30000,
+        "prizePool": 25000,
         "rules": [
           "Time Limit:",
           "Bands are allocated a maximum of 20 minutes for their performance, inclusive of stage setup.",
