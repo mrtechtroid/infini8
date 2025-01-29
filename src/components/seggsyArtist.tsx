@@ -110,7 +110,7 @@ const ArtistSection = () => {
     {
       name: "Twinkle Aggrwal",
       date: "7th Feb 2025",
-      description: "Hailed by The New York Times as a 'modern day wizard,' Twinkle Aggrwal stuns audiences by reading minds of celebrities like Shah Rukh Khan and cricket legends Sachin Tendulkar and Virat Kohli.",
+      description: "",
     },
     {
       name: "Karan Singh",
@@ -121,12 +121,12 @@ const ArtistSection = () => {
     {
       name: "Oxygen On the Rocks",
       date: "9th Feb 2025",
-      description: "Hailed by The New York Times as a 'modern day wizard,' Oxygen On the Rocks stuns audiences by reading minds of celebrities like Shah Rukh Khan and cricket legends Sachin Tendulkar and Virat Kohli.",
+      description: "",
     },
     {
       name: "DJ Kawal",
       date: "9th Feb 2025",
-      description: "Hailed by The New York Times as a 'modern day wizard,' DJ Kawal stuns audiences by reading minds of celebrities like Shah Rukh Khan and cricket legends Sachin Tendulkar and Virat Kohli.",
+      description: "",
     }
   ];
 
