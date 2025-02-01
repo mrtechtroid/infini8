@@ -88,7 +88,7 @@ const TeamGrid = () => {
           role: "Event Coordinator",
           accent: "bg-teal-500",
           image: '/Harshal_sac.png',
-          linkedInUrl: 'https://www.linkedin.com/in/harshalpurohit/',
+          linkedInUrl: 'https://www.linkedin.com/in/harshal-gujarathi-2ab432239/',
 
         },
         {
