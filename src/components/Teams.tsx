@@ -150,6 +150,14 @@ const TeamGrid = () => {
 
         },
         {
+          name: "Siddharth Menon",
+          role: "Illustrator",
+          accent: "bg-amber-500",
+          image: '/Menon_design.png',
+          linkedInUrl: 'https://www.linkedin.com/in/siddharth-menon-2192a1278/',
+
+        },
+        {
           name: "Tahir Khadarabad",
           role: "Graphic Designer",
           accent: "bg-lime-500",
@@ -171,14 +179,6 @@ const TeamGrid = () => {
           accent: "bg-fuchsia-500",
           image: '/team/Chaitya.png',
           linkedInUrl: 'https://www.linkedin.com/in/chaitya-shah-0a7589267/',
-
-        },
-        {
-          name: "Siddharth Menon",
-          role: "Illustrator",
-          accent: "bg-amber-500",
-          image: '/Menon_design.png',
-          linkedInUrl: 'https://www.linkedin.com/in/siddharth-menon-2192a1278/',
 
         },
         {
