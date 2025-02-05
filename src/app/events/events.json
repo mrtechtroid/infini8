@@ -161,44 +161,6 @@
         ]
       },
       {
-        "id": 10,
-        "name": "Ramp It Up",
-        "prizePool": 12000,
-        "rules": [
-          "You can form a team of 2 or take part individually.",
-          "The time limit for every team/individual would be 1 minute (including setup and performance both).",
-          "Negative marking if participants exceed the time limit.",
-          "Vulgarity is strongly prohibited. Any form of obscenity will lead to debarring the team/individual from the contest.",
-          "Teams/individuals will be judged on costumes, walking stance, attitude, hairstyle, and overall presentation.",
-          "The decision of the judges will be final and binding.",
-          "All costumes are permitted, which maintain decency, including original costumes and fashion designs.",
-          "Purchased, professionally made, or rented costumes are permitted.",
-          "Results Announcement: On our Instagram handle https://www.instagram.com/infin8_iiitb/"
-        ],
-        "about": "Get ready to own the spotlight at our college's fashion show in the Infin8! 'Ramp It Up ' is your chance to showcase your unique style and make a statement on the runway. Whether you're a trendsetter or just love fashion, this is your moment to shine. Join us for an evening of glamour, creativity, and runway magic – where style meets the spotlight!",
-        "image": "/posters/ramp_it_up_v2.png",
-        "rulespdf": "https://drive.google.com/file/d/1vQRhFXU9W4ycmD8Lji9ZKVi7Y6OY4lkU/view?usp=sharing",
-        "time": "7th Feb 11:00 AM",
-        "venue": "TBD",
-        "spocs": [
-          {
-            "name": "Varsha Yamasani",
-            "contact": "8639604273"
-          },
-          {
-            "name": "Monish",
-            "contact": "9154158805"
-          }
-        ],
-        "fee": 200,
-        "registration_form": [
-          {
-            "link": "https://forms.gle/JoCt2aMubhvX19aZ7",
-            "info": ""
-          }
-        ]
-      },
-      {
         "id": 15,
         "name": "Battle of Bands",
         "prizePool": 25000,
@@ -423,6 +385,44 @@
         "registration_form": [
           {
             "link": "https://forms.gle/3u6g3yTDdNzHpxNz8",
+            "info": ""
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Ramp It Up",
+        "prizePool": 12000,
+        "rules": [
+          "You can form a team of 2 or take part individually.",
+          "The time limit for every team/individual would be 1 minute (including setup and performance both).",
+          "Negative marking if participants exceed the time limit.",
+          "Vulgarity is strongly prohibited. Any form of obscenity will lead to debarring the team/individual from the contest.",
+          "Teams/individuals will be judged on costumes, walking stance, attitude, hairstyle, and overall presentation.",
+          "The decision of the judges will be final and binding.",
+          "All costumes are permitted, which maintain decency, including original costumes and fashion designs.",
+          "Purchased, professionally made, or rented costumes are permitted.",
+          "Results Announcement: On our Instagram handle https://www.instagram.com/infin8_iiitb/"
+        ],
+        "about": "Get ready to own the spotlight at our college's fashion show in the Infin8! 'Ramp It Up ' is your chance to showcase your unique style and make a statement on the runway. Whether you're a trendsetter or just love fashion, this is your moment to shine. Join us for an evening of glamour, creativity, and runway magic – where style meets the spotlight!",
+        "image": "/posters/ramp_it_up_v2.png",
+        "rulespdf": "https://drive.google.com/file/d/1vQRhFXU9W4ycmD8Lji9ZKVi7Y6OY4lkU/view?usp=sharing",
+        "time": "8th Feb 10:00 AM",
+        "venue": "TBD",
+        "spocs": [
+          {
+            "name": "Varsha Yamasani",
+            "contact": "8639604273"
+          },
+          {
+            "name": "Monish",
+            "contact": "9154158805"
+          }
+        ],
+        "fee": 200,
+        "registration_form": [
+          {
+            "link": "https://forms.gle/JoCt2aMubhvX19aZ7",
             "info": ""
           }
         ]
